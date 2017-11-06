@@ -59,7 +59,7 @@ After users enter their determined restrictions including distance from the user
 1.5 References
 ----------
 
-// Add Hyperlinks
+**// Add Hyperlinks**
 Restaurants have seen a serious rise since 2001, providing a much wider diversity for users, and a more intense need for users to choose what services them best. More information located in a news article here.
 
 Online ordering provides a sense of control to the customers, increased order frequency, and contributed to savings of labor as cited here.
@@ -115,7 +115,7 @@ Our assumptions are that FoodSwipe™ will be used primarily within the applicat
 
 3.1 User Interfaces
 ---------------
-//Add images
+**//Add images**
 Our user interface will be using a “card” interface, similar to applications such as Tinder. This user interface will allow users to “thumbs up” and “thumbs down” restaurants that fit their criteria.
 
 3.2 Software Interfaces
