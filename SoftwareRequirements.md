@@ -59,10 +59,9 @@ After users enter their determined restrictions including distance from the user
 1.5 References
 ----------
 
-**// Add Hyperlinks**
-Restaurants have seen a serious rise since 2001, providing a much wider diversity for users, and a more intense need for users to choose what services them best. More information located in a news article [here].(https://www.nytimes.com/2017/10/31/business/too-many-restaurants-wall-street.html)
+Restaurants have seen a serious rise since 2001, providing a much wider diversity for users, and a more intense need for users to choose what services them best. More information located in a news article [here](https://www.nytimes.com/2017/10/31/business/too-many-restaurants-wall-street.html).
 
-Online ordering provides a sense of control to the customers, increased order frequency, and contributed to savings of labor as cited [here].(http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1072&context=chrpubs)
+Online ordering provides a sense of control to the customers, increased order frequency, and contributed to savings of labor as cited [here](http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1072&context=chrpubs).
 
 2 Overall Description
 ===================
