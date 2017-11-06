@@ -2,7 +2,34 @@ FoodSwipe
 ===================
 Austin Edington, Zac Gallagher, Aparna Gollakota, Don Stolz, Mike Sukan
 
-[TOC]
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+- [1 Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Document Conventions](#12-document-conventions)
+  - [1.3 Intended Audience and Reading Suggestions](#13-intended-audience-and-reading-suggestions)
+  - [1.4 Product Scope](#14-product-scope)
+  - [1.5 References](#15-references)
+- [2 Overall Description](#2-overall-description)
+  - [2.1 Product Perspective](#21-product-perspective)
+  - [2.2 Product Functions](#22-product-functions)
+  - [2.3 User Classes and Characteristics](#23-user-classes-and-characteristics)
+  - [2.4 Operating Environment](#24-operating-environment)
+  - [2.5 Design and Implementation Constraints](#25-design-and-implementation-constraints)
+  - [2.6 User Documentation](#26-user-documentation)
+  - [2.7 Assumptions and Dependencies](#27-assumptions-and-dependencies)
+- [3 External Interface Requirements](#3-external-interface-requirements)
+  - [3.1 User Interfaces](#31-user-interfaces)
+  - [3.2 Software Interfaces](#32-software-interfaces)
+- [4 System Features](#4-system-features)
+  - [4.1 Swipe Function](#41-swipe-function)
+  - [4.2 Swipe Function](#42-swipe-function)
+- [5 Other Nonfunctional Requirements](#5-other-nonfunctional-requirements)
+  - [5.1 Performance Requirements](#51-performance-requirements)
+  - [5.2 Security Requirements](#52-security-requirements)
+  - [5.3 Software Quality Attributes](#53-software-quality-attributes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 1 Introduction
 ============
