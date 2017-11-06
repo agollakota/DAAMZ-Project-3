@@ -23,7 +23,7 @@ FoodSwipe
   - [3.2 Software Interfaces](#32-software-interfaces)
 - [4 System Features](#4-system-features)
   - [4.1 Swipe Function](#41-swipe-function)
-  - [4.2 Swipe Function](#42-swipe-function)
+  - [4.2 Criteria Matcher](#42-criteria-matcher)
 - [5 Other Nonfunctional Requirements](#5-other-nonfunctional-requirements)
   - [5.1 Performance Requirements](#51-performance-requirements)
   - [5.2 Security Requirements](#52-security-requirements)
@@ -144,22 +144,22 @@ product.&gt;
 4.1 Swipe Function
 ----------------
 
-4.1.1 Description and Priority
+#### 4.1.1 Description and Priority
 
 The swipe function is of high priority for FoodSwipe™. After inputting their criteria, the swipe functions allows the users to determine their restaurants of choice.
 
-4.1.2 Stimulus/Response Sequences
+#### 4.1.2 Stimulus/Response Sequences
 
 The swipe function is dynamic to the user’s interactions. Users can swipe right or “thumbs up” restaurants they do like, and swipe left or “thumbs down” restaurants that they don’t like, or they feel like does not match their criteria.
 
-4.2 Swipe Function
+4.2 Criteria Matcher
 ----------------
 
-4.2.1 Description and Priority
+#### 4.2.1 Description and Priority
 
 Within the FoodSwipe™ application, users input specific criteria for the restaurants they are searching for. Users can enter keywords that best identify with what they want.
 
-4.2.2 Stimulus/Response Sequences
+#### 4.2.2 Stimulus/Response Sequences
 
 Users are given the opportunity to enter keywords that best identify with what they’re interested in, in terms of restaurants. This search option would include: vegan/vegetarian options, gluten-free, Halal/Kosher, specific allergies, etc.
 
