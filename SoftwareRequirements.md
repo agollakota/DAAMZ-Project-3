@@ -1,6 +1,6 @@
 FoodSwipe
 ===================
-Austin Edington, Zac Gallagher, Aparna Gollakota, Don Stolz, Mike Sukan
+###### Austin Edington, Zac Gallagher, Aparna Gollakota, Don Stolz, Mike Sukan
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -60,9 +60,9 @@ After users enter their determined restrictions including distance from the user
 ----------
 
 **// Add Hyperlinks**
-Restaurants have seen a serious rise since 2001, providing a much wider diversity for users, and a more intense need for users to choose what services them best. More information located in a news article here.
+Restaurants have seen a serious rise since 2001, providing a much wider diversity for users, and a more intense need for users to choose what services them best. More information located in a news article [here].(https://www.nytimes.com/2017/10/31/business/too-many-restaurants-wall-street.html)
 
-Online ordering provides a sense of control to the customers, increased order frequency, and contributed to savings of labor as cited here.
+Online ordering provides a sense of control to the customers, increased order frequency, and contributed to savings of labor as cited [here].(http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1072&context=chrpubs)
 
 2 Overall Description
 ===================
@@ -115,7 +115,7 @@ Our assumptions are that FoodSwipe™ will be used primarily within the applicat
 
 3.1 User Interfaces
 ---------------
-**//Add images**
+
 Our user interface will be using a “card” interface, similar to applications such as Tinder. This user interface will allow users to “thumbs up” and “thumbs down” restaurants that fit their criteria.
 
 ![Alt text](/doc/react-native-meteor-starter-2.gif)
