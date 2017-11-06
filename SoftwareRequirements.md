@@ -118,6 +118,12 @@ Our assumptions are that FoodSwipe™ will be used primarily within the applicat
 **//Add images**
 Our user interface will be using a “card” interface, similar to applications such as Tinder. This user interface will allow users to “thumbs up” and “thumbs down” restaurants that fit their criteria.
 
+![Alt text](/doc/react-native-meteor-starter-2.gif)
+![Alt text](/doc/DrawingSwipePage.jpg)
+![Alt text](/doc/DrawingProfilePage.jpg)
+![Alt text](/doc/DrawingFiltersPage.jpg)
+
+
 3.2 Software Interfaces
 -------------------
 
