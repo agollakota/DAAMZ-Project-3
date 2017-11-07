@@ -169,7 +169,7 @@ FoodSwipe™ should be able to quickly receive and usefully relay information to
 5.2 Security Requirements
 ---------------------
 
-User authentication maybe added at a later point in the project. However, the initial design does not require it.
+User authentication may be added at a later point in the project. However, the initial design does not require it.
 
 5.3 Software Quality Attributes
 ---------------------------
