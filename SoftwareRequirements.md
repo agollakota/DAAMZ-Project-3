@@ -28,6 +28,7 @@ FoodSwipe
   - [5.1 Performance Requirements](#51-performance-requirements)
   - [5.2 Security Requirements](#52-security-requirements)
   - [5.3 Software Quality Attributes](#53-software-quality-attributes)
+- [6 Market Research](#6-market-research)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
