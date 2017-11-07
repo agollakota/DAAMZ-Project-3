@@ -176,8 +176,11 @@ User authentication may be added at a later point in the project. However, the i
 
 We’re developing an app with cross-compatibility because of react-native. The information from the restaurants will be coming from the restaurants themselves, so the info will be as accurate as they make it online. Reliability depends on internet connection. Testing will be done in small focus groups before a release. It will be available on Google Play so we can provide the link to people with Android phones. Our intention is to show our focus groups how to navigate throughout the application, however the developers for FoodSwipe™ have in their utmost priority to make the interface seem familiar, without the need of teaching users how to operate the application.
 
-6 Market Research
+6 Primary Market Research
 ================================
+
+This includes research gauging what our audience was looking for in an app. 
+We included secondary market research under our References.
 
 ![Alt text](/doc/InterestGraph.png)
 ![Alt text](/doc/PrioritiesGraph.png)
