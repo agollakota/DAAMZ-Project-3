@@ -57,7 +57,9 @@ Users interested in SwipeEats™ would be best serviced throughout this document
 1.4 Product Scope
 -------------
 
-After users enter their determined restrictions including distance from the user’s location, their own dietary restrictions, etc., users will then get “cards” of restaurants that fit their requirements. These cards will provide an image of the restaurant or food from the restaurant, in which users will be able  to “thumbs up” or “thumbs down” to each restaurant presented, allowing a popularity of each restaurant to be relevant in the user’s search.
+After users enter their determined restrictions including distance from the user’s location, their own dietary restrictions, etc., users will then get “cards” of restaurants that fit their requirements. These cards will provide an image of the restaurant or food from the restaurant, in which users will be able  to “thumbs up” or “thumbs down” to each restaurant presented. The "thumbs up" indicates that the user is interested in the restaurant and will be added to a list, which the user can choose from  at the end. "Thumbs down" indicates that the user is not interested and the restraunt will not be shown again in this search or added to the list at the end.
+
+
 
 2 Overall Description
 ===================
