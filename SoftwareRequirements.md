@@ -29,6 +29,8 @@ SwipeEats
   - [5.2 Security Requirements](#52-security-requirements)
   - [5.3 Software Quality Attributes](#53-software-quality-attributes)
 - [6 Market Research](#6-market-research)
+  - [6.1 Primary Market Research](#61-primary-market-research)
+  - [6.2 Secondary Market Research](#62-secondary-market-research)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -56,13 +58,6 @@ Users interested in SwipeEats™ would be best serviced throughout this document
 -------------
 
 After users enter their determined restrictions including distance from the user’s location, their own dietary restrictions, etc., users will then get “cards” of restaurants that fit their requirements. These cards will provide an image of the restaurant or food from the restaurant, in which users will be able  to “thumbs up” or “thumbs down” to each restaurant presented, allowing a popularity of each restaurant to be relevant in the user’s search.
-
-1.5 References
-----------
-
-Restaurants have seen a serious rise since 2001, providing a much wider diversity for users, and a more intense need for users to choose what services them best. More information located in a news article [here](https://www.nytimes.com/2017/10/31/business/too-many-restaurants-wall-street.html).
-
-Online ordering provides a sense of control to the customers, increased order frequency, and contributed to savings of labor as cited [here](http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1072&context=chrpubs).
 
 2 Overall Description
 ===================
@@ -118,7 +113,6 @@ Our assumptions are that SwipeEats™ will be used primarily within the applicat
 
 Our user interface will be using a “card” interface, similar to applications such as Tinder. This user interface will allow users to “thumbs up” and “thumbs down” restaurants that fit their criteria.
 
-![Alt text](/doc/react-native-meteor-starter-2.gif)
 ![Alt text](/doc/DrawingSwipePage.jpg)
 ![Alt text](/doc/DrawingProfilePage.jpg)
 ![Alt text](/doc/DrawingFiltersPage.jpg)
@@ -176,8 +170,11 @@ User authentication may be added at a later point in the project. However, the i
 
 We’re developing an app with cross-compatibility because of react-native. The information from the restaurants will be coming from the restaurants themselves, so the info will be as accurate as they make it online. Reliability depends on internet connection. Testing will be done in small focus groups before a release. It will be available on Google Play so we can provide the link to people with Android phones. Our intention is to show our focus groups how to navigate throughout the application, however the developers for SwipeEats™ have in their utmost priority to make the interface seem familiar, without the need of teaching users how to operate the application.
 
-6 Primary Market Research
+6 Market Research
 ================================
+
+6.1 Primary Market Research
+---------------------------
 
 This includes research gauging what our audience was looking for in an app. 
 We included secondary market research under our References.
@@ -185,3 +182,10 @@ We included secondary market research under our References.
 ![Alt text](/doc/InterestGraph.png)
 ![Alt text](/doc/PrioritiesGraph.png)
 ![Alt text](/doc/DistancePieChart.png)
+
+6.2 Secondary Market Research
+---------------------------
+
+Restaurants have seen a serious rise since 2001, providing a much wider diversity for users, and a more intense need for users to choose what services them best. More information located in a news article [here](https://www.nytimes.com/2017/10/31/business/too-many-restaurants-wall-street.html).
+
+Online ordering provides a sense of control to the customers, increased order frequency, and contributed to savings of labor as cited [here](http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1072&context=chrpubs).
