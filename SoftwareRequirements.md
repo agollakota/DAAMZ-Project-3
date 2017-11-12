@@ -9,7 +9,7 @@ SwipeEats
   - [1.2 Document Conventions](#12-document-conventions)
   - [1.3 Intended Audience and Reading Suggestions](#13-intended-audience-and-reading-suggestions)
   - [1.4 Product Scope](#14-product-scope)
-  
+  - [1.5 References](#15-references)
 - [2 Overall Description](#2-overall-description)
   - [2.1 Product Perspective](#21-product-perspective)
   - [2.2 Product Functions](#22-product-functions)
@@ -78,7 +78,7 @@ The second part of the system will be a database used to store and reference inf
 
 * Our users choose the types of restaurants they want food from
 * We take user’s current location into consideration
-* The user then will be taken to a hoome screen, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” or “thumbs down” restaurants
+* The user then will be taken to a main menu UI, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” or “thumbs down” restaurants
 * The user then has the opportunity to view restaurant's profile for reviews, prices, menu items, allergy alerts, etc.
 
 
@@ -90,7 +90,7 @@ We are going for simple and minimalistic so people can quickly decide what to ea
 2.4 Operating Environment
 ---------------------
 
-SwipeEats™ will be compatible with Apple and Android smartphones that can support React-native applications.
+SwipeEats™ will be compatible with Apple and Android smartphones because we are using React-Native, which helps us be able to make the app cross-platform. 
 
 2.5 Design and Implementation Constraints
 -------------------------------------
