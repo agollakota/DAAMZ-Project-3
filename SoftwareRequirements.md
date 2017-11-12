@@ -78,7 +78,7 @@ The second part of the system will be a database used to store and reference inf
 
 * Our users choose the types of restaurants they want food from
 * We take user’s current location into consideration
-* The user then will be taken to a main menu UI, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” or “thumbs down” restaurants
+* The user then will be taken to a main menu, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” or “thumbs down” restaurants
 * The user then has the opportunity to view restaurant's profile for reviews, prices, menu items, allergy alerts, etc.
 
 
