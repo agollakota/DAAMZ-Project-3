@@ -9,7 +9,7 @@ SwipeEats
   - [1.2 Document Conventions](#12-document-conventions)
   - [1.3 Intended Audience and Reading Suggestions](#13-intended-audience-and-reading-suggestions)
   - [1.4 Product Scope](#14-product-scope)
-  - [1.5 References](#15-references)
+  
 - [2 Overall Description](#2-overall-description)
   - [2.1 Product Perspective](#21-product-perspective)
   - [2.2 Product Functions](#22-product-functions)
