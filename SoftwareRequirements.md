@@ -105,7 +105,7 @@ We will have several sources of documentation, including: user manuals, tutorial
 2.7 Assumptions and Dependencies
 ----------------------------
 
-Our assumptions are that SwipeEats™ will be used primarily within the application on the user’s mobile device. The application may not work as intended, crash, or provide inaccurate location data if the platform does not have the hardware resources available. We are also assuming that the GPS will work uniformly within browser platforms.
+Our assumptions are that SwipeEats™ will be used primarily within the application on the user’s mobile device. The application may not work as intended, crash, or provide inaccurate location data if the platform does not have the hardware resources available. We are also assuming that the GPS will work uniformly within browser platforms. We will be developing for Android 6.0 Marshmallow and up and iOS 10.1.1 and up.
 
 3 External Interface Requirements
 ===============================
