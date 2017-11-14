@@ -115,9 +115,9 @@ Our assumptions are that SwipeEats™ will be used primarily within the applicat
 
 Our user interface will be using a “card” interface, similar to applications such as Tinder. This user interface will allow users to “thumbs up” (or swipe right) and “thumbs down”(or swipe left) restaurants that fit their criteria.
 
-![Alt text](/doc/DrawingSwipePage.jpg)
-![Alt text](/doc/DrawingProfilePage.jpg)
-![Alt text](/doc/DrawingFiltersPage.jpg)
+![Alt text](/doc/WireFrame.png)
+![Alt text](/doc/WireFrame2.png)
+![Alt text](/doc/WireFrame3.png)
 
 
 3.2 Software Interfaces
