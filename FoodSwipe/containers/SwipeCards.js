@@ -10,7 +10,7 @@ class Card extends React.Component {
   constructor(props) {
     super(props);
   }
-	//TODO Create profile for card
+	//TODO Use restaurantProfile for card
   render() {
     return (
       <View style={[styles.card, {backgroundColor: this.props.backgroundColor}]}>
@@ -24,7 +24,7 @@ class NoMoreCards extends Component {
   constructor(props) {
     super(props);
   }
-	//TODO Add a button to start over or change to filter menu
+	//TODO Add a button to start over &/or link to filter menu
   render() {
     return (
       <View>
