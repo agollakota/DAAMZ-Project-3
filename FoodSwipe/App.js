@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import SwipeCards from './Components/SwipeCards.js'
+import SwipeCards from './containers/SwipeCards.js'
 import {
   Platform,
   StyleSheet,
