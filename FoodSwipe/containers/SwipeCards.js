@@ -1,4 +1,5 @@
 // SwipeCards.js
+// TODO:
 'use strict';
 
 import React, { Component } from 'react';
@@ -10,7 +11,7 @@ class Card extends React.Component {
   constructor(props) {
     super(props);
   }
-	//TODO Use restaurantProfile for card
+	//TODO: Use restaurantProfile for card
   render() {
     return (
       <View style={[styles.card, {backgroundColor: this.props.backgroundColor}]}>
@@ -24,7 +25,7 @@ class NoMoreCards extends Component {
   constructor(props) {
     super(props);
   }
-	//TODO Add a button to start over &/or link to filter menu
+	//TODO: Add a button to start over &/or link to filter menu
   render() {
     return (
       <View>
@@ -69,8 +70,7 @@ export default class extends React.Component {
 
         handleYup={this.handleYup}
         handleNope={this.handleNope}
-        handleMaybe={this.handleMaybe}
-        hasMaybeAction
+
       />
     )
   }

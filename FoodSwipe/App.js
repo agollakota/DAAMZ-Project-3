@@ -1,28 +1,15 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+
  */
 
+// TODO: Add ReactRouter and Routes
 import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
 import SwipeCards from './containers/SwipeCards.js'
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+// TODO: Add FavoritesList & FilterPage
 
 export default class App extends Component<{}> {
-	//TODO Create a home screen? Or pass prop to display all
-	// NOTE Routes? -Probably
+	//TODO: Create a home screen? Or shuffle all restraunts
   render() {
     return (
       <View style={styles.container}>
