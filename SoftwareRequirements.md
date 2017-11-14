@@ -40,7 +40,7 @@ SwipeEats
 1.1 Purpose
 --------
 
-Our purpose for SwipeEats™ is to give our users a friendly way to search for food in their area. Whether they’re hungry for pizza or Chinese food, users can specify whether they want to see vegan/vegetarian options, gluten-free options, so on and so forth. By displaying “cards” of different restaurants to users, users can “thumbs-up” or “thumbs-down” the search results to find their perfect meal. This will be the release of our debut version, v1.0
+Our purpose for SwipeEats™ is to give our users a friendly way to search for food in their area. Whether they’re hungry for pizza or Chinese food, users can specify whether they want to see vegan/vegetarian options, gluten-free options, so on and so forth. By displaying “cards” of different restaurants to users, users can “thumbs-up” (or swipe right) or “thumbs-down” (or swipe left) the search results to find their perfect meal. This will be the release of our debut version, v1.0
 
 1.2 Document Conventions
 --------------------
@@ -57,7 +57,7 @@ Users interested in SwipeEats™ would be best serviced throughout this document
 1.4 Product Scope
 -------------
 
-After users enter their determined restrictions including distance from the user’s location, their own dietary restrictions, etc., users will then get “cards” of restaurants that fit their requirements. These cards will provide an image of the restaurant or food from the restaurant, in which users will be able  to “thumbs up” or “thumbs down” to each restaurant presented. The "thumbs up" indicates that the user is interested in the restaurant and will be added to a list, which the user can choose from  at the end. "Thumbs down" indicates that the user is not interested and the restraunt will not be shown again in this search or added to the list at the end.
+After users enter their determined restrictions including distance from the user’s location, their own dietary restrictions, etc., users will then get “cards” of restaurants that fit their requirements. These cards will provide an image of the restaurant or food from the restaurant, in which users will be able  to “thumbs up”( or swipe right) or “thumbs down”(or swipe left) to each restaurant presented. The "thumbs up"(or swiping right) indicates that the user is interested in the restaurant and will be added to a list, which the user can choose from  at the end. "Thumbs down" (or swiping left) indicates that the user is not interested and the restraunt will not be shown again in this search or added to the list at the end. The reason that the user is given the choice to either "thumbs up"/"thumbs down" or swipe left or right  is because we want to offer users an option in case their device has issues with either function.
 
 
 
@@ -78,7 +78,7 @@ The second part of the system will be a database used to store and reference inf
 
 * Our users choose the types of restaurants they want food from
 * We take user’s current location into consideration
-* The user then will be taken to a main menu, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” or “thumbs down” restaurants
+* The user then will be taken to a main menu, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” (or swipe right) and "thumbs down" (or swipe left) on restaurants.
 * The user then has the opportunity to view restaurant's profile for reviews, prices, menu items, allergy alerts, etc.
 
 
@@ -113,7 +113,7 @@ Our assumptions are that SwipeEats™ will be used primarily within the applicat
 3.1 User Interfaces
 ---------------
 
-Our user interface will be using a “card” interface, similar to applications such as Tinder. This user interface will allow users to “thumbs up” and “thumbs down” restaurants that fit their criteria.
+Our user interface will be using a “card” interface, similar to applications such as Tinder. This user interface will allow users to “thumbs up” (or swipe right) and “thumbs down”(or swipe left) restaurants that fit their criteria.
 
 ![Alt text](/doc/DrawingSwipePage.jpg)
 ![Alt text](/doc/DrawingProfilePage.jpg)
@@ -140,7 +140,7 @@ The swipe function is of high priority for SwipeEats™. After inputting their c
 
 #### 4.1.2 Stimulus/Response Sequences
 
-The swipe function is dynamic to the user’s interactions. Users can swipe right or “thumbs up” restaurants they do like, and swipe left or “thumbs down” restaurants that they don’t like, or they feel like does not match their criteria.
+The swipe function is dynamic to the user’s interactions. Users can swipe right or “thumbs up”(or swipe right) restaurants they do like, and swipe left or “thumbs down”(or swipe left) on restaurants that they don’t like, or they feel like does not match their criteria.
 
 4.2 Criteria Matcher
 ----------------
