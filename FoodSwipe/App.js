@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import SwipeCards from './Components/SwipeCards.js'
 import {
   Platform,
   StyleSheet,
@@ -20,18 +21,12 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+	//TODO Create a home screen? Or pass prop to display all
+	// NOTE Routes? -Probably
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <SwipeCards style={{flex: 1}} />
       </View>
     );
   }
@@ -43,15 +38,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });
