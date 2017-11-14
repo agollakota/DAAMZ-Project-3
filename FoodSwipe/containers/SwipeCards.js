@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 
 import SwipeCards from 'react-native-swipe-cards';
+// import RestaurantCard from '../components/RestrauntCard';
 
 class Card extends React.Component {
   constructor(props) {
@@ -22,10 +23,10 @@ class Card extends React.Component {
 }
 
 class NoMoreCards extends Component {
+  // TODO: Go to matches; hide "return to cards" button
   constructor(props) {
     super(props);
   }
-	//TODO: Add a button to start over &/or link to filter menu
   render() {
     return (
       <View>
