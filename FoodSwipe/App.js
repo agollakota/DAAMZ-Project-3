@@ -1,33 +1,33 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import { NativeRouter, Route } from 'react-router-native'
 
-import SwipeCards from './containers/FavoritesList.js'
-import SwipeCards from './containers/FilterPage.js'
+import FavoritesList from './containers/FavoritesList.js'
+import FilterPage from './containers/FilterPage.js'
 import SwipeCards from './containers/SwipeCards.js'
 
+import Styles from './style/Styles.js'
+
 export default class App extends Component<{}> {
-	//TODO: Create a home screen? Or shuffle all restraunts
+	let store = createStore(/* */)
+
+	const Cards =  () => (
+	  <View style={styles.cards}>
+	    </SwipeCards>
+	  </View>
+	)
+
   render() {
     return (
-			<NativeRouter>
-				<Route exact path="/" component={Home}/>
-				<Route path="/filters" component={About}/>
-				<Route path="/topics" component={Topics}/>
-			</NativeRouter>
-
-      <View style={styles.container}>
-        <SwipeCards style={{flex: 1}} />
-      </View>
+			<Provider store={store}>
+				<NativeRouter>
+					<Route exact path="/" component={Cards}/>
+					<Route path="/filters" component={FilterPage}/>
+					<Route path="/favorites" component={FavoritesList}/>
+				</NativeRouter>
+			</Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  }
-});
