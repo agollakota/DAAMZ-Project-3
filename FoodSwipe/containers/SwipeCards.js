@@ -51,14 +51,14 @@ export default class extends React.Component {
   }
 
   handleYup (card) {
+		// TODO: Add to favorites
     console.log(`Yup for ${card.text}`)
   }
   handleNope (card) {
+		// TODO: Remove from matches?
     console.log(`Nope for ${card.text}`)
   }
-  handleMaybe (card) {
-    console.log(`Maybe for ${card.text}`)
-  }
+
   render() {
     // If you want a stack of cards instead of one-per-one view, activate stack mode
     // stack={true}

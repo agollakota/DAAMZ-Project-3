@@ -22,6 +22,7 @@ export const GET_FAVORITES = 'GET_FAVORITES'
 // Filter constants
 
 export const RestrauntFilters = {
+	// Type
 	// Distance
 	// Rating
 	// Price

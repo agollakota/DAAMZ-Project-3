@@ -3,7 +3,7 @@ Reducer List:
   restaurantReducer
   listReducer
 
-States:
+State:
   restaurant = {
     name:,
     location:,
@@ -12,6 +12,6 @@ States:
     phoneNumber:,
     menuLink:,
     reviews:,
-  }
-  list = [ restaurant ]
+  },
+  list : [ restaurant ]
 */

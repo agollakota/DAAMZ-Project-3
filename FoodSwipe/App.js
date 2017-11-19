@@ -1,17 +1,21 @@
-/**
-
- */
-
-// TODO: Add ReactRouter and Routes
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { NativeRouter, Route } from 'react-router-native'
+
+import SwipeCards from './containers/FavoritesList.js'
+import SwipeCards from './containers/FilterPage.js'
 import SwipeCards from './containers/SwipeCards.js'
-// TODO: Add FavoritesList & FilterPage
 
 export default class App extends Component<{}> {
 	//TODO: Create a home screen? Or shuffle all restraunts
   render() {
     return (
+			<NativeRouter>
+				<Route exact path="/" component={Home}/>
+				<Route path="/filters" component={About}/>
+				<Route path="/topics" component={Topics}/>
+			</NativeRouter>
+
       <View style={styles.container}>
         <SwipeCards style={{flex: 1}} />
       </View>
