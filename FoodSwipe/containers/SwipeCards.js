@@ -1,5 +1,4 @@
 // SwipeCards.js
-// TODO:
 'use strict';
 
 import React, { Component } from 'react';
@@ -69,6 +68,7 @@ export default class extends React.Component {
         renderCard={(cardData) => <Card {...cardData} />}
         renderNoMoreCards={() => <NoMoreCards />}
 
+				yupText={"YUM!"}
         handleYup={this.handleYup}
         handleNope={this.handleNope}
 
