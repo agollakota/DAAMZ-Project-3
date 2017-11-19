@@ -15,3 +15,12 @@ State:
   },
   list : [ restaurant ]
 */
+
+import { combineReducers } from 'redux'
+
+
+const FoodSwipe = combineReducers({
+  // TODO
+})
+
+export default FoodSwipe
