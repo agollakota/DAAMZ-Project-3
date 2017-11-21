@@ -38,6 +38,13 @@ const styles = {
   textStyle: {
     fontSize: 30
   }
+ 
+ //name
+ 
+ 
+//restrauntpicture
+ 
+ //picture placement
 
 
 };
