@@ -1,33 +1,50 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { NativeRouter, Route } from 'react-router-native'
 
-import FavoritesList from './containers/FavoritesList.js'
-import FilterPage from './containers/FilterPage.js'
-import SwipeCards from './containers/SwipeCards.js'
+// import reducer from './reducers'
+// import { getAllProducts } from './actions'
 
-import Styles from './style/Styles.js'
+// import FavoritesList from './containers/FavoritesList'
+// import FilterPage from './containers/FilterPage'
+import SwipeCards from './containers/SwipeCards'
+
+// import Styles from './style/Styles.js'
+
+const Cards = () => (
+	<View style={styles.cards}>
+		<SwipeCards />
+	</View>
+);
 
 export default class App extends Component<{}> {
-	let store = createStore(/* */)
-
-	const Cards =  () => (
-	  <View style={styles.cards}>
-	    </SwipeCards>
-	  </View>
-	)
+	// let store = createStore(reducer)
+	// store.dispatch(getAllRestraunts())
 
   render() {
     return (
-			<Provider store={store}>
 				<NativeRouter>
-					<Route exact path="/" component={Cards}/>
-					<Route path="/filters" component={FilterPage}/>
-					<Route path="/favorites" component={FavoritesList}/>
+					<View style={styles.containers}>
+						<Route exact path="/" component={Cards}/>
+					</View>
 				</NativeRouter>
-			</Provider>
     );
   }
 }
+// <Provider store={store}>
+// <Route path="/filters" component={FilterPage}/>
+// <Route path="/favorites" component={FavoritesList}/>
+
+const styles = StyleSheet.create({
+	containers: {
+		flex: 1
+	},
+	cards: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#F5FCFF',
+	}
+});

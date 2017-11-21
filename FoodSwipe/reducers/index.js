@@ -1,7 +1,7 @@
 /*
 Reducer List:
-  restaurantReducer
-  listReducer
+  restaurant
+  list
 
 State:
   restaurant = {
@@ -17,10 +17,12 @@ State:
 */
 
 import { combineReducers } from 'redux'
-
+import restraunt from './restraunt'
+import favorites from './favorites'
 
 const FoodSwipe = combineReducers({
-  // TODO
+  restraunt,
+	favorites
 })
 
 export default FoodSwipe

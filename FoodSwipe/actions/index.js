@@ -11,20 +11,19 @@ GET_FAVORITES
 */
 
 // action types
-export const SET_RESTRAUNT_FILTER = 'SET_RESTRAUNT_FILTER'
-export const GET_RESTRAUNT_INFO = 'GET_RESTRAUNT_INFO'
+export const FETCH_RESTRAUNTS = 'FETCH_RESTRAUNTS'
+export const NOT_A_MATCH = 'NOT_A_MATCH'
 
 export const ADD_FAVORITE = 'ADD_FAVORITE'
-export const NOT_A_MATCH = 'NOT_A_MATCH'
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
-export const GET_FAVORITES = 'GET_FAVORITES'
+// export const GET_FAVORITES = 'GET_FAVORITES'?
 
 // Filter constants
 
 export const RestrauntFilters = {
 	// Type
-	// Distance
-	// Rating
+	// Distance?
+	// Rating?
 	// Price
 }
 
@@ -32,7 +31,7 @@ export const RestrauntFilters = {
 	/* Restraunts */
 export function filterRestraunts(/*filter*/){
 	// TODO
-	return { type: SET_RESTRAUNT_FILTER, filter }
+	return { type: FETCH_RESTRAUNTS, filter }
 }
 
 export function getRestraunt(/*id*/){
