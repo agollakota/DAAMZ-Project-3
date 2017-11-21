@@ -79,7 +79,11 @@ The second part of the system will be a database used to store and reference inf
 * Our users choose the types of restaurants they want food from
 * We take user’s current location into consideration
 * The user then will be taken to a main menu, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” (or swipe right) and "thumbs down" (or swipe left) on restaurants.
+
+
 * The user then has the opportunity to view restaurant's profile for reviews, prices, menu items, allergy alerts, etc.
+
+Currently our profile component is about 40% complete. We still need to incorporate options for different food allergies, prices, and reviews. We need to implement the Google WebPlaces API.
 
 
 2.3 User Classes and Characteristics
