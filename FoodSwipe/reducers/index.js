@@ -7,22 +7,22 @@ State:
   restaurant = {
     name:,
     location:,
-    rating:,
-    price:,
-    phoneNumber:,
-    menuLink:,
+    rating: 0-5,
+    price: 0-4,
+    phoneNumber: phone,
+    websiteLink: URL,
     reviews:,
   },
   list : [ restaurant ]
 */
 
 import { combineReducers } from 'redux'
-import restraunt from './restraunt'
+import restraunts from './restraunts'
 import favorites from './favorites'
 
 const FoodSwipe = combineReducers({
-  restraunt,
+  restraunts,
 	favorites
 })
 
-export default FoodSwipe
+export default FoodSwipe;

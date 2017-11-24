@@ -1,7 +1,7 @@
 /*
 Action List:
 
-SEARCH_RESTRAUNTS
+FETCH_RESTRAUNTS
 NOT_A_MATCH
 
 ADD_FAVORITE
@@ -9,41 +9,48 @@ REMOVE_FAVORITE
 
 */
 
+// TODO: API calls
+
 // action types
 export const FETCH_RESTRAUNTS = 'FETCH_RESTRAUNTS'
 export const NOT_A_MATCH = 'NOT_A_MATCH'
 
+export const SELECT_RESTRAUNT = 'SELECT_RESTRAUNT'
+
 export const ADD_FAVORITE = 'ADD_FAVORITE'
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
 
-// Filter constants
-
-export const RestrauntFilters = {
-	// Type
-	// Distance?
-	// Rating?
-	// Price
-}
-
 // action creators
 	/* Restraunts */
-export function fecthRestraunts(/*filter*/){
-	// TODO
-	return { type: FETCH_RESTRAUNTS, filter }
+export const fetchRestraunts = (filters) => {
+	// TODO: Status
+	return {
+		type: FETCH_RESTRAUNTS,
+		status: ,
+		filters
+	}}
+
+export const selectRestraunt = (id) => {
+	return {
+		// TODO: 
+	}
 }
 
-export function noMatch(/*id*/) {
-	// TODO
-  return { type: NOT_A_MATCH, text }
-}
+export const noMatch = (id) => {
+  return{
+		type: NOT_A_MATCH,
+		id
+	}}
 
-	/* List */
-export function addFavorite(/*id*/) {
-	// TODO
-  return { type: ADD_FAVORITE, text }
-}
+	/* Favorites */
+export const addFavorite = (restraunt) => {
+  return{
+		type: ADD_FAVORITE,
+		restraunt
+	}}
 
-export function removeFavorite(/*id*/) {
-	// TODO
-  return { type: REMOVE_FAVORITE, text }
-}
+export const removeFavorite = (id) => {
+  return{
+		type: REMOVE_FAVORITE,
+		id
+	}}
