@@ -8,18 +8,18 @@ import { NativeRouter, Route } from 'react-router-native'
 // import { getAllProducts } from './actions'
 
 // import FavoritesList from './containers/FavoritesList'
-// import FilterPage from './containers/FilterPage'
-import SwipeCards from './containers/SwipeCards'
+import FilterPage from './components/FilterPage'
+// import SwipeCards from './containers/SwipeCards'
 
 // import Styles from './style/Styles.js'
 
-const Cards = () => (
-	<View style={styles.cards}>
-		<SwipeCards />
-	</View>
-);
+// const Cards = () => (
+// 	<View style={styles.cards}>
+// 		<SwipeCards />
+// 	</View>
+// );
 
-export default class App extends Component<{}> {
+export default class App extends Component{
 	// let store = createStore(reducer)
 	// store.dispatch(getAllRestraunts())
 
@@ -27,14 +27,14 @@ export default class App extends Component<{}> {
     return (
 				<NativeRouter>
 					<View style={styles.containers}>
-						<Route exact path="/" component={Cards}/>
+						<Route exact path="/" component={FilterPage}/>
 					</View>
 				</NativeRouter>
     );
   }
 }
 // <Provider store={store}>
-// <Route path="/filters" component={FilterPage}/>
+// <Route exact path="/" component={Cards}/>
 // <Route path="/favorites" component={FavoritesList}/>
 
 const styles = StyleSheet.create({
