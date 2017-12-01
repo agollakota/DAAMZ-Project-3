@@ -125,14 +125,14 @@ export default class FilterPage extends Component {
 
 		onPressButton = () => {
 			const food = this.state.foodOptions[this.state.selectedFoodIndex];
-			// var diet = ' '
-			// this.state.dietOptions.map((filter, index) => {
-			// 	if (filter.checked) {
-			// 		diet.concat(filter.name)
-			// 		console.log(filter.name);
-			// 	}
-			// })
-			// console.log("Diet: " + diet);
+			var diet = ' '
+			this.state.dietOptions.map((filter, index) => {
+				if (filter.checked) {
+					diet.concat(filter.name)
+					console.log(filter.name);
+				}
+			})
+			console.log("Diet: " + diet);
 			const price = this.state.price;
 			const distance = this.state.distance;
 
