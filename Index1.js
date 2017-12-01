@@ -4,6 +4,8 @@ import MapView from 'react-native-maps';
 
 export default class App extends React.Component {
 
+var lat =  42.00;
+var longitude = -87.66;
 
  render()   {
       return (
@@ -11,8 +13,8 @@ export default class App extends React.Component {
 
          <MapView style={styles.map}
               region={{
-                  latitude: 42.00,
-                  longitude: -87.66,
+                  latitude: lat,
+                  longitude: longitude,
                   latitudeDelta: 0.1,
                   logitudeDelta: 0.1
 
@@ -22,8 +24,8 @@ export default class App extends React.Component {
 
             <MapView.Marker
                  coordinate={{
-                   latitude: 42.00,
-                   longitude: -87.66
+                   latitude: lat,
+                   longitude: long
                    }}
                  title={'You are here'}
                  />
