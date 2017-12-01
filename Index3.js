@@ -8,6 +8,10 @@ import MapView, {PROVIDER_GOOGLE} from "react-native-maps";
 const{width, height} = Dimensions.get('window')
 
 export default class Index extends Component {
+  
+  
+var lati = 42.00;
+var longi = -87.6;
 
 constructor(){
 
@@ -91,9 +95,12 @@ Marker1(){
 
 return{
 
-latitude: this.state.region.latitude,
+//latitude: this.state.region.latitude,
 
-longitude: this.state.region.longitude
+//longitude: this.state.region.longitude
+  
+  lati;
+  longi;
 
 }
 
