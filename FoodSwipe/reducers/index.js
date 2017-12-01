@@ -1,10 +1,15 @@
 /*
-Reducer List:
-  restaurant
-  list
+State: {
+	restaurants: {
+		query: {},
+		error: '',
+		loading: false,
+		restraunts: [restraunt]
+	},
+	favorites: [restraunt]
+}
 
-State:
-  restaurant = {
+  restraunt: {
     name:,
     location:,
     rating: 0-5,
@@ -12,17 +17,16 @@ State:
     phoneNumber: phone,
     websiteLink: URL,
     reviews:,
-  },
-  list : [ restaurant ]
+  }
 */
 
 import { combineReducers } from 'redux'
-import restraunts from './restraunts'
-import favorites from './favorites'
+import RestrauntReducer from './RestrauntReducer'
+import FavoritesReducer from './FavoritesReducer'
 
 const FoodSwipe = combineReducers({
-  restraunts,
-	favorites
-})
+  search : RestrauntReducer,
+	favorites : FavoritesReducer
+});
 
 export default FoodSwipe;

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-native'
 import {
     StyleSheet,
     Text,
@@ -10,7 +11,7 @@ import {
 import CheckBox from 'react-native-check-box'
 
 
-export default class example extends Component {
+export default class FilterPage extends Component {
     constructor() {
       super();
 			this.state = {
@@ -110,6 +111,18 @@ export default class example extends Component {
 
     }
 
+		renderButton(){
+			return(<View style={styles.containerButton}>
+				<Link to="/favorites"
+					component={TouchableOpacity}
+					style={styles.button}
+					onPress={this.onPressButton}>
+						<Text style={styles.buttonText}>Search</Text>
+				</Link>
+				</View>
+			)
+		}
+
 		onPressButton = () => {
 			const food = this.state.foodOptions[this.state.selectedFoodIndex];
 			// var diet = ' '
@@ -138,9 +151,7 @@ export default class example extends Component {
         return (
             <View style={styles.container}>
               {this.renderView()}
-							<TouchableOpacity style={styles.button} onPress={this.onPressButton}>
-					      <Text style={styles.buttonText}>Search</Text>
-					    </TouchableOpacity>
+							{this.renderButton()}
             </View>
         )
     }
@@ -150,25 +161,43 @@ export default class example extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f3f2f2',
+        backgroundColor: '#fff',
         marginTop:30
     },
 		filters: {
-			flex: 4,
+			flex: 3,
 			padding: 25
 		},
 		headers: {
 			fontSize: 20,
 			fontWeight: 'bold'
 		},
+		containerButton: {
+	    borderBottomWidth: 1,
+	    padding: 5,
+	    backgroundColor: '#fff',
+	    justifyContent: 'flex-start',
+	    flexDirection: 'row',
+	    borderColor: '#ddd',
+	    position: 'relative'
+	  },
 		button: {
-			backgroundColor: '#3fffff',
 			flex: 1,
-			margin: 50,
-			padding: 20
+	    alignSelf: 'stretch',
+	    backgroundColor: '#fff',
+	    borderRadius: 5,
+	    borderWidth: 1,
+	    borderColor: '#007aff',
+	    marginLeft: 25,
+	    marginRight: 25,
+			marginBottom: 25,
 		},
 		buttonText:{
-			fontSize: 50,
-			textAlign: 'center'
+			alignSelf: 'center',
+	    color: '#007aff',
+	    fontSize: 16,
+	    fontWeight: '600',
+	    paddingTop: 10,
+	    paddingBottom: 10
 		}
 })

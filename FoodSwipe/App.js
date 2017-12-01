@@ -9,33 +9,35 @@ import { NativeRouter, Route } from 'react-router-native'
 
 // import FavoritesList from './containers/FavoritesList'
 import FilterPage from './components/FilterPage'
-// import SwipeCards from './containers/SwipeCards'
+import SwipeCards from './containers/SwipeCards'
 
 // import Styles from './style/Styles.js'
 
-// const Cards = () => (
-// 	<View style={styles.cards}>
-// 		<SwipeCards />
-// 	</View>
-// );
+const Cards = () => (
+	<View style={styles.cards}>
+		<SwipeCards />
+	</View>
+);
 
 export default class App extends Component{
-	// let store = createStore(reducer)
-	// store.dispatch(getAllRestraunts())
 
   render() {
     return (
+
 				<NativeRouter>
 					<View style={styles.containers}>
 						<Route exact path="/" component={FilterPage}/>
+						<Route path="/cards" component={Cards}/>
+
 					</View>
 				</NativeRouter>
+
     );
   }
 }
-// <Provider store={store}>
-// <Route exact path="/" component={Cards}/>
-// <Route path="/favorites" component={FavoritesList}/>
+// TODO: <Route path="/favorites" component={FavoritesList}/>
+// <Provider store={createStore(reducer)}>
+// </Provider>
 
 const styles = StyleSheet.create({
 	containers: {
