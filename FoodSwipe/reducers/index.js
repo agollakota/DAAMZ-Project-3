@@ -1,26 +1,32 @@
 /*
-Reducer List:
-  restaurantReducer
-  listReducer
+State: {
+	restaurants: {
+		query: {},
+		error: '',
+		loading: false,
+		restraunts: [restraunt]
+	},
+	favorites: [restraunt]
+}
 
-State:
-  restaurant = {
+  restraunt: {
     name:,
     location:,
-    rating:,
-    price:,
-    phoneNumber:,
-    menuLink:,
+    rating: 0-5,
+    price: 0-4,
+    phoneNumber: phone,
+    websiteLink: URL,
     reviews:,
-  },
-  list : [ restaurant ]
+  }
 */
 
 import { combineReducers } from 'redux'
-
+import RestrauntReducer from './RestrauntReducer'
+import FavoritesReducer from './FavoritesReducer'
 
 const FoodSwipe = combineReducers({
-  // TODO
-})
+  search : RestrauntReducer,
+	favorites : FavoritesReducer
+});
 
-export default FoodSwipe
+export default FoodSwipe;

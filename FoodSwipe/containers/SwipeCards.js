@@ -41,11 +41,8 @@ export default class extends React.Component {
     this.state = {
       cards: [
         {text: 'Tomato', backgroundColor: 'red'},
-        {text: 'Aubergine', backgroundColor: 'purple'},
         {text: 'Courgette', backgroundColor: 'green'},
         {text: 'Blueberry', backgroundColor: 'blue'},
-        {text: 'Umm...', backgroundColor: 'cyan'},
-        {text: 'orange', backgroundColor: 'orange'},
       ]
     };
   }
@@ -82,10 +79,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
 		flex: 1,
-		minWidth: 300,
+		minWidth: 350,
 		marginTop: 75,
 		marginHorizontal: 25,
-		marginBottom: 100,
+		marginBottom: 50,
   },
   noMoreCardsText: {
     fontSize: 22,
