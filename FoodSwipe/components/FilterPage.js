@@ -113,7 +113,7 @@ export default class FilterPage extends Component {
 
 		renderButton(){
 			return(<View style={styles.containerButton}>
-				<Link to="/favorites"
+				<Link to="/"
 					component={TouchableOpacity}
 					style={styles.button}
 					onPress={this.onPressButton}>
@@ -125,20 +125,18 @@ export default class FilterPage extends Component {
 
 		onPressButton = () => {
 			const food = this.state.foodOptions[this.state.selectedFoodIndex];
-			var diet = ' '
+			var search = food
 			this.state.dietOptions.map((filter, index) => {
-				if (filter.checked) {
-					diet.concat(filter.name)
-					console.log(filter.name);
-				}
+				if (filter.checked) {search += (', ' +  filter.name)}
 			})
-			console.log("Diet: " + diet);
-			const price = this.state.price;
+			var price = this.state.price - 1
+			price = price < 1 ? price + 1: price;
 			const distance = this.state.distance;
 
 			var request = {
-				query : food,
-				minPriceLevel : 0,
+				language: 'en',
+				query : search,
+				minPriceLevel : 1,
 				maxPriceLevel : price,
 				type : 'restaurant',
 				// location : userLocation,
