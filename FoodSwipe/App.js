@@ -20,7 +20,8 @@ import reducers from './reducers';
 const Cards = () => (
 	<Provider store={createStore(reducers)}>
    <View style={{ flex: 1 }}>
-		<Header headerText="Tech Stack" />
+		<Header headerText="FoodSwipe" />
+		//place other Components here
 		<RestaurantCard />
 	</View>
 </Provider>
