@@ -133,16 +133,24 @@ export default class FilterPage extends Component {
 			price = price < 1 ? price + 1: price;
 			const distance = this.state.distance;
 
-			var request = {
+			var query = {
 				language: 'en',
 				query : search,
 				minPriceLevel : 1,
 				maxPriceLevel : price,
 				type : 'restaurant',
 				// location : userLocation,
-				radius : distance
+				// radius : distance
 			}
-			console.log(request);
+
+			var googleMapsClient = require('@google/maps').createClient({
+			  key: 'your API key here'
+			});
+
+			googleMaps.places(
+				{query}, function(err, response) {
+						if (!err) {console.log(response.json.results);}
+					});
 		}
 
     render() {

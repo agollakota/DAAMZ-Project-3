@@ -5,7 +5,6 @@ import { Provider } from 'react-redux'
 import { NativeRouter, Route } from 'react-router-native'
 
 // import reducer from './reducers'
-// import { getAllProducts } from './actions'
 
 // import FavoritesList from './containers/FavoritesList'
 import Header from './components/Header'
