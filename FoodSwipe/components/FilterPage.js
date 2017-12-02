@@ -113,7 +113,7 @@ export default class FilterPage extends Component {
 
 		renderButton(){
 			return(<View style={styles.containerButton}>
-				<Link to="/"
+				<Link to="/cards"
 					component={TouchableOpacity}
 					style={styles.button}
 					onPress={this.onPressButton}>
@@ -160,11 +160,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        marginTop:30
+        marginTop:15,
     },
 		filters: {
 			flex: 3,
-			padding: 25
+			paddingLeft: 30,
+			paddingRight: 30,
+			marginBottom:15
 		},
 		headers: {
 			fontSize: 20,

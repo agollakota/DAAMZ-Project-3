@@ -15,8 +15,8 @@ const Header = (props) => {
   const { textStyle, viewStyle } = styles;
   return (
     <View style={viewStyle}>
-    <Text style={textStyle}>{props.headerText}</Text>
-     </View>
+    	<Text style={textStyle}>{props.headerText}</Text>
+    </View>
   );
 };
 
@@ -38,12 +38,12 @@ const styles = {
   textStyle: {
     fontSize: 30
   }
- 
+
  //name
- 
- 
+
+
 //restrauntpicture
- 
+
  //picture placement
 
 

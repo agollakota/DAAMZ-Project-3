@@ -8,6 +8,7 @@ import { NativeRouter, Route } from 'react-router-native'
 // import { getAllProducts } from './actions'
 
 // import FavoritesList from './containers/FavoritesList'
+import Header from './components/Header'
 import FilterPage from './components/FilterPage'
 import SwipeCards from './containers/SwipeCards'
 
@@ -26,9 +27,9 @@ export default class App extends Component{
 
 				<NativeRouter>
 					<View style={styles.containers}>
+						<Header headerText={"Food Swipe"}/>
 						<Route exact path="/" component={FilterPage}/>
 						<Route path="/cards" component={Cards}/>
-
 					</View>
 				</NativeRouter>
 
