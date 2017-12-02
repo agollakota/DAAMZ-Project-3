@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-native'
 import {
     StyleSheet,
@@ -9,6 +9,7 @@ import {
 		TouchableOpacity
 } from 'react-native'
 import CheckBox from 'react-native-check-box'
+
 
 
 export default class FilterPage extends Component {

@@ -8,16 +8,22 @@ import { NativeRouter, Route } from 'react-router-native'
 // import { getAllProducts } from './actions'
 
 // import FavoritesList from './containers/FavoritesList'
-import Header from './components/Header'
-import FilterPage from './components/FilterPage'
+import Header from './Components/Header'
+import FilterPage from './Components/FilterPage'
 import SwipeCards from './containers/SwipeCards'
+import CheckBox from 'react-native-check-box'
+import RestaurantCard from './Components/RestaurantCard'
+import reducers from './reducers';
 
 // import Styles from './style/Styles.js'
 
 const Cards = () => (
-	<View style={styles.cards}>
-		<SwipeCards />
+	<Provider store={createStore(reducers)}>
+   <View style={{ flex: 1 }}>
+		<Header headerText="Tech Stack" />
+		<RestaurantCard />
 	</View>
+</Provider>
 );
 
 export default class App extends Component{
