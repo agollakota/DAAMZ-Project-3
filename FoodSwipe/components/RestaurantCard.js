@@ -1,6 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
 
+var hardCodedAPI = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyCQp15T05cCMaykrYdpa43QLDtdd1zDsGY';
+
+function setup(){
+  noCanvas();
+  
+}
 const Card = (props) => {
   return (
     <View style={styles.containerStyle}>

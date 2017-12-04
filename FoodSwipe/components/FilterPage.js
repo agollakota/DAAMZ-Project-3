@@ -9,7 +9,11 @@ import {
 		TouchableOpacity
 } from 'react-native'
 import CheckBox from 'react-native-check-box'
-
+var foodOption = '';
+var dietOption ='';
+var api = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&keyword=';
+var apiKey = '&key=AIzaSyC0tAbdVdZ34vHASbFae4A7Rz9amxih00Y';
+var hardCodedAPI = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyCQp15T05cCMaykrYdpa43QLDtdd1zDsGY';
 
 
 export default class FilterPage extends Component {
@@ -125,6 +129,7 @@ export default class FilterPage extends Component {
 		}
 
 		onPressButton = () => {
+      var searchUrl=api+foodOption+dietOption+apiKey;
 			const food = this.state.foodOptions[this.state.selectedFoodIndex];
 			var search = food
 			this.state.dietOptions.map((filter, index) => {
