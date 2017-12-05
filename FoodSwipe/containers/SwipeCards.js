@@ -5,9 +5,10 @@ import React, { Component } from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 
 import SwipeCards from 'react-native-swipe-cards';
+import NoMoreCards from '../components/NoMoreCards'
 // import RestaurantCard from '../components/RestrauntCard';
 
-class Card extends React.Component {
+class Card extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,20 +17,6 @@ class Card extends React.Component {
     return (
       <View style={[styles.card, {backgroundColor: this.props.backgroundColor}]}>
         <Text>{this.props.text}</Text>
-      </View>
-    )
-  }
-}
-
-class NoMoreCards extends Component {
-  // TODO: Go to matches; hide "return to cards" button
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <View>
-        <Text style={styles.noMoreCardsText}>No more cards</Text>
       </View>
     )
   }
@@ -84,7 +71,4 @@ const styles = StyleSheet.create({
 		marginHorizontal: 25,
 		marginBottom: 50,
   },
-  noMoreCardsText: {
-    fontSize: 22,
-  }
 })

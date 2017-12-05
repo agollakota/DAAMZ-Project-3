@@ -4,14 +4,12 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { NativeRouter, Route } from 'react-router-native'
 
-// import reducer from './reducers'
+import reducer from './reducers'
 
 // import FavoritesList from './containers/FavoritesList'
 import Header from './components/Header'
 import FilterPage from './components/FilterPage'
 import SwipeCards from './containers/SwipeCards'
-
-// import Styles from './style/Styles.js'
 
 const Cards = () => (
 	<View style={styles.cards}>
@@ -20,6 +18,8 @@ const Cards = () => (
 );
 
 export default class App extends Component{
+	// const store = createStore(reducer)
+  // <Provider store={store}>
 
   render() {
     return (
@@ -36,8 +36,6 @@ export default class App extends Component{
   }
 }
 // TODO: <Route path="/favorites" component={FavoritesList}/>
-// <Provider store={createStore(reducer)}>
-// </Provider>
 
 const styles = StyleSheet.create({
 	containers: {
