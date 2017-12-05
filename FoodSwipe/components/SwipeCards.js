@@ -4,8 +4,8 @@
 import React, { Component } from 'react';
 
 import SwipeCards from 'react-native-swipe-cards';
-import NoMoreCards from '../components/NoMoreCards'
-import RestaurantCard from '../components/RestaurantCard';
+import NoMoreCards from './NoMoreCards'
+import RestaurantCard from './RestaurantCard';
 
 export default class extends React.Component {
   constructor(props) {
@@ -29,8 +29,7 @@ export default class extends React.Component {
   }
 
   render() {
-    // If you want a stack of cards instead of one-per-one view, activate stack mode
-    // stack={true}
+
     return (
       <SwipeCards
         cards={this.state.cards}
