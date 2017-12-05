@@ -1,45 +1,26 @@
 import React from 'react';
-import { Text, View, Image, Linking } from 'react-native';
+import { Text, View } from 'react-native';
 import Card from './common/Card';
 import CardSection from './common/CardSection';
-import Button from './common/Button';
+
 
 const RestaurantDetail = ({ restaurant }) => {
-  const { title, artist, thumbnail_image, image, url } = restaurant;
+  const { name, rating } = restaurant;
   const {
-    thumbnailStyle,
+
     headerContentStyle,
-    thumbnailContainerStyle,
+
     headerTextStyle,
-    imageStyle
   } = styles;
 
   return (
     <Card>
       <CardSection>
-        <View style={thumbnailContainerStyle}>
-          <Image
-            style={thumbnailStyle}
-            source={{ uri: thumbnail_image }}
-          />
-        </View>
+
         <View style={headerContentStyle}>
-          <Text style={headerTextStyle}>{title}</Text>
-          <Text>{artist}</Text>
+          <Text style={headerTextStyle}>{name}</Text>
+          <Text>{rating}</Text>
         </View>
-      </CardSection>
-
-      <CardSection>
-        <Image
-          style={imageStyle}
-          source={{ uri: image }}
-        />
-      </CardSection>
-
-      <CardSection>
-        <Button onPress={() => Linking.openURL(url)}>
-          More Details
-        </Button>
       </CardSection>
     </Card>
   );
