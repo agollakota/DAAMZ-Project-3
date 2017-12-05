@@ -9,21 +9,19 @@ import {
 		TouchableOpacity
 } from 'react-native'
 import CheckBox from 'react-native-check-box'
+import Filters from '../constants/Filters.json'
 
 export default class FilterPage extends Component {
     constructor() {
       super();
+
 			this.state = {
-				foodOptions : [	"Chinese",
-												"Pizza",
-												"Fast Food"],
+				foodOptions : Filters.foodOptions,
 				selectedFoodIndex : 0,
-				dietOptions : [	{name : "Vegetarian", checked:false},
-												{name : "Vegan", checked:false},
-												{name : "Gluten Free", checked:false}],
+				dietOptions : Filters.dietOptions,
 				selectedDiet : [],
-				distance : 1600, // Meters; So default close to a mile
-				price : 5
+				distance : Filters.distance,
+				price : Filters.price
 			}
     }
 
@@ -101,7 +99,7 @@ export default class FilterPage extends Component {
 							{this.renderCheckBox()}
 						<Text style={styles.headers}>{"Distance: " + this.state.distance + "M"}</Text>
 							{this.renderDistanceSlider()}
-						<Text style={styles.headers}>{"Price: "+ (this.state.price)}</Text>
+						<Text style={styles.headers}>{"Max Price: "+ (this.state.price)}</Text>
 							{this.renderPriceOptions()}
 					</View>
 				)
