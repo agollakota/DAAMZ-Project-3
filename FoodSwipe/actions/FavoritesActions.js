@@ -1,7 +1,7 @@
 import{
 	ADD_FAVORITE,
 	REMOVE_FAVORITE
-} from './types';
+} from '../constants/types';
 
 export const addToFavorites = (restraunt) => {
 	return {

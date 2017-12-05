@@ -9,22 +9,19 @@ import {
 		TouchableOpacity
 } from 'react-native'
 import CheckBox from 'react-native-check-box'
-
+import Filters from '../constants/Filters.json'
 
 export default class FilterPage extends Component {
     constructor() {
       super();
+
 			this.state = {
-				foodOptions : [	"Chinese",
-												"Pizza",
-												"Fast Food"],
+				foodOptions : Filters.foodOptions,
 				selectedFoodIndex : 0,
-				dietOptions : [	{name : "Vegetarian", checked:false},
-												{name : "Vegan", checked:false},
-												{name : "Gluten Free", checked:false}],
+				dietOptions : Filters.dietOptions,
 				selectedDiet : [],
-				distance : 1600, // Meters; So default close to a mile
-				price : 5
+				distance : Filters.distance,
+				price : Filters.price
 			}
     }
 
@@ -102,47 +99,49 @@ export default class FilterPage extends Component {
 							{this.renderCheckBox()}
 						<Text style={styles.headers}>{"Distance: " + this.state.distance + "M"}</Text>
 							{this.renderDistanceSlider()}
-						<Text style={styles.headers}>{"Price: "+ (this.state.price)}</Text>
+						<Text style={styles.headers}>{"Max Price: "+ (this.state.price)}</Text>
 							{this.renderPriceOptions()}
-
 					</View>
 				)
         return views;
-
     }
 
 		renderButton(){
-			return(<View style={styles.containerButton}>
-				<Link to="/cards"
-					component={TouchableOpacity}
-					style={styles.button}
-					onPress={this.onPressButton}>
-						<Text style={styles.buttonText}>Search</Text>
-				</Link>
+      // TODO: Break into search button component
+			return(
+				<View style={styles.containerButton}>
+					<Link to="/cards"
+						component={TouchableOpacity}
+						style={styles.button}
+						onPress={this.onPressButton}>
+							<Text style={styles.buttonText}>Search</Text>
+					</Link>
 				</View>
 			)
 		}
 
 		onPressButton = () => {
+			// 1. Build basic type var
+			var query = 'type=restaurant&query='
+			// 2. Add other categories
+				// A. food type
 			const food = this.state.foodOptions[this.state.selectedFoodIndex];
-			var search = food
+				// B. diet
+			var foodDetails = food
 			this.state.dietOptions.map((filter, index) => {
-				if (filter.checked) {search += (', ' +  filter.name)}
+				if (filter.checked) {foodDetails += ('+' +  filter.name)}
 			})
+			query += foodDetails + "in+chicago" //"in+chicago" will be replaced by location data
+				// C. price
 			var price = this.state.price - 1
 			price = price < 1 ? price + 1: price;
-			const distance = this.state.distance;
-
-			var request = {
-				language: 'en',
-				query : search,
-				minPriceLevel : 1,
-				maxPriceLevel : price,
-				type : 'restaurant',
-				// location : userLocation,
-				radius : distance
-			}
-			console.log(request);
+			query += '&maxprice=' + price.toString();
+			// TODO:
+				// D. location and radius
+				// const location =42.3675294,-71.186966
+				// const radius = this.state.distance;
+				// '&location=' + location + '&radius=' + 10000
+			// store.dispatch(fetchRestraunts(query))
 		}
 
     render() {
