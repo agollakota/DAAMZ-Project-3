@@ -109,6 +109,7 @@ export default class FilterPage extends Component {
     }
 
 		renderButton(){
+      // TODO: Break into search button component
 			return(
 				<View style={styles.containerButton}>
 					<Link to="/cards"
