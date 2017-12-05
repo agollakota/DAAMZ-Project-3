@@ -1,7 +1,7 @@
 import {
 	ADD_FAVORITE,
 	REMOVE_FAVORITE
-} from '../actions/types';
+} from '../constants/types';
 
 const INITIAL_STATE = [];
 

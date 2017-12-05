@@ -3,7 +3,7 @@ import {
   FETCH_RESTRAUNTS_SUCCESS,
   FETCH_RESTRAUNTS_FAIL,
 	UPDATE_RESTRAUNTS
-} from '../actions/types';
+} from '../constants/types';
 
 const INITIAL_STATE = {
   query: {},
@@ -19,7 +19,7 @@ export default (state = INITIAL_STATE, action) => {
     case FETCH_RESTRAUNTS_SUCCESS:
       return { ...state, loading: false, restraunts: action.payload };
     case FETCH_RESTRAUNTS_FAIL:
-      return { ...state, ...INITIAL_STATE, error: 'Search Failed.'};
+      return { ...state, loading: false, query: {}, error: 'Search Failed.'};
 		case UPDATE_RESTRAUNTS:
 			return { ...state, restraunts: action.payload}
     default:

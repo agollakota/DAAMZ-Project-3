@@ -1,35 +1,22 @@
-import React from 'react';
-import { View } from 'react-native';
+import React from 'react'
+import {StyleSheet, Text, View} from 'react-native';
 
-var hardCodedAPI = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyCQp15T05cCMaykrYdpa43QLDtdd1zDsGY';
+const RestaurantCard = (restaurant) => (
+  <View style={[styles.card, {backgroundColor: restaurant.backgroundColor}]}>
+    <Text>{restaurant.text}</Text>
+  </View>
+)
 
-function setup(){
-  noCanvas();
-  
-}
-const Card = (props) => {
-  return (
-    <View style={styles.containerStyle}>
-      {props.children}
-    </View>
-  );
-};
+const styles = StyleSheet.create({
+  card: {
+    justifyContent: 'center',
+    alignItems: 'center',
+		flex: 1,
+		minWidth: 350,
+		marginTop: 75,
+		marginHorizontal: 25,
+		marginBottom: 50,
+  },
+})
 
-const styles = {
-  containerStyle: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: '#ddd',
-    borderBottomWidth: 0,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10
-  }
-};
-
-export { Card };
+export default RestaurantCard;
