@@ -3,7 +3,7 @@ import {
   FETCH_RESTRAUNTS_SUCCESS,
   FETCH_RESTRAUNTS_FAIL,
 	UPDATE_RESTRAUNTS
-} from '../actions/types';
+} from '../constants/types';
 
 const INITIAL_STATE = {
   query: {},

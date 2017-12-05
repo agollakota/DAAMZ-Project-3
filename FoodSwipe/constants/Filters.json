@@ -1,0 +1,12 @@
+{
+  foodOptions : [	"Chinese",
+                  "Pizza",
+                  "Fast Food"],
+  selectedFoodIndex : 0,
+  dietOptions : [	{name : "Vegetarian", checked:false},
+                  {name : "Vegan", checked:false},
+                  {name : "Gluten Free", checked:false}],
+  selectedDiet : [],
+  distance : 1600, // Meters; So default close to a mile
+  price : 5
+}
