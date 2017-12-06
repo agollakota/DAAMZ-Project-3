@@ -1,2 +1,6 @@
-export * from './FavoritesActions';
-export * from './RestrauntActions';
+export const selectLibrary = (libraryId) => {
+  return {
+    type: 'select_library',
+    payload: libraryId
+  };
+};

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ListView } from 'react-native';
 import { connect } from 'react-redux';
-import ListItem from './RestaurantItem';
+import RestaurantItem from './RestaurantItem';
 
 class RestaurantList extends Component {
   componentWillMount() {
@@ -13,7 +13,7 @@ class RestaurantList extends Component {
   }
 
   renderRow(library) {
-    return <ListItem library={library} />;
+    return <RestaurantItem library={library} />;
   }
 
   render() {
