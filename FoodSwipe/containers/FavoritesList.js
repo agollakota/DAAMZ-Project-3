@@ -18,10 +18,7 @@ export default class FavoritesList extends Component {
 		})
     return (
       <View>
-				<Text> Favorites </Text>
-				<Text> List </Text>
-				<Text> Favorites </Text>
-				<Text> List </Text>
+
       </View>
     )
   }

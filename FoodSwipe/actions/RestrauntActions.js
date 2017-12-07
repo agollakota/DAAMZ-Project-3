@@ -6,31 +6,26 @@ import{
 } from '../constants/types';
 
 export const fetchRestraunts =  (query) => {
-	return (dispatch) => {
-	  dispatch({ type: FETCH_RESTRAUNTS });
-		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
-		const PlacesRequest = 'https://maps.googleapis.com/maps/api/place/textsearch/json?' + query + APIkey;
-
-		fetch(PlacesRequest)
-			.then((response) => response.json())
-			.then(responseJson => {
-				console.log("Respose: " + responseJson.results);
-			})
-			.catch(error => {
-				console.log("Error: " + error);
-			});
-  //
-  //   firebase.auth().signInWithEmailAndPassword(email, password)
-  //     .then(user => loginUserSuccess(dispatch, user))
-  //     .catch((error) => {
-  //       console.log(error);
-  //
-  //       firebase.auth().createUserWithEmailAndPassword(email, password)
-  //         .then(user => loginUserSuccess(dispatch, user))
-  //         .catch(() => loginUserFail(dispatch));
-  //     });
-  // };
-};
+	return {
+		type: FETCH_RESTRAUNTS,
+		payload: query
+	};
+	// TODO: Add Thunk - Async middleware
+	// return (dispatch) => {
+	//   dispatch({ type: FETCH_RESTRAUNTS });
+	// 	const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
+	// 	const PlacesRequest = 'https://maps.googleapis.com/maps/api/place/textsearch/json?' + query + APIkey;
+	// 	console.log("Here:" + PlacesRequest);
+	// 	fetch(PlacesRequest)
+	// 		.then((response) => response.json())
+	// 		.then(responseJson => {
+	// 			console.log("Respose: " + responseJson.results);
+	// 		})
+	// 		.catch(error => {
+	// 			console.log("Error: " + error);
+	// 		});
+	// 	}
+}
 
 
 const fetchRestrauntsFail = (dispatch) => {

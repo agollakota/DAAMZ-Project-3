@@ -110,7 +110,7 @@ export default class FilterPage extends Component {
       // TODO: Break into search button component
 			return(
 				<View style={styles.containerButton}>
-					<Link to="/cards"
+					<Link to="/"
 						component={TouchableOpacity}
 						style={styles.button}
 						onPress={this.onPressButton}>
@@ -141,7 +141,7 @@ export default class FilterPage extends Component {
 				// const location =42.3675294,-71.186966
 				// const radius = this.state.distance;
 				// '&location=' + location + '&radius=' + 10000
-			// store.dispatch(fetchRestraunts(query))
+			this.props.searchForMatches(query);
 		}
 
     render() {
