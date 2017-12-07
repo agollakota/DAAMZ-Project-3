@@ -23,6 +23,7 @@ export default class App extends Component{
 					<View style={{flex: 1}}>
 						<Header headerText={"Food Swipe"}/>
 						<Route exact path="/" component={FilterContainer}/>
+						<Route path="/cards" component={CardsContainer}/>
 					</View>
 				</NativeRouter>
 			</Provider>
@@ -30,4 +31,4 @@ export default class App extends Component{
   }
 }
 // TODO: <Route path="/favorites" component={FavoritesList}/>
-//	<Route path="/cards" component={CardsContainer}/>
+//

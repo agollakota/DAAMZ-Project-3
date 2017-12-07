@@ -110,7 +110,7 @@ export default class FilterPage extends Component {
       // TODO: Break into search button component
 			return(
 				<View style={styles.containerButton}>
-					<Link to="/"
+					<Link to="/cards"
 						component={TouchableOpacity}
 						style={styles.button}
 						onPress={this.onPressButton}>
