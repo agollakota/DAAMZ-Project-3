@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { NativeRouter, Route } from 'react-router-native'
+import thunk from 'redux-thunk'
 
 import reducer from './reducers'
 
@@ -12,7 +13,7 @@ import CardsContainer from './containers/CardsContainer'
 // import FavoritesList from './containers/FavoritesList'
 
 // TODO: Add Thunk - Async middleware
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 export default class App extends Component{
   render() {
