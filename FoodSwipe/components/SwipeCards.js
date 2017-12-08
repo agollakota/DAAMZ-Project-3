@@ -33,7 +33,8 @@ export default class extends React.Component {
 	}
 
 	componentWillReceiveProps(nextProps){
-		this.setState({ cards: nextProps.search.restraunts })
+		var cards = nextProps.search.restraunts
+		this.setState({ cards: cards })
 	}
 
   render() {
