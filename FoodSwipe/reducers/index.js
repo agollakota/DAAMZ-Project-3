@@ -1,6 +1,6 @@
 /*
 State: {
-	restaurants: {
+	search: {
 		query: {},
 		error: '',
 		loading: false,
@@ -23,10 +23,10 @@ State: {
 import { combineReducers } from 'redux'
 import RestrauntReducer from './RestrauntReducer'
 import FavoritesReducer from './FavoritesReducer'
+import CardReducer from './CardReducer'
 
-const FoodSwipe = combineReducers({
-  search : RestrauntReducer,
-	favorites : FavoritesReducer
+export default combineReducers({
+  search: RestrauntReducer,
+	favorites: FavoritesReducer,
+	card: CardReducer
 });
-
-export default FoodSwipe;

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-native'
 import {
     StyleSheet,
@@ -141,7 +141,7 @@ export default class FilterPage extends Component {
 				// const location =42.3675294,-71.186966
 				// const radius = this.state.distance;
 				// '&location=' + location + '&radius=' + 10000
-			// store.dispatch(fetchRestraunts(query))
+			this.props.searchForMatches(query);
 		}
 
     render() {

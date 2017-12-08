@@ -1,21 +1,18 @@
 import React from 'react'
+import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { updateRestraunts } from '../actions'
+
 import SwipeCards from '../components/SwipeCards'
-import { View, StyleSheet } from 'react-native';
+
+const mapStateToProps = (state) => ({
+	search: state.search
+})
+
+const mapDispatchToProps = (dispatch) => ({
+	updateCards: bindActionCreators(updateRestraunts, dispatch)
+})
 
 
-const CardsContainer = () => (
-	<View style={styles.cards}>
-		<SwipeCards />
-	</View>
-);
 
-const styles = StyleSheet.create({
-	cards: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#F5FCFF',
-	}
-});
-
-export default CardsContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(SwipeCards);
