@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
-import axios from 'axios';
-import RestaurantDetail from './RestaurantDetail';
+import { ListView } from 'react-native';
+import { connect } from 'react-redux';
+import RestaurantItem from './RestaurantItem';
 
 class RestaurantList extends Component {
-  state = { restaurants: [] };
-
   componentWillMount() {
-    axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=AIzaSyCQp15T05cCMaykrYdpa43QLDtdd1zDsGY')
-      .then(response => this.setState({ restaurants: response.data }));
+    const ds = new ListView.DataSource({
+      rowHasChanged: (r1, r2) => r1 !== r2
+    });
+
+    this.dataSource = ds.cloneWithRows(this.props.libraries);
   }
 
-  renderRestaurants() {
-    return this.state.restaurants.map(restaurant =>
-      <RestaurantDetail key={restaurant.name} restaurant={restaurant} />
-    );
+  renderRow(library) {
+    return <RestaurantItem library={library} />;
   }
 
   render() {
-    console.log(this.state);
-
     return (
-      <ScrollView>
-        {this.renderRestaurants()}
-      </ScrollView>
+      <ListView
+        dataSource={this.dataSource}
+        renderRow={this.renderRow}
+      />
     );
   }
 }
 
-export default RestaurantList;
+const mapStateToProps = state => {
+  return { libraries: state.libraries };
+};
+
+export default connect(mapStateToProps)(RestaurantList);

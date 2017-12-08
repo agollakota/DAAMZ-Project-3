@@ -37,7 +37,7 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 			address: result.formatted_address,
 			rating: result.rating,
 			price: result.price_level,
-			photos: result.photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
+			photos: result.photos
 		};
 	})
 
