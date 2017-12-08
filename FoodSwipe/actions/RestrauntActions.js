@@ -5,10 +5,11 @@ import{
 	UPDATE_RESTRAUNTS
 } from '../constants/types';
 
+const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
+
 export const fetchRestraunts =  (query) => {
 	return (dispatch) => {
 	  dispatch({ type: FETCH_RESTRAUNTS, payload: query });
-		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
 		const PlacesRequest = 'https://maps.googleapis.com/maps/api/place/textsearch/json?' + query + APIkey;
 
 		fetch(PlacesRequest)
@@ -22,13 +23,22 @@ export const fetchRestraunts =  (query) => {
 		}
 }
 
-
 const fetchRestrauntsFail = (dispatch, error) => {
   dispatch({
 		type: FETCH_RESTRAUNTS_FAIL,
 		payload: error
 	});
 };
+
+const fetchPhoto = (photoReference) => {
+	const PhotoRef = '&photoreference=' + photoReference
+	const PhotoRequest = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400' + PhotoRef + APIkey
+	fetch(PhotoRequest)
+		.then((response) => response.blob())
+		.then(responseBlob) => {
+			fetchPhotos(dispatch, responseJson)
+		}
+}
 
 const fetchRestrauntsSuccess = (dispatch, response) => {
 	let restraunts = response.results.map((result, index) => {
@@ -37,9 +47,8 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 			address: result.formatted_address,
 			rating: result.rating,
 			price: result.price_level,
-			photos: result.photos
+			photo: result.photos[0].photo_reference
 		};
-	})
 
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,

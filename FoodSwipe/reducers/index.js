@@ -22,10 +22,9 @@ State: {
 
 import { combineReducers } from 'redux'
 import RestrauntReducer from './RestrauntReducer'
-import SelectionReducer from './SelectionReducer'
+import FavoritesReducer from './FavoritesReducer'
 
 export default combineReducers({
-  libraries: RestrauntReducer,
-selectedLibraryId: SelectionReducer
-
+  search: RestrauntReducer,
+	favorites: FavoritesReducer
 });
