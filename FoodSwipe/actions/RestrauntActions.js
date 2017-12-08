@@ -31,9 +31,19 @@ const fetchRestrauntsFail = (dispatch, error) => {
 };
 
 const fetchRestrauntsSuccess = (dispatch, response) => {
+	let restraunts = response.results.map((result, index) => {
+		return {
+			name: result.name,
+			address: result.formatted_address,
+			rating: result.rating,
+			price: result.price_level,
+			photos: result.photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
+		};
+	})
+
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,
-    payload: response.results
+    payload: restraunts
   });
 };
 

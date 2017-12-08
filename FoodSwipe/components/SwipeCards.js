@@ -6,6 +6,7 @@ import { View, StyleSheet } from 'react-native'
 import SwipeCards from 'react-native-swipe-cards';
 import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
+import Spinner from './common/Spinner'
 
 export default class extends React.Component {
   constructor(props) {
@@ -24,12 +25,21 @@ export default class extends React.Component {
     console.log(`Nope for ${card.text}`)
   }
 
-// TODO: Render Spinner until there are results
+	setCards(restraunts){
+
+		console.log("Cards");
+
+		// TODO: setState to cards
+	}
+
+	componentWillReceiveProps(nextProps){
+		this.setState({ cards: nextProps.search.restraunts })
+	}
 
   render() {
 		if (this.props.search.loading) {
-			console.log("Loading");
-			return (<NoMoreCards />);
+			console.log("loading");
+			return (<Spinner />);
 		}
 		else {
 			return (

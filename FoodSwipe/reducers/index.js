@@ -1,6 +1,6 @@
 /*
 State: {
-	restaurants: {
+	search: {
 		query: {},
 		error: '',
 		loading: false,
