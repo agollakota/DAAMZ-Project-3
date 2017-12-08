@@ -33,13 +33,8 @@ class RestaurantCard extends React.Component {
 			const PhotoRequest = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400' + PhotoRef + APIkey
 
 			RNFetchBlob
-				.config({
-					fileCache : true,
-					// by adding this option, the temp files will have a file extension
-					appendExt : 'png'
-				})
 				.fetch('GET', PhotoRequest)
-				.then((res) => {console.log(res);
+				.then((res) => {
 					this.loadPhoto(res.info())
 				})
 				.catch(error => {
