@@ -25,13 +25,6 @@ export default class extends React.Component {
     console.log(`Nope for ${card.text}`)
   }
 
-	setCards(restraunts){
-
-		console.log("Cards");
-
-		// TODO: setState to cards
-	}
-
 	componentWillReceiveProps(nextProps){
 		var cards = nextProps.search.restraunts
 		this.setState({ cards: cards })
@@ -39,7 +32,6 @@ export default class extends React.Component {
 
   render() {
 		if (this.props.search.loading) {
-			console.log("loading");
 			return (<Spinner />);
 		}
 		else {
