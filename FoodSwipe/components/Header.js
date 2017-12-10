@@ -28,8 +28,8 @@ const HeaderComp = (props) => {
     <Header
 
     statusBarProps={{ barStyle: 'light-content' }}
-    centerComponent={{ text: 'Food Swipe', style: { color: '#fff'} }}
-    outerContainerStyles={{ backgroundColor: '#3D6DCC' }}
+    centerComponent={{ text: 'Food Swipe', style: { color: '#fff' }, fontWeight: 'bold' }}
+    outerContainerStyles={{ backgroundColor: 'red' }}
     innerContainerStyles={{ justifyContent: 'space-around',}}
 
     />
@@ -47,7 +47,7 @@ const styles = {
     backgroundColor: '#F8F8F3',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 60,
+    height: 50,
     paddingTop: 5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },

@@ -25,7 +25,7 @@ export default class App extends Component{
 				<NativeRouter>
 					<View style={{flex: 1}}>
 
-						<Header headerText={"Food Swipe"}/>
+						<Header/>
                 <Navigator/>
 
 					</View>
