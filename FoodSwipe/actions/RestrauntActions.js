@@ -26,7 +26,7 @@ export const fetchRestraunts =  (query) => {
 }
 
 const fetchRestrauntsSuccess = (dispatch, response) => {
-	let restraunts = response.results.map((result, index) => {
+	let results = response.results.map((result, index) => {
 		// TODO: Remove restraunts without a photo
 		return {
 			name: result.name,
@@ -35,6 +35,32 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 			price: result.price_level,
 			photo: result.photos
 		};
+	})
+
+	// TODO: Use filter method to remove undefined
+	let restraunts = results.filter( (result) => {
+		if (typeof restraunt.photo != 'undefined') {
+			return result
+		}
+	});
+
+	// if (typeof ) {
+	// 	// search for photo
+	// }
+
+	restraunts.map((restraunt, index) => {
+		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
+		const PhotoRef = '&photoreference=' + restraunt.photo[0].photo_reference
+		const PhotoRequest = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400' + PhotoRef + APIkey
+		RNFetchBlob
+			.fetch('GET', PhotoRequest)
+			.then((res) => {
+				restraunts[index].photo = res.info()
+			})
+			.catch(error => {
+				console.log("Caught Error:");
+				console.error(error);
+			});
 	})
 
 	dispatch({
