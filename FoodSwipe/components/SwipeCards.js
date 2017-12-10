@@ -3,24 +3,18 @@
 
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native'
-
 import SwipeCards from 'react-native-swipe-cards';
 import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
 import Spinner from './common/Spinner'
 
-
-
-
 export default class extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
       cards: []
     };
   }
-
 
   handleYup (card) {
 		// TODO: Add to favorites

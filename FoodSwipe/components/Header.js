@@ -28,7 +28,7 @@ const HeaderComp = (props) => {
     <Header
 
     statusBarProps={{ barStyle: 'light-content' }}
-    centerComponent={{ text: 'Food Swipe', style: { color: '#fff' }, fontWeight: 'bold' }}
+    centerComponent={{ text: 'Food Swipe', style: { color: '#fff' } }}
     outerContainerStyles={{ backgroundColor: 'red' }}
     innerContainerStyles={{ justifyContent: 'space-around',}}
 
