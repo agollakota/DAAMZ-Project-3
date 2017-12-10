@@ -7,18 +7,39 @@ Will contain buttons to link to favorites list,
 
 import React from 'react';
 import { Text, View } from 'react-native';
+import { TabNavigator } from 'react-navigation';
+import { Button, Header } from 'react-native-elements'
+import FilterPage from './FilterPage';
+import SwipeCards from './SwipeCards'
+
+
+
+
 
 //make a component
 //name same as filename
 
-const Header = (props) => {
+const HeaderComp = (props) => {
+
+
   const { textStyle, viewStyle } = styles;
   return (
-    <View style={viewStyle}>
-    	<Text style={textStyle}>{props.headerText}</Text>
-    </View>
+
+    <Header
+
+    statusBarProps={{ barStyle: 'light-content' }}
+    centerComponent={{ text: 'Food Swipe', style: { color: '#fff'} }}
+    outerContainerStyles={{ backgroundColor: '#3D6DCC' }}
+    innerContainerStyles={{ justifyContent: 'space-around',}}
+
+    />
+
+
   );
+
 };
+
+
 
 const styles = {
 
@@ -54,4 +75,4 @@ const styles = {
 //only the root compnent uses AppRegistry
 //here we have to export statements
 //make Header component to other parts of the App
-export default Header;
+export default HeaderComp;
