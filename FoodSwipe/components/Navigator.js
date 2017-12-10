@@ -19,17 +19,35 @@ const Routes = StackNavigator({
   Cards: {
     screen: SwipeCards,
     navigationOptions: {
-      header: myNavOptions
+      header: myNavOptionsCards
     }
   },
   Favorites: {
-    screen: FavoritesList
+    screen: FavoritesList,
+    navigationOptions: {
+      header: myNavOptionsFavorites
+    }
   }
 });
 
+const myNavOptionsFavorites = {
+  headerStyle: {
+    backgroundColor: "#FFFFFF"
+  },
+  headerLeft: (
+    <Icon
+      onPress={() => this.navigate("Cards")}
+      name="comments-o"
+      size={22}
+      color="#b6b6b6"
+      style={{ marginLeft: 8 }}
+    />
+  ),
+};
 
 
-const myNavOptions = {
+
+const myNavOptionsCards = {
   headerStyle: {
     backgroundColor: "#FFFFFF"
   },
@@ -51,7 +69,6 @@ const myNavOptions = {
       style={{ marginLeft: 8 }}
     />
   ),
-  title: "Coin Deck"
 };
 
 
