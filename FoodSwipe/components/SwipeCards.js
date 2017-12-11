@@ -44,7 +44,7 @@ export default class extends React.Component {
         <RouterButton
     to="/"
     title="Back"
-    color="#841584"  />
+    color="#581845"  />
 
 		      <SwipeCards
 		        cards={this.state.cards}
@@ -56,9 +56,9 @@ export default class extends React.Component {
 		        handleNope={this.handleNope}
 		      />
           <RouterButton
-      to="/FavoritesList"
+      to="/favorites"
       title="Done"
-      color="#841584"
+      color="#581845"
       accessibilityLabel="Click to navigate to settings"
     />
 

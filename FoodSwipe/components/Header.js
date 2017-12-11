@@ -7,7 +7,6 @@ Will contain buttons to link to favorites list,
 
 import React from 'react';
 import { Text, View } from 'react-native';
-import { TabNavigator } from 'react-navigation';
 import { Button, Header } from 'react-native-elements'
 import FilterPage from './FilterPage';
 import SwipeCards from './SwipeCards'
@@ -26,10 +25,9 @@ const HeaderComp = (props) => {
   return (
 
     <Header
-     leftComponent={{ icon: 'menu' }}
     statusBarProps={{ barStyle: 'light-content' }}
-    centerComponent={{ text: 'Food Swipe', style: { color: '#fff' } }}
-    outerContainerStyles={{ backgroundColor: 'red' }}
+    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
+    outerContainerStyles={{ backgroundColor: '#C70039' }}
     innerContainerStyles={{ justifyContent: 'space-around',}}
 
 
@@ -40,9 +38,13 @@ const HeaderComp = (props) => {
 
 
 
+
   );
 
 };
+
+
+
 
 //import custom comp wrap it in link... just make button.
 
