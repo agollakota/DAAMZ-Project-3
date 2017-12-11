@@ -9,7 +9,19 @@ import Stack from 'react-router-native-stack';
 import SwipeCards from 'react-native-swipe-cards';
 import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
+import RestaurantDetail from './RestaurantCard';
 import Spinner from './common/Spinner'
+
+var favoriteslist = [
+    { name: '', rating: '' },
+    { name: '', rating: '' },
+    { name: '', rating: '' },
+    { name: '', rating: '' },
+    { name: '', rating: '' },
+    { name: '', rating: '' },
+    { name: '', rating: '' },
+];
+global.favorites = favoriteslist;
 
 export default class extends React.Component {
   constructor(props) {
@@ -22,6 +34,8 @@ export default class extends React.Component {
   handleYup (card) {
 		// TODO: Add to favorites
     console.log(`Yup for ${card.text}`)
+    console.log('HEY ' , cardInfo.cardName);
+    favoriteslist.push(cardInfo.cardName, cardInfo.cardRating);
   }
   handleNope (card) {
 		// TODO: Remove from matches?

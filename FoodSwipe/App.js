@@ -12,7 +12,7 @@ import Header from './components/Header'
 import FilterContainer from './containers/FilterContainer'
 import CardsContainer from './containers/CardsContainer'
 
-import FavoritesList from './containers/FavoritesList';
+import FavoritesList from './components/FavoritesList';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
