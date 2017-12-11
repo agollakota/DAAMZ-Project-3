@@ -2,7 +2,10 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native'
+import RouterButton from 'react-router-native-button';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { NativeRouter, Route, Link } from 'react-router-native';
+import Stack from 'react-router-native-stack';
 import SwipeCards from 'react-native-swipe-cards';
 import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
@@ -37,6 +40,12 @@ export default class extends React.Component {
 		else {
 			return (
 				<View style={styles.cards}>
+
+        <RouterButton
+    to="/"
+    title="Back"
+    color="#841584"  />
+
 		      <SwipeCards
 		        cards={this.state.cards}
 		        renderCard={(cardData) => <RestaurantCard {...cardData} />}
@@ -46,6 +55,13 @@ export default class extends React.Component {
 		        handleYup={this.handleYup}
 		        handleNope={this.handleNope}
 		      />
+          <RouterButton
+      to="/FavoritesList"
+      title="Done"
+      color="#841584"
+      accessibilityLabel="Click to navigate to settings"
+    />
+
 				</View>
 	    )
 		}
@@ -54,6 +70,26 @@ export default class extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  button: {
+    flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#007aff',
+    marginLeft: 25,
+    marginRight: 25,
+
+  },
+  buttonText:{
+    alignSelf: 'center',
+    color: '#007aff',
+    fontSize: 16,
+    fontWeight: '600',
+    paddingTop: 10,
+    paddingBottom: 10
+  },
+
 	cards: {
 		flex: 1,
 		justifyContent: 'center',

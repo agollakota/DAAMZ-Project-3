@@ -26,20 +26,25 @@ const HeaderComp = (props) => {
   return (
 
     <Header
-
+     leftComponent={{ icon: 'menu' }}
     statusBarProps={{ barStyle: 'light-content' }}
     centerComponent={{ text: 'Food Swipe', style: { color: '#fff' } }}
     outerContainerStyles={{ backgroundColor: 'red' }}
     innerContainerStyles={{ justifyContent: 'space-around',}}
 
+
+    //this.props.navigation.path
     />
+
+
+
 
 
   );
 
 };
 
-
+//import custom comp wrap it in link... just make button.
 
 const styles = {
 
