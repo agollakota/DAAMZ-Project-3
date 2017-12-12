@@ -7,13 +7,8 @@ Will contain buttons to link to favorites list,
 
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Button, Header } from 'react-native-elements'
-import FilterPage from './FilterPage';
-import SwipeCards from './SwipeCards'
-
-
-
-
+import { Header } from 'react-native-elements'
+import RouterButton from 'react-router-native-button';
 
 //make a component
 //name same as filename
@@ -21,21 +16,31 @@ import SwipeCards from './SwipeCards'
 const HeaderComp = (props) => {
 
 
-  const { textStyle, viewStyle } = styles;
   return (
-
+<View>
     <Header
     statusBarProps={{ barStyle: 'light-content' }}
+    leftComponent = {    <RouterButton
+    to="/favorites"
+    title="Back"
+    color="#581845"
+    accessibilityLabel="Click to navigate to settings"
+    />}
     centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
     outerContainerStyles={{ backgroundColor: '#C70039' }}
-    innerContainerStyles={{ justifyContent: 'space-around',}}
-
-
+    innerContainerStyles={{ justifyContent: 'space-around',} }
+    rightComponent = {    <RouterButton
+    to="/favorites"
+    title="Favorites"
+    color="#581845"
+    accessibilityLabel="Click to navigate to settings"
+    />}
     //this.props.navigation.path
     />
 
 
 
+</View>
 
 
 

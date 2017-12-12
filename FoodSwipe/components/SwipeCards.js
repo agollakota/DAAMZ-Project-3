@@ -49,12 +49,6 @@ export default class extends React.Component {
 		else {
 			return (
 				<View style={styles.cards}>
-
-        <RouterButton
-    to="/"
-    title="Back"
-    color="#581845"  />
-
 		      <SwipeCards
 		        cards={this.state.cards}
 		        renderCard={(cardData) => <RestaurantCard {...cardData} />}
@@ -64,12 +58,7 @@ export default class extends React.Component {
 		        handleYup={this.handleYup}
 		        handleNope={this.handleNope}
 		      />
-          <RouterButton
-      to="/favorites"
-      title="Done"
-      color="#581845"
-      accessibilityLabel="Click to navigate to settings"
-    />
+
 
 				</View>
 	    )

@@ -14,10 +14,7 @@ import { List, ListItem, Button, Icon } from 'react-native-elements'
 
 
         <View style={styles.container}>
-        <RouterButton
-    to="/cards"
-    title="Back"
-    color="#841584"/>
+  
 
     <List containerStyle={{marginBottom: 20}}>
     {
