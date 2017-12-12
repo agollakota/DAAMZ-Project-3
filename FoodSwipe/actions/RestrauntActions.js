@@ -15,8 +15,9 @@ export const fetchRestraunts = (query) => {
 
 		fetch(PlacesRequest)
 			.then((response) => response.json())
-			.then(responseJson => {
-				fetchRestrauntsSuccess(dispatch, responseJson);
+			.then(responseJson => setRestrauntData(responseJson))
+			.then( (restraunts) => {
+				fetchRestrauntsSuccess(dispatch, restraunts)
 			})
 			.catch(error => {
 				dispatch({
@@ -28,40 +29,39 @@ export const fetchRestraunts = (query) => {
 }
 
 const setRestrauntData = (response) => {
-	let restraunts = response.results.map((result, index) => {
+	let restraunts = response.results.map( async (result, index) => {
 		return {
 			name: result.name,
 			address: result.formatted_address,
 			rating: result.rating,
 			price: result.price_level,
-			photo: result.photos
+			photo: await getPhoto(result.photos[0].photo_reference)
 		};
 	})
+	return Promise.all(restraunts)
+}
+const getPhoto = (photo) => {
 
-	restraunts.map((restraunt, index) => {
 		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
-		const PhotoRef = '&photoreference=' + restraunt.photo[0].photo_reference
+		const PhotoRef = '&photoreference=' + photo
 		const PhotoRequest = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400' + PhotoRef + APIkey
-		RNFetchBlob
+
+		return RNFetchBlob
 			.fetch('GET', PhotoRequest)
 			.then((res) => {
-				console.log(res);
-				restraunts[index].photo = res;
+				return res.info().redirects[1]
 			})
 			.catch(error => {
 				console.log("Caught Error:");
 				console.error(error);
 			});
-	})
+		}
 
-	return restraunts
-}
 
 const fetchRestrauntsSuccess = async (dispatch, response) => {
-	const restraunts = await setRestrauntData(response)
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,
-    payload: restraunts
+    payload: response
   });
 };
 
