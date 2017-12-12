@@ -35,7 +35,6 @@ export default class extends React.Component {
 			return (<Spinner />);
 		}
 		else {
-			// console.log(this.props);
 			return (
 				<View style={styles.cards}>
 		      <SwipeCards

@@ -2,7 +2,10 @@ import{
 	FETCH_RESTRAUNTS,
 	FETCH_RESTRAUNTS_SUCCESS,
 	FETCH_RESTRAUNTS_FAIL,
-	UPDATE_RESTRAUNTS
+	UPDATE_RESTRAUNTS,
+	API_KEY,
+	PLACES_REQUEST,
+	PHOTO_REQUEST
 } from '../constants/types';
 import RNFetchBlob from 'react-native-fetch-blob'
 
@@ -10,10 +13,10 @@ import RNFetchBlob from 'react-native-fetch-blob'
 export const fetchRestraunts = (query) => {
 	return (dispatch) => {
 	  dispatch({ type: FETCH_RESTRAUNTS, payload: query });
-		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
-		const PlacesRequest = 'https://maps.googleapis.com/maps/api/place/textsearch/json?' + query + APIkey;
 
-		fetch(PlacesRequest)
+		const request = PLACES_REQUEST + query + API_KEY;
+
+		fetch(request)
 			.then((response) => response.json())
 			.then(responseJson => setRestrauntData(responseJson))
 			.then( (restraunts) => {
@@ -29,6 +32,7 @@ export const fetchRestraunts = (query) => {
 }
 
 const setRestrauntData = (response) => {
+
 	let restraunts = response.results.map( async (result, index) => {
 		return {
 			name: result.name,
@@ -44,10 +48,10 @@ const getPhoto = (photo) => {
 
 		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
 		const PhotoRef = '&photoreference=' + photo
-		const PhotoRequest = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400' + PhotoRef + APIkey
+		const request = PHOTO_REQUEST + PhotoRef + API_KEY
 
 		return RNFetchBlob
-			.fetch('GET', PhotoRequest)
+			.fetch('GET', request)
 			.then((res) => {
 				return res.info().redirects[1]
 			})

@@ -10,48 +10,11 @@ import Spinner from './common/Spinner'
 class RestaurantCard extends React.Component {
 	constructor(props) {
 		super(props)
-		// this.state = {
-		// 	photo: '',
-		// 	loading: true
-		// }
 	}
-
-	// componentDidMount(){
-	// 	this.fetchPhoto(this.props.photo;
-	// }
-  //
-	// componentWillReceiveProps(nextProps){
-	// 	this.fetchPhoto(this.props.photo[0].photo_reference)
-	// }
-  //
-	// fetchPhoto(photo){
-	// 	this.setState({loading:true})
-	// 	if (photo) {
-  //
-  //
-  //
-	// 	}
-	// }
-  //
-	// loadPhoto(photoInfo){
-	// 	var uri = photoInfo.redirects[1]
-	// 	this.setState({
-	// 		photo: uri,
-	// 		loading: false
-	// 	})
-	// }
-
-	// renderPhoto(photo){
-	// 	//'https://lh3.googleusercontent.com/p/AF1QipM6z4oj-tpHbBRT-2GCMXhPcmm8rhfjnblihu27=s1600-w400'
-	// 	return(
-	// 		// <Image
-	// 		// style={{width: 300, height: 400}}
-	// 		// source={{uri: photo }}/>
-	// 	)
-	// }
 
 	render(){
 		const restraunt = this.props
+		console.log(restraunt);
 		return(
 		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>
 			 <Text>{restraunt.name}</Text>
