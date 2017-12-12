@@ -6,7 +6,7 @@ import{
 	API_KEY,
 	PLACES_REQUEST,
 	PHOTO_REQUEST
-} from '../constants/types';
+} from '../constants/constants';
 import RNFetchBlob from 'react-native-fetch-blob'
 
 
