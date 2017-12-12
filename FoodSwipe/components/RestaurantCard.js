@@ -86,6 +86,7 @@ getCardName(){
 		cardName='';
 		const restraunt = this.props
 		cardInfo.cardName = this.props.name;
+		cardInfo.cardRating = this.props.rating;
 		console.log(cardName);
 		return(
 		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>

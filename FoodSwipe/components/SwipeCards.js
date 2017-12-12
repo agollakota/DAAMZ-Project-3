@@ -12,16 +12,9 @@ import RestaurantCard from './RestaurantCard';
 import RestaurantDetail from './RestaurantCard';
 import Spinner from './common/Spinner'
 
-var favoriteslist = [
-    { name: '', rating: '' },
-    { name: '', rating: '' },
-    { name: '', rating: '' },
-    { name: '', rating: '' },
-    { name: '', rating: '' },
-    { name: '', rating: '' },
-    { name: '', rating: '' },
+global.favoriteslist = [
 ];
-global.favorites = favoriteslist;
+
 
 export default class extends React.Component {
   constructor(props) {
@@ -35,7 +28,9 @@ export default class extends React.Component {
 		// TODO: Add to favorites
     console.log(`Yup for ${card.text}`)
     console.log('HEY ' , cardInfo.cardName);
-    favoriteslist.push(cardInfo.cardName, cardInfo.cardRating);
+    favoriteslist.push({name: cardInfo.cardName, rating: cardInfo.cardRating});
+    console.log('HEOOY ' , favoriteslist[0]);
+
   }
   handleNope (card) {
 		// TODO: Remove from matches?

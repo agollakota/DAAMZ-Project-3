@@ -6,6 +6,7 @@ import{
 } from '../constants/types';
 
 export const fetchRestraunts =  (query) => {
+	var name ="";
 	return (dispatch) => {
 	  dispatch({ type: FETCH_RESTRAUNTS, payload: query });
 		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
@@ -26,6 +27,8 @@ export const fetchRestraunts =  (query) => {
 }
 
 const fetchRestrauntsSuccess = (dispatch, response) => {
+
+
 	let restraunts = response.results.map((result, index) => {
 		// TODO: Remove restraunts without a photo
 		return {

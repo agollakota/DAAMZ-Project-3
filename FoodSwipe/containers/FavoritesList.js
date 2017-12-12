@@ -4,33 +4,26 @@ import { List, ListItem } from 'react-native-elements'
   import { FlatList, StyleSheet, Text, View } from 'react-native';
   import SwipeCards from '../components/SwipeCards'
 
-
+list=favoriteslist
   export default class FlatListBasics extends Component {
-
     render() {
-console.log(favoriteslist[0].name);
       return (
-
-
         <View style={styles.container}>
         <RouterButton
     to="/cards"
     title="Back"
     color="#841584"/>
-
-    <List containerStyle={{marginBottom: 20}}>
-    {
-      favoriteslist.map((l, i) => (
-        <ListItem
-          subtitle={l.rating}
-          key={i}
-          title={l.name}
-        />
-      ))
-    }
-  </List>
-
-
+    <List>
+      {
+        favoriteslist.map((item, i) => (
+          <ListItem
+            key={i}
+            title={item.title}
+            leftIcon={{name: item.icon}}
+          />
+        ))
+      }
+    </List>
         </View>
       );
     }
