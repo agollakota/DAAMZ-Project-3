@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import { List, ListItem } from 'react-native-elements'
   import RouterButton from 'react-router-native-button';
   import { FlatList, StyleSheet, Text, View } from 'react-native';
-  import SwipeCards from '../components/SwipeCards'
+  import Communications from 'react-native-communications';
+
+
 
 
   export default class FlatListBasics extends Component {
@@ -25,6 +27,8 @@ console.log(favoriteslist[0].name);
           subtitle={l.rating}
           key={i}
           title={l.name}
+          //onPress={Communications.phonecall('0123456789', true)}
+          leftIcon={{name: 'av-timer'}}
         />
       ))
     }
