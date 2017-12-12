@@ -46,6 +46,10 @@ const setRestrauntData = (response) => {
 }
 const getPhoto = (photo) => {
 
+		if (typeof photo === 'undefined') {
+			return 'null'
+		}
+
 		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
 		const PhotoRef = '&photoreference=' + photo
 		const request = PHOTO_REQUEST + PhotoRef + API_KEY
@@ -63,9 +67,12 @@ const getPhoto = (photo) => {
 
 
 const fetchRestrauntsSuccess = async (dispatch, response) => {
+
+	let restraunts = response.filter(response => response.photo != 'null')
+
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,
-    payload: response
+    payload: restraunts
   });
 };
 
