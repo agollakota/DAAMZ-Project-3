@@ -4,8 +4,10 @@ import{
 	FETCH_RESTRAUNTS_FAIL,
 	UPDATE_RESTRAUNTS
 } from '../constants/types';
+import RNFetchBlob from 'react-native-fetch-blob'
 
-export const fetchRestraunts =  (query) => {
+
+export const fetchRestraunts = (query) => {
 	return (dispatch) => {
 	  dispatch({ type: FETCH_RESTRAUNTS, payload: query });
 		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
@@ -25,9 +27,8 @@ export const fetchRestraunts =  (query) => {
 		}
 }
 
-const fetchRestrauntsSuccess = (dispatch, response) => {
-	let results = response.results.map((result, index) => {
-		// TODO: Remove restraunts without a photo
+const setRestrauntData = (response) => {
+	let restraunts = response.results.map((result, index) => {
 		return {
 			name: result.name,
 			address: result.formatted_address,
@@ -37,17 +38,6 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 		};
 	})
 
-	// TODO: Use filter method to remove undefined
-	let restraunts = results.filter( (result) => {
-		if (typeof restraunt.photo != 'undefined') {
-			return result
-		}
-	});
-
-	// if (typeof ) {
-	// 	// search for photo
-	// }
-
 	restraunts.map((restraunt, index) => {
 		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
 		const PhotoRef = '&photoreference=' + restraunt.photo[0].photo_reference
@@ -55,7 +45,8 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 		RNFetchBlob
 			.fetch('GET', PhotoRequest)
 			.then((res) => {
-				restraunts[index].photo = res.info()
+				console.log(res);
+				restraunts[index].photo = res;
 			})
 			.catch(error => {
 				console.log("Caught Error:");
@@ -63,6 +54,11 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 			});
 	})
 
+	return restraunts
+}
+
+const fetchRestrauntsSuccess = async (dispatch, response) => {
+	const restraunts = await setRestrauntData(response)
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,
     payload: restraunts

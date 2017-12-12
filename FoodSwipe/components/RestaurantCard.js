@@ -6,7 +6,6 @@ import {
 	Image
 } from 'react-native';
 import Spinner from './common/Spinner'
-import RNFetchBlob from 'react-native-fetch-blob'
 
 class RestaurantCard extends React.Component {
 	constructor(props) {
@@ -42,20 +41,19 @@ class RestaurantCard extends React.Component {
 	// 	})
 	// }
 
-	renderPhoto(photo){
-		//'https://lh3.googleusercontent.com/p/AF1QipM6z4oj-tpHbBRT-2GCMXhPcmm8rhfjnblihu27=s1600-w400'
-		return(
-			<Image
-			style={{width: 300, height: 400}}
-			source={{uri: photo }}/>
-		)
-	}
+	// renderPhoto(photo){
+	// 	//'https://lh3.googleusercontent.com/p/AF1QipM6z4oj-tpHbBRT-2GCMXhPcmm8rhfjnblihu27=s1600-w400'
+	// 	return(
+	// 		// <Image
+	// 		// style={{width: 300, height: 400}}
+	// 		// source={{uri: photo }}/>
+	// 	)
+	// }
 
 	render(){
 		const restraunt = this.props
 		return(
 		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>
-			{this.renderPhoto(restraunt.photo)}
 			 <Text>{restraunt.name}</Text>
 			 <Text>{restraunt.rating}</Text>
 		 </View>)
