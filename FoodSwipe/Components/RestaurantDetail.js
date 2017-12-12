@@ -16,6 +16,9 @@ const RestaurantDetail = ({ restaurant }) => {
   return (
     <Card>
       <CardSection>
+      //return the restaurant calls here? call the api
+      
+
 
         <View style={headerContentStyle}>
           <Text style={headerTextStyle}>{name}</Text>
