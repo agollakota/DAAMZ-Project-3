@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Spinner from './common/Spinner'
 
-class RestaurantCard extends React.Component {
+class RestrauntCard extends React.Component {
 	constructor(props) {
 		super(props)
 	}
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default RestaurantCard;
+export default RestrauntCard;
