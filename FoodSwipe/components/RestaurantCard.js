@@ -12,7 +12,8 @@ import RNFetchBlob from 'react-native-fetch-blob'
 
 var cardInfo={
 	cardName:"",
-	cardRating:""
+	cardRating:"",
+	cardAddress:""
 };
 global.cardInfo = cardInfo;
 
@@ -87,6 +88,10 @@ getCardName(){
 		const restraunt = this.props
 		cardInfo.cardName = this.props.name;
 		cardInfo.cardRating = this.props.rating;
+			var str = this.props.address.replace(/\,/g,"");
+		cardInfo.cardAddress = str.split(' ').join('+');
+
+
 		console.log(cardName);
 		return(
 		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>

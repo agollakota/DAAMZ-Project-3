@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { List, ListItem } from 'react-native-elements'
+import { List, ListItem, Button, Icon } from 'react-native-elements'
   import RouterButton from 'react-router-native-button';
   import { FlatList, StyleSheet, Text, View } from 'react-native';
   import Communications from 'react-native-communications';
@@ -10,7 +10,6 @@ import { List, ListItem } from 'react-native-elements'
   export default class FlatListBasics extends Component {
 
     render() {
-console.log(favoriteslist[0].name);
       return (
 
 
@@ -28,7 +27,16 @@ console.log(favoriteslist[0].name);
           key={i}
           title={l.name}
           //onPress={Communications.phonecall('0123456789', true)}
-          leftIcon={{name: 'av-timer'}}
+          leftIcon={
+            <Icon
+raised
+name='map'
+type='font-awesome'
+color='#f50'
+onPress={() =>Communications.web('https://www.google.com/maps/place/'+l.address,true)} />
+
+
+          }
         />
       ))
     }

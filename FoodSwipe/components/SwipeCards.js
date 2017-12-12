@@ -28,8 +28,8 @@ export default class extends React.Component {
 		// TODO: Add to favorites
     console.log(`Yup for ${card.text}`)
     console.log('HEY ' , cardInfo.cardName);
-    favoriteslist.push({name: cardInfo.cardName, rating: cardInfo.cardRating});
-    console.log('HEOOY ' , favoriteslist[0]);
+    favoriteslist.push({name: cardInfo.cardName, rating: cardInfo.cardRating, address: cardInfo.cardAddress});
+    console.log('HEOOY ' ,cardInfo.phoneNumber);
 
   }
   handleNope (card) {
