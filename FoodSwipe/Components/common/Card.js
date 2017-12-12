@@ -1,15 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const Card = (props) => {
+const Card = (props) => { 
   return (
-    <View style={styles.containerStyle}>
+    <View style={styles.containerStyle}> //controls style/layout
       {props.children}
     </View>
   );
 };
 
-const styles = {
+const styles = { //Setting up the style for what the cards should look like
   containerStyle: {
     borderWidth: 1,
     borderRadius: 2,
