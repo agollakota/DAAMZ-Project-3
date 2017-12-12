@@ -1,8 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {
+	StyleSheet,
+	Text,
+	View,
+	Image
+} from 'react-native';
 import Card from './common/Card';
 import CardSection from './common/CardSection';
-
+import {restaurants} from './actions/RestrauntActions';
 
 const RestaurantDetail = ({ restaurant }) => {
   const { name, rating } = restaurant;
@@ -16,10 +21,12 @@ const RestaurantDetail = ({ restaurant }) => {
   return (
     <Card>
       <CardSection>
-
+        <Image style = {styles.photo}</Image>
         <View style={headerContentStyle}>
           <Text style={headerTextStyle}>{name}</Text>
           <Text>{rating}</Text>
+          <Text>{price}</Text>
+          <Text>{address}</Text>
         </View>
       </CardSection>
     </Card>

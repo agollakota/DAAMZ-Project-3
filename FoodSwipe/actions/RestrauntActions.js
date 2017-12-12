@@ -41,6 +41,7 @@ const setRestrauntData = (response) => {
 			price: result.price_level,
 			photo: await getPhoto(result.photos[0].photo_reference)
 		};
+	export {restaurants};
 	})
 	return Promise.all(restraunts)
 }
@@ -72,13 +73,13 @@ const fetchRestrauntsSuccess = async (dispatch, response) => {
 
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,
-    payload: restraunts
+    payload: restaurants
   });
 };
 
-export const updateRestraunts = (restraunts) => {
+export const updateRestraunts = (restaurants) => {
 	return {
 		type: UPDATE_RESTRAUNTS,
-		payload: restraunts
+		payload: restaurants
 	};
 }
