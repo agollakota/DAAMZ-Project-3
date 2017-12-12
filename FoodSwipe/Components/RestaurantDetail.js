@@ -7,21 +7,17 @@ import {
 } from 'react-native';
 import Card from './common/Card';
 import CardSection from './common/CardSection';
-import {restaurants} from './actions/RestrauntActions';
 
-const RestaurantDetail = ({ restaurant }) => {
-  const { name, rating } = restaurant;
-  const {
-
-    headerContentStyle,
-
-    headerTextStyle,
-  } = styles;
+const RestaurantDetail = () => {
+  var rating = 3
+  var price = 2
+  var address = '1234 Place'
+  var URL = 'https://blog.sqlauthority.com/i/a/errorstop.png'
 
   return (
     <Card>
       <CardSection>
-        <Image style = {styles.photo}</Image>
+        <Image source={{uri: URL}}</Image>
         <View style={headerContentStyle}>
           <Text style={headerTextStyle}>{name}</Text>
           <Text>{rating}</Text>
