@@ -5,11 +5,13 @@ import {
   View
 } from 'react-native';
 
-export default class ProfilePage extends Component {
+import Header from './FoodSwipe/Components/Header';
+
+export default class RestaurantProfile extends Component {
   render() {
     return(
       <View style={styles.container}>
-        < Header />
+        <Header/>
       </View>
     );
   }
@@ -22,4 +24,4 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerCompnent('ProfilePage', () => ProfilePage);
+AppRegistry.registerComponent('RestaurantProfile', () => RestaurantProfile);
