@@ -21,10 +21,12 @@ const RestaurantDetail = ({ restaurant }) => {
   return (
     <Card>
       <CardSection>
-
+        <Image style = {styles.photo}</Image>
         <View style={headerContentStyle}>
           <Text style={headerTextStyle}>{name}</Text>
           <Text>{rating}</Text>
+          <Text>{price}</Text>
+          <Text>{address}</Text>
         </View>
       </CardSection>
     </Card>

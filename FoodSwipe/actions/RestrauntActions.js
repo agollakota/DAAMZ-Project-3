@@ -26,7 +26,7 @@ export const fetchRestraunts =  (query) => {
 }
 
 const fetchRestrauntsSuccess = (dispatch, response) => {
-	let restraunts = response.results.map((result, index) => {
+	let restaurants = response.results.map((result, index) => {
 		// TODO: Remove restraunts without a photo
 		return {
 			name: result.name,
@@ -35,17 +35,18 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 			price: result.price_level,
 			photo: result.photos
 		};
+	export {restaurants};
 	})
 
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,
-    payload: restraunts
+    payload: restaurants
   });
 };
 
-export const updateRestraunts = (restraunts) => {
+export const updateRestraunts = (restaurants) => {
 	return {
 		type: UPDATE_RESTRAUNTS,
-		payload: restraunts
+		payload: restaurants
 	};
 }
