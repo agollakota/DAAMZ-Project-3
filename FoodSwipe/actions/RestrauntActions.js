@@ -2,19 +2,25 @@ import{
 	FETCH_RESTRAUNTS,
 	FETCH_RESTRAUNTS_SUCCESS,
 	FETCH_RESTRAUNTS_FAIL,
-	UPDATE_RESTRAUNTS
-} from '../constants/types';
+	UPDATE_RESTRAUNTS,
+	API_KEY,
+	PLACES_REQUEST,
+	PHOTO_REQUEST
+} from '../constants/constants';
+import RNFetchBlob from 'react-native-fetch-blob'
 
-export const fetchRestraunts =  (query) => {
+
+export const fetchRestraunts = (query) => {
 	return (dispatch) => {
 	  dispatch({ type: FETCH_RESTRAUNTS, payload: query });
-		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
-		const PlacesRequest = 'https://maps.googleapis.com/maps/api/place/textsearch/json?' + query + APIkey;
 
-		fetch(PlacesRequest)
+		const request = PLACES_REQUEST + query + API_KEY;
+
+		fetch(request)
 			.then((response) => response.json())
-			.then(responseJson => {
-				fetchRestrauntsSuccess(dispatch, responseJson);
+			.then(responseJson => setRestrauntData(responseJson))
+			.then( (restraunts) => {
+				fetchRestrauntsSuccess(dispatch, restraunts)
 			})
 			.catch(error => {
 				dispatch({
@@ -25,18 +31,45 @@ export const fetchRestraunts =  (query) => {
 		}
 }
 
-const fetchRestrauntsSuccess = (dispatch, response) => {
-	let restaurants = response.results.map((result, index) => {
-		// TODO: Remove restraunts without a photo
+const setRestrauntData = (response) => {
+
+	let restraunts = response.results.map( async (result, index) => {
 		return {
 			name: result.name,
 			address: result.formatted_address,
 			rating: result.rating,
 			price: result.price_level,
-			photo: result.photos
+			photo: await getPhoto(result.photos[0].photo_reference)
 		};
 	export {restaurants};
 	})
+	return Promise.all(restraunts)
+}
+const getPhoto = (photo) => {
+
+		if (typeof photo === 'undefined') {
+			return 'null'
+		}
+
+		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
+		const PhotoRef = '&photoreference=' + photo
+		const request = PHOTO_REQUEST + PhotoRef + API_KEY
+
+		return RNFetchBlob
+			.fetch('GET', request)
+			.then((res) => {
+				return res.info().redirects[1]
+			})
+			.catch(error => {
+				console.log("Caught Error:");
+				console.error(error);
+			});
+		}
+
+
+const fetchRestrauntsSuccess = async (dispatch, response) => {
+
+	let restraunts = response.filter(response => response.photo != 'null')
 
 	dispatch({
     type: FETCH_RESTRAUNTS_SUCCESS,

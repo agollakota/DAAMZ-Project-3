@@ -23,10 +23,8 @@ State: {
 import { combineReducers } from 'redux'
 import RestrauntReducer from './RestrauntReducer'
 import FavoritesReducer from './FavoritesReducer'
-import CardReducer from './CardReducer'
 
 export default combineReducers({
   search: RestrauntReducer,
 	favorites: FavoritesReducer,
-	card: CardReducer
 });
