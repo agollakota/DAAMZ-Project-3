@@ -1,3 +1,29 @@
+import MapView from 'react-native-maps';
+
+
+
+//import MapView, {PROVIDER_GOOGLE} from "react-native-maps";
+
+import reducer from './reducers'
+
+
+
+import Header from './components/Header'
+
+import FilterContainer from './containers/FilterContainer'
+
+import CardsContainer from './containers/CardsContainer'
+
+// import FavoritesList from './containers/FavoritesList'
+
+
+
+const store = createStore(reducer, applyMiddleware(thunk));
+
+var lat =  42.00;
+
+var longitude = -87.66;
+
 
 import React, { Component } from 'react';
 import { View } from 'react-native';
