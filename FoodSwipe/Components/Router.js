@@ -1,14 +1,18 @@
 import React from 'react';
-import { Scene, Router } from 'react-native-router-flux';
-import FilterPage from '../containers/FilterPage';
-import FavoritesList from '../containers/FavoritesList';
+import { Scene, Router, Actions } from 'react-native-router-flux';
+import FilterPage from './FilterPage';
+import FavoritesList from './RestaurantList';
+import SwipeCards from './SwipeCards';
 
-const RouterComponent = () =>  {
+const RouterComponent = () => {
   return (
     <Router sceneStyle={{ paddingTop: 65 }}>
-        <Scene key="filterPage" component={FilterPage} title="Select Filters" />
-        <Scene key="favoritesList" component={FavoritesList} title="Select Your Favorite" />
-    </Router>
+<Scene
+        <Scene key="filters" component={FilterPage} title="Select Your Filters" />
+
+        <Scene key="swipeCards" component={SwipeCards} title="Food Swipe" />
+        <Scene key="FavoritesList" component={FavoritesList} title="Favorites" />
+    </Router> </>
   );
 };
 

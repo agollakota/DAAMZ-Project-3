@@ -5,20 +5,59 @@ Will contain buttons to link to favorites list,
 */
 //import libraries for making a component
 
-import React from 'react';
+import React, {Component} from 'react';
 import { Text, View } from 'react-native';
-
+import { Header } from 'react-native-elements'
+import RouterButton from 'react-router-native-button';
+import Ember from 'ember';
 //make a component
 //name same as filename
 
-const Header = (props) => {
-  const { textStyle, viewStyle } = styles;
+class HeaderComp extends React.Component {
+  constructor(props){
+    super(props);
+  }
+render(){
+//console.log(getOwner(this).lookup('controller:application').currentPath);
+console.log("FUCUUCKASKJJAS!")
+console.log(this.props);
   return (
-    <View style={viewStyle}>
-    	<Text style={textStyle}>{props.headerText}</Text>
-    </View>
-  );
+
+<View>
+    <Header
+    statusBarProps={{ barStyle: 'light-content' }}
+    leftComponent = {    <RouterButton
+    to="/favorites"
+    title="Back"
+    color="#581845"
+    accessibilityLabel="Click to navigate to settings"
+    />}
+    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
+    outerContainerStyles={{ backgroundColor: '#C70039' }}
+    innerContainerStyles={{ justifyContent: 'space-around',} }
+    rightComponent = { <RouterButton
+    to="/favorites"
+    title="Favorites"
+    color="#581845"
+    accessibilityLabel="Click to navigate to settings"
+    />}
+    //this.props.navigation.path
+    />
+
+
+
+</View>
+
+
+
+);}
+
 };
+
+
+
+
+//import custom comp wrap it in link... just make button.
 
 const styles = {
 
@@ -26,7 +65,7 @@ const styles = {
     backgroundColor: '#F8F8F3',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 60,
+    height: 50,
     paddingTop: 5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -54,4 +93,4 @@ const styles = {
 //only the root compnent uses AppRegistry
 //here we have to export statements
 //make Header component to other parts of the App
-export default Header;
+export default HeaderComp;
