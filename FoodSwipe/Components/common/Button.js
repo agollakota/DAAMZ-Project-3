@@ -33,5 +33,5 @@ const styles = { //Basic styling for button component
     marginRight: 5
   }
 };
-
+//Make the component available to other parts of the app
 export { Button };
