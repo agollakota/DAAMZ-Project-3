@@ -12,15 +12,15 @@ import RNFetchBlob from 'react-native-fetch-blob'
 
 export const fetchRestaurants = (query) => {
 	return (dispatch) => {
-	  dispatch({ type: FETCH_restaurantS, payload: query });
+	  dispatch({ type: FETCH_RESTAURANTS, payload: query });
 
 		const request = PLACES_REQUEST + query + API_KEY;
 
 		fetch(request)
 			.then((response) => response.json())
-			.then(responseJson => setrestaurantData(responseJson))
+			.then(responseJson => setRestaurantData(responseJson))
 			.then( (restaurants) => {
-				fetchrestaurantsSuccess(dispatch, restaurants)
+				fetchRestaurantsSuccess(dispatch, restaurants)
 			})
 			.catch(error => {
 				dispatch({
@@ -31,7 +31,7 @@ export const fetchRestaurants = (query) => {
 		}
 }
 
-const setrestaurantData = (response) => {
+const setRestaurantData = (response) => {
 
 	let restaurants = response.results.map( async (result, index) => {
 		return {
