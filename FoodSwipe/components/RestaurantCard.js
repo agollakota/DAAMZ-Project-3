@@ -1,3 +1,7 @@
+
+import { Rating, Tile } from 'react-native-elements';
+
+
 import React, { Component } from 'react'
 import {
 	StyleSheet,
@@ -15,14 +19,25 @@ class RestaurantCard extends React.Component {
 	render(){
 		const restaurant = this.props
 		return(
-		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>
+		<View style={[styles.card, {backgroundColor: '#FFC30F'}]}>
+
+
 			 <Text>{restaurant.name}</Text>
-			 <Text>{restaurant.rating}</Text>
+			 <Rating
+
+				 type="star"
+				 fractions={1}
+				 startingValue={restaurant.rating}
+				 ratingBackgroundColor='red'
+				 imageSize={40}
+
+				 style={{ paddingVertical: 10 }}
+			 />
 		 </View>)
 	}
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ //restaurantcard style
   card: {
     justifyContent: 'center',
     alignItems: 'center',

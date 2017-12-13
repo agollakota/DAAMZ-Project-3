@@ -6,9 +6,9 @@ import Communications from 'react-native-communications';
 
 export default class FavoritesList extends Component {
 	constructor(props){ //constructor
-		super(props //we do this cause we want to access this inside the constructor
+		super(props) //we do this cause we want to access this inside the constructor
 		const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-		this.state = { 
+		this.state = {
       dataSource: ds.cloneWithRows(this.props.list.favorites),
     };
 	}
