@@ -7,18 +7,17 @@ import {
 } from 'react-native';
 import Spinner from './common/Spinner'
 
-class RestrauntCard extends React.Component {
+class RestaurantCard extends React.Component {
 	constructor(props) {
 		super(props)
 	}
 
 	render(){
-		const restraunt = this.props
-		console.log(restraunt);
+		const restaurant = this.props
 		return(
 		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>
-			 <Text>{restraunt.name}</Text>
-			 <Text>{restraunt.rating}</Text>
+			 <Text>{restaurant.name}</Text>
+			 <Text>{restaurant.rating}</Text>
 		 </View>)
 	}
 }
@@ -35,4 +34,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default RestrauntCard;
+export default RestaurantCard;

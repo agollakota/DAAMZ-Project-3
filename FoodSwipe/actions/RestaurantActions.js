@@ -1,8 +1,8 @@
 import{
-	FETCH_RESTRAUNTS,
-	FETCH_RESTRAUNTS_SUCCESS,
-	FETCH_RESTRAUNTS_FAIL,
-	UPDATE_RESTRAUNTS,
+	FETCH_RESTAURANTS,
+	FETCH_RESTAURANTS_SUCCESS,
+	FETCH_RESTAURANTS_FAIL,
+	UPDATE_RESTAURANTS,
 	API_KEY,
 	PLACES_REQUEST,
 	PHOTO_REQUEST
@@ -10,30 +10,30 @@ import{
 import RNFetchBlob from 'react-native-fetch-blob'
 
 
-export const fetchRestraunts = (query) => {
+export const fetchRestaurants = (query) => {
 	return (dispatch) => {
-	  dispatch({ type: FETCH_RESTRAUNTS, payload: query });
+	  dispatch({ type: FETCH_restaurantS, payload: query });
 
 		const request = PLACES_REQUEST + query + API_KEY;
 
 		fetch(request)
 			.then((response) => response.json())
-			.then(responseJson => setRestrauntData(responseJson))
-			.then( (restraunts) => {
-				fetchRestrauntsSuccess(dispatch, restraunts)
+			.then(responseJson => setrestaurantData(responseJson))
+			.then( (restaurants) => {
+				fetchrestaurantsSuccess(dispatch, restaurants)
 			})
 			.catch(error => {
 				dispatch({
-					type: FETCH_RESTRAUNTS_FAIL,
+					type: FETCH_restaurantS_FAIL,
 					payload: error
 				});
 			});
 		}
 }
 
-const setRestrauntData = (response) => {
+const setrestaurantData = (response) => {
 
-	let restraunts = response.results.map( async (result, index) => {
+	let restaurants = response.results.map( async (result, index) => {
 		return {
 			name: result.name,
 			address: result.formatted_address,
@@ -41,9 +41,8 @@ const setRestrauntData = (response) => {
 			price: result.price_level,
 			photo: await getPhoto(result.photos[0].photo_reference)
 		};
-	export {restaurants};
 	})
-	return Promise.all(restraunts)
+	return Promise.all(restaurants)
 }
 const getPhoto = (photo) => {
 
@@ -67,19 +66,19 @@ const getPhoto = (photo) => {
 		}
 
 
-const fetchRestrauntsSuccess = async (dispatch, response) => {
+const fetchRestaurantsSuccess = async (dispatch, response) => {
 
-	let restraunts = response.filter(response => response.photo != 'null')
+	let restaurants = response.filter(response => response.photo != 'null')
 
 	dispatch({
-    type: FETCH_RESTRAUNTS_SUCCESS,
+    type: FETCH_RESTAURANTS_SUCCESS,
     payload: restaurants
   });
 };
 
-export const updateRestraunts = (restaurants) => {
+export const updateRestaurants = (restaurants) => {
 	return {
-		type: UPDATE_RESTRAUNTS,
+		type: UPDATE_RESTAURANTS,
 		payload: restaurants
 	};
 }
