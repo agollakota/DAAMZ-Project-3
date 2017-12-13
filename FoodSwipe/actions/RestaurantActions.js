@@ -9,9 +9,9 @@ import{
 } from '../constants/constants';
 import RNFetchBlob from 'react-native-fetch-blob'
 
-export const fetchRestaurants = (query) => {
+export const fetchRestaurants = (query) => { //retrieves json data us-
 	return (dispatch) => {
-	  dispatch({ type: FETCH_RESTAURANTS, payload: query });
+	  dispatch({ type: FETCH_RESTAURANTS, payload: query }); //returns an action
 
 		const request = PLACES_REQUEST + query + API_KEY;
 
@@ -19,12 +19,12 @@ export const fetchRestaurants = (query) => {
 			.then((response) => response.json())
 			.then(responseJson => setRestaurantData(responseJson))
 			.then( (restaurants) => {
-				fetchRestaurantsSuccess(dispatch, restaurants)
+				fetchRestaurantsSuccess(dispatch, restaurants) //fetchRestaurauntsSuccess returns an action
 			})
 			.catch(error => {
 				console.log("Request Error:");
 				console.log(error);
-				dispatch({
+				dispatch({ //returns an action with an error object
 					type: FETCH_RESTAURANTS_FAIL,
 					payload: error
 				});
@@ -32,7 +32,7 @@ export const fetchRestaurants = (query) => {
 		}
 }
 
-const setRestaurantData = (response) => {
+const setRestaurantData = (response) => { //sets the data
 	let results = response.results.filter( (result) => {
 		try {
 			return typeof(result.photos[0]) !== 'undefined';
@@ -52,7 +52,7 @@ const setRestaurantData = (response) => {
 	return Promise.all(restaurants)
 }
 
-const getPhoto = (photo) => {
+const getPhoto = (photo) => { //configuring getting the photo from the API
 
 	const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
 	const PhotoRef = '&photoreference=' + photo.photo_reference
@@ -69,14 +69,14 @@ const getPhoto = (photo) => {
 }
 
 
-const fetchRestaurantsSuccess = async (dispatch, response) => {
+const fetchRestaurantsSuccess = async (dispatch, response) => { //If there is a sucess dispatch the restaurant
 	dispatch({
     type: FETCH_RESTAURANTS_SUCCESS,
     payload: response
   });
 };
 
-export const removeRestaurant = (name) => {
+export const removeRestaurant = (name) => { //removing the restaurant
 	console.log(name);
 	return {
 		type: REMOVE_RESTAURANT,
