@@ -1,5 +1,5 @@
 
-import { Rating, Tile } from 'react-native-elements';
+import { Rating, Tile, Avatar } from 'react-native-elements';
 
 
 import React, { Component } from 'react'
@@ -21,6 +21,11 @@ class RestaurantCard extends React.Component {
 		return(
 		<View style={[styles.card, {backgroundColor: '#FFC30F'}]}>
 
+<Tile
+   imageSrc={{uri:restaurant.photo}}
+	 height ={300}
+		width={300}
+/>
 
 			 <Text>{restaurant.name}</Text>
 			 <Rating
