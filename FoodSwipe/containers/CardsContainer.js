@@ -1,7 +1,10 @@
 import React from 'react'
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
-import { updateRestaurants } from '../actions'
+import {
+	updateRestaurants,
+	addFavorite
+} from '../actions'
 
 import SwipeCards from '../components/SwipeCards'
 
@@ -10,7 +13,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-	updateCards: bindActionCreators(updateRestaurants, dispatch)
+	updateCards: bindActionCreators(updateRestaurants, dispatch),
+	addFavorite: bindActionCreators(addFavorite, dispatch)
 })
 
 

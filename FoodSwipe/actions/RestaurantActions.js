@@ -24,7 +24,7 @@ export const fetchRestaurants = (query) => {
 			})
 			.catch(error => {
 				dispatch({
-					type: FETCH_restaurantS_FAIL,
+					type: FETCH_RESTAURANTS_FAIL,
 					payload: error
 				});
 			});

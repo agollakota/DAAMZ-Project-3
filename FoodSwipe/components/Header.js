@@ -9,7 +9,6 @@ import React, {Component} from 'react';
 import { Text, View } from 'react-native';
 import { Header } from 'react-native-elements'
 import RouterButton from 'react-router-native-button';
-import Ember from 'ember';
 //make a component
 //name same as filename
 
@@ -17,35 +16,45 @@ class HeaderComp extends React.Component {
   constructor(props){
     super(props);
   }
-render(){
-//console.log(getOwner(this).lookup('controller:application').currentPath);
-console.log("FUCUUCKASKJJAS!")
-console.log(this.props);
-  return (
-
-<View>
-    <Header
-    statusBarProps={{ barStyle: 'light-content' }}
-    leftComponent = {    <RouterButton
-    to="/"
-    title="Search"
-    color="#581845"
-    accessibilityLabel="Click to navigate to settings"
-    />}
-    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
-    outerContainerStyles={{ backgroundColor: '#C70039' }}
-    innerContainerStyles={{ justifyContent: 'space-around',} }
-    rightComponent = { <RouterButton
-    to="/favorites"
-    title="Favorites"
-    color="#581845"
-    accessibilityLabel="Click to navigate to settings"
-    />}
-    //this.props.navigation.path
-    />
-
+	render(){
+	  return (
+		<View>
+	    <Header
+	    statusBarProps={{ barStyle: 'light-content' }}
+	    leftComponent = { }
+	    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
+	    outerContainerStyles={{ backgroundColor: '#C70039' }}
+	    innerContainerStyles={{ justifyContent: 'space-around',} }
+	    rightComponent = { <RouterButton
+			  to="/favorites"
+			  title="Favorites"
+			  color="#581845"
+			  accessibilityLabel="Click to navigate to settings"
+		  /> }
+	    />
+		</View>
+	)}
+}
 /**
  *
+
+ <Header
+ statusBarProps={{ barStyle: 'light-content' }}
+ leftComponent = {    <RouterButton
+ to="/"
+ title="Search"
+ color="#581845"
+ accessibilityLabel="Click to navigate to settings"
+ />}
+ centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
+ outerContainerStyles={{ backgroundColor: '#C70039' }}
+ innerContainerStyles={{ justifyContent: 'space-around',} }
+ rightComponent = { <RouterButton
+ to="/favorites"
+ title="Favorites"
+ color="#581845"
+ accessibilityLabel="Click to navigate to settings"
+ />
 
  //for favorites no right
  <Header
@@ -84,27 +93,7 @@ accessibilityLabel="Click to navigate to settings"
 />}
 //this.props.navigation.path
 />
-
-
-
-
-
-
-
  */
-
-</View>
-
-
-
-);}
-
-};
-
-
-
-
-//import custom comp wrap it in link... just make button.
 
 const styles = {
 

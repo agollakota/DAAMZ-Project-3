@@ -8,31 +8,28 @@ import thunk from 'redux-thunk'
 
 import reducer from './reducers'
 
-import NavHeader from './components/NavHeader'
+// import NavHeader from './components/NavHeader'
+import HeaderComp from './components/Header'
 import FilterContainer from './containers/FilterContainer'
 import CardsContainer from './containers/CardsContainer'
-
-import FavoritesList from './components/FavoritesList';
+import FavoritesContainer from './containers/FavoritesContainer';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
 export default class App extends Component{
   render() {
-    console.log(this.state);
     return (
 			<Provider store={store}>
 
 				<NativeRouter>
 					<View style={{flex: 1}}>
-						<NavHeader headerText={"Food Swipe"}/>
+						<HeaderComp />
 						<Route exact path="/" component={FilterContainer}/>
 						<Route path="/cards" component={CardsContainer}/>
             <Route path="/favorites" component={FavoritesList}/>
-
 					</View>
 				</NativeRouter>
 			</Provider>
     );
   }
 }
-// TODO: <Route path="/favorites" component={FavoritesList}/>
