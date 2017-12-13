@@ -22,7 +22,7 @@ class RestaurantCard extends React.Component {
 	}
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ //restaurantcard style
   card: {
     justifyContent: 'center',
     alignItems: 'center',
