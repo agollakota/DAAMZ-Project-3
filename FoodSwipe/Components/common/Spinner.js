@@ -9,7 +9,7 @@ const Spinner = ({ size }) => {
   );
 };
 
-const styles = {
+const styles = { //style for spinner
   spinnerStyle: {
     flex: 1,
     justifyContent: 'center',

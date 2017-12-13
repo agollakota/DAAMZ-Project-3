@@ -10,7 +10,7 @@ import CardSection from './common/CardSection';
 
 
 
-const RestaurantDetail = ({ rating, price,address, image }) => {
+const RestaurantDetail = ({ rating, price,address, image }) => { //Hardcoding in restaurantDetails
   const { headerContentStyle,headerTextStyle, thumbnailStyle, thumbnailContainerStyle, imageStyle} = styles;
   return (
    </View>
@@ -25,7 +25,7 @@ const RestaurantDetail = ({ rating, price,address, image }) => {
   );
 };
 
-const styles = {
+const styles = { 
   headerContentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'

@@ -25,7 +25,7 @@ export default class FilterPage extends Component {
 			}
     }
 
-		renderPicker(){
+		renderPicker(){ //rendering the picker
 			let items = this.state.foodOptions.map((type, index) => {
 				return  <Picker.Item label={type} value={index} key={index} />;
 			})
@@ -39,7 +39,7 @@ export default class FilterPage extends Component {
 	      </Picker>
 			)}
 
-    renderCheckBox() {
+    renderCheckBox() { //rendering the checkbox
       let boxes = this.state.dietOptions.map((filter, index) => {
 				return <CheckBox
 						style={{flex: 1, padding: 10}}
@@ -52,7 +52,7 @@ export default class FilterPage extends Component {
 			return boxes;
     }
 
-    onClickCheckBox(data) {
+    onClickCheckBox(data) { 
 			let selected = this.state.selectedDiet;
       data.checked = !data.checked;
       // let msg=data.checked? 'you checked ':'you unchecked '
@@ -155,7 +155,7 @@ export default class FilterPage extends Component {
 
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ //filterpage style
     container: {
         flex: 1,
         backgroundColor: '#fff',
