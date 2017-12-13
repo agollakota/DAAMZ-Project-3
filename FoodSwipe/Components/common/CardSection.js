@@ -20,5 +20,5 @@ const styles = { //Styling for the CardSection component
     position: 'relative'
   }
 };
-
+//Make the component available to other parts of the app
 export { CardSection };
