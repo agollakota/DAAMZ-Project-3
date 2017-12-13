@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "ember": "^1.0.3",
     "react": "16.0.0",
     "react-checkbox-group": "^3.3.4",
     "react-native": "^0.50.4",

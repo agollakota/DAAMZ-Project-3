@@ -5,18 +5,24 @@ Will contain buttons to link to favorites list,
 */
 //import libraries for making a component
 
-import React from 'react';
+import React, {Component} from 'react';
 import { Text, View } from 'react-native';
 import { Header } from 'react-native-elements'
 import RouterButton from 'react-router-native-button';
-
+import Ember from 'ember';
 //make a component
 //name same as filename
 
-const HeaderComp = (props) => {
-
-
+class HeaderComp extends React.Component {
+  constructor(props){
+    super(props);
+  }
+render(){
+//console.log(getOwner(this).lookup('controller:application').currentPath);
+console.log("FUCUUCKASKJJAS!")
+console.log(this.props);
   return (
+
 <View>
     <Header
     statusBarProps={{ barStyle: 'light-content' }}
@@ -29,7 +35,7 @@ const HeaderComp = (props) => {
     centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
     outerContainerStyles={{ backgroundColor: '#C70039' }}
     innerContainerStyles={{ justifyContent: 'space-around',} }
-    rightComponent = {    <RouterButton
+    rightComponent = { <RouterButton
     to="/favorites"
     title="Favorites"
     color="#581845"
@@ -44,7 +50,7 @@ const HeaderComp = (props) => {
 
 
 
-  );
+);}
 
 };
 

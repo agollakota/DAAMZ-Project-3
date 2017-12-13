@@ -18,6 +18,7 @@ const store = createStore(reducer, applyMiddleware(thunk));
 
 export default class App extends Component{
   render() {
+    console.log(this.state);
     return (
 			<Provider store={store}>
 

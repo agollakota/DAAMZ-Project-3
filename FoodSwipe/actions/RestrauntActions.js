@@ -31,7 +31,6 @@ const fetchRestrauntsSuccess = (dispatch, response) => {
 
 	let restraunts = response.results.map((result, index) => {
 		// TODO: Remove restraunts without a photo
-		console.log(result);
 		return {
 			name: result.name,
 			address: result.formatted_address,
