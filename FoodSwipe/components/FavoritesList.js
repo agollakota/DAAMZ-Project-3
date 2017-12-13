@@ -1,44 +1,48 @@
 import React, {Component} from 'react';
 import { List, ListItem, Button, Icon } from 'react-native-elements'
 import RouterButton from 'react-router-native-button';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ListView } from 'react-native';
 import Communications from 'react-native-communications';
 
 export default class FavoritesList extends Component {
-
-	mapFavorites(){
-		return(
-		this.props.list.favorites.map((restaurant, index) => (
-			<ListItem title={restaurant.name} subtitle={restaurant.rating} key={index}
-			leftIcon={ <Icon raised
-				name='phone'
-				type='font-awesome'
-				color='#f50'
-				onPress={() => Communications.phonecall('0123456789', true)} />}
-			rightIcon={ <Icon raised
-				name='map'
-				type='font-awesome'
-				color='#f50'
-				onPress={() => Communications.web('https://www.google.com/maps/place/'+restaurant.address,true)} />}
-			/>
-			))
-		)
+	constructor(props){
+		super(props);
+		const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+		this.state = {
+      dataSource: ds.cloneWithRows(this.props.list.favorites),
+    };
 	}
 
 	render() {
 		return (
-			<View style={styles.container}>
-				<List containerStyle={{marginBottom: 20}}>
-					{ this.mapFavorites() }
-				</List>
-			</View>
+			<ListView style={styles.container}
+				dataSource={this.state.dataSource}
+				renderRow={(data) => <Row {...data} />}
+			/>
 	);}
+}
+
+const Row = ( props ) => {
+	return(
+		<ListItem title={props.name} subtitle={props.rating}
+		leftIcon={ <Icon raised
+			name='phone'
+			type='font-awesome'
+			color='#f50'
+			onPress={() => Communications.phonecall('0123456789', true)} />}
+			//onPress={Communications.phonecall('0123456789', true)}
+		rightIcon={ <Icon raised
+			name='map'
+			type='font-awesome'
+			color='#f50'
+			onPress={() => Communications.web('https://www.google.com/maps/place/'+props.address,true)} />}
+		/>)
 }
 
   const styles = StyleSheet.create({
     container: {
      flex: 1,
-     paddingTop: 22
+     paddingTop: 12
     },
     item: {
       padding: 10,
