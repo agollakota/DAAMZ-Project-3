@@ -7,13 +7,13 @@ const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
   return (
-    <View style={viewStyle}>
+    <View style={viewStyle}> //controls style/layout
       <Text style={textStyle}>{props.headerText}</Text>
     </View>
   );
 };
 
-const styles = {
+const styles = { //setting up header style
   viewStyle: {
     backgroundColor: '#F8F8F8',
     justifyContent: 'center',
