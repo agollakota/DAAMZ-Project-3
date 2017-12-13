@@ -2,7 +2,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
@@ -21,13 +21,12 @@ export default class extends React.Component {
 		this.setState({ cards: cards })
 	}
 
-  handleYup (card) {
-		// TODO: Add to favorites
-    console.log(`Yup for ${card.text}`)
+  handleYup (restaurant) {
+		this.props.addFavorite(restaurant)
+		// TODO: remove from array and send copy through dispatch
   }
   handleNope (card) {
-		// TODO: Remove from matches?
-    console.log(`Nope for ${card.text}`)
+		// TODO: remove from array and send copy through dispatch
   }
 
 	componentWillReceiveProps(nextProps){
@@ -48,8 +47,8 @@ export default class extends React.Component {
 		        renderNoMoreCards={() => <NoMoreCards />}
 
 						yupText={"YUM!"}
-		        handleYup={this.handleYup}
-		        handleNope={this.handleNope}
+		        handleYup={this.handleYup.bind(this)}
+		        handleNope={this.handleNope.bind(this)}
 		      />
 				</View>
 	    )

@@ -6,7 +6,7 @@ import { removeFavorite } from '../actions'
 import FavoritesList from '../components/FavoritesList';
 
 const mapStateToProps = (state) => ({
-	favorites: state.favorites
+	list: state.favorites
 })
 
 const mapDispatchToProps = (dispatch) => ({

@@ -3,16 +3,16 @@ import {
 	REMOVE_FAVORITE
 } from '../constants/constants';
 
-const INITIAL_STATE = [];
+const INITIAL_STATE = {
+	favorites: []
+};
 
 export default (state = INITIAL_STATE, action) => {
 	switch (action.type) {
 		case ADD_FAVORITE:
-			return { ...state,
-				favorites: state.favorites.concat(action.payload)}
+			return { ...state, favorites: state.favorites.concat(action.payload)}
 		case REMOVE_FAVORITE:
-			return { ...state,
-				favorites: state.favorites.filter(favorite => favorite !== action.payload)}
+			return { ...state, favorites: state.favorites.filter(favorite => favorite !== action.payload)}
 		default:
 			return state;
 	}

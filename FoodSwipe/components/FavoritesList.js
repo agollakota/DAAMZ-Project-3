@@ -4,14 +4,11 @@ import RouterButton from 'react-router-native-button';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import Communications from 'react-native-communications';
 
-
-
-
-export default class FlatListBasics extends Component {
+export default class FavoritesList extends Component {
 
 	mapFavorites(){
 		return(
-		favoriteslist.map((restaurant, iindex) => (
+		this.props.list.favorites.map((restaurant, index) => (
 			<ListItem title={restaurant.name} subtitle={restaurant.rating} key={index}
 			leftIcon={ <Icon raised
 				name='phone'
@@ -28,15 +25,14 @@ export default class FlatListBasics extends Component {
 			))
 		)
 	}
-// { this.mapFavorites() }
+
 	render() {
-
-	return (
-		<View style={styles.container}>
-			<List containerStyle={{marginBottom: 20}}>
-
-			</List>
-		</View>
+		return (
+			<View style={styles.container}>
+				<List containerStyle={{marginBottom: 20}}>
+					{ this.mapFavorites() }
+				</List>
+			</View>
 	);}
 }
 

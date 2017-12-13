@@ -9,32 +9,126 @@ import React, {Component} from 'react';
 import { Text, View } from 'react-native';
 import { Header } from 'react-native-elements'
 import RouterButton from 'react-router-native-button';
+import { withRouter } from 'react-router'
 //make a component
 //name same as filename
-
 class HeaderComp extends React.Component {
   constructor(props){
     super(props);
   }
+
+	renderHeaders(){
+		const page = this.props.history.location.pathname //location props
+		switch (page) {
+			case '/':
+				return SearchHeader;
+			case '/cards':
+				return CardsHeader
+			case '/favorites':
+				return FavoritesHeader
+			default:
+				return(
+					<Header
+				    statusBarProps={{ barStyle: 'light-content' }}
+				    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
+				    outerContainerStyles={{ backgroundColor: '#C70039' }}
+				    innerContainerStyles={{ justifyContent: 'space-around',} }
+			    />
+				)
+		}
+	}
+
 	render(){
 	  return (
 		<View>
-	    <Header
-	    statusBarProps={{ barStyle: 'light-content' }}
-	    leftComponent = { }
-	    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
-	    outerContainerStyles={{ backgroundColor: '#C70039' }}
-	    innerContainerStyles={{ justifyContent: 'space-around',} }
-	    rightComponent = { <RouterButton
-			  to="/favorites"
-			  title="Favorites"
-			  color="#581845"
-			  accessibilityLabel="Click to navigate to settings"
-		  /> }
-	    />
+			{ this.renderHeaders() }
 		</View>
 	)}
 }
+
+const CardsHeader = (
+	<Header
+	statusBarProps={{ barStyle: 'light-content' }}
+
+	leftComponent = { <RouterButton to="/" title="Search"
+	color="#581845" accessibilityLabel="Click to navigate to settings"
+	/>}
+
+	centerComponent={{ text: 'Food Swipe',
+	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
+	outerContainerStyles={{ backgroundColor: '#C70039' }}
+	innerContainerStyles={{ justifyContent: 'space-around' } }
+
+	rightComponent = { <RouterButton
+	to="/favorites"
+	title="Favorites"
+	color="#581845"
+	accessibilityLabel="Click to navigate to settings"
+	/>}
+	/>
+)
+
+const FavoritesHeader = (
+	<Header
+	statusBarProps={{ barStyle: 'light-content' }}
+	leftComponent = { <RouterButton to="/cards" title="Cards"
+	color="#581845" accessibilityLabel="Click to navigate to settings"
+	/>}
+	centerComponent={{ text: 'Food Swipe',
+	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
+	outerContainerStyles={{ backgroundColor: '#C70039' }}
+	innerContainerStyles={{ justifyContent: 'space-around' } }
+	/>
+)
+
+const SearchHeader = (
+	<Header
+	statusBarProps={{ barStyle: 'light-content' }}
+	leftComponent = { <RouterButton to="/cards" title="Cards"
+	color="#581845" accessibilityLabel="Click to navigate to settings"
+	/>}
+	centerComponent={{ text: 'Food Swipe',
+	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
+	outerContainerStyles={{ backgroundColor: '#C70039' }}
+	innerContainerStyles={{ justifyContent: 'space-around' } }
+	rightComponent = { <RouterButton
+	to="/favorites"
+	title="Favorites"
+	color="#581845"
+	accessibilityLabel="Click to navigate to settings"
+	/>}
+	/>
+)
+
+const styles = {
+
+  viewStyle: {
+    backgroundColor: '#F8F8F3',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 50,
+    paddingTop: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    elevation: 2,
+    position: 'relative'
+  },
+  //increase Text
+  textStyle: {
+    fontSize: 30
+  }
+
+ //name
+
+
+//restrauntpicture
+
+ //picture placement
+
+
+};
+
 /**
  *
 
@@ -95,38 +189,10 @@ accessibilityLabel="Click to navigate to settings"
 />
  */
 
-const styles = {
-
-  viewStyle: {
-    backgroundColor: '#F8F8F3',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 50,
-    paddingTop: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    elevation: 2,
-    position: 'relative'
-  },
-  //increase Text
-  textStyle: {
-    fontSize: 30
-  }
-
- //name
-
-
-//restrauntpicture
-
- //picture placement
-
-
-};
 
 // make the component available to ther parts of the app
 
 //only the root compnent uses AppRegistry
 //here we have to export statements
 //make Header component to other parts of the App
-export default HeaderComp;
+export default HeaderComp = withRouter(HeaderComp);
