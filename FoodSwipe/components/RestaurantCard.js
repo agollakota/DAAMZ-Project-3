@@ -5,6 +5,8 @@ import {
 	View,
 	Image
 } from 'react-native';
+import { Rating } from 'react-native-elements';
+
 
 class RestaurantCard extends React.Component {
 
@@ -12,15 +14,26 @@ class RestaurantCard extends React.Component {
 		super(props)
 	}
 
+
 	render(){
 		const restaurant = this.props
 		return(
 		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>
 			 <Text>{restaurant.name}</Text>
-			 <Text>{restaurant.rating}</Text>
+			
+			 <Rating
+			   showRating
+			   type="star"
+			   fractions={1}
+			   startingValue={restaurant.rating}
+			   imageSize={40}
+			   onFinishRating={restaurant.rating}
+			   style={{ paddingVertical: 10 }}
+			 />
 		 </View>)
 	}
 }
+
 
 const styles = StyleSheet.create({
   card: {
