@@ -12,6 +12,9 @@ import RouterButton from 'react-router-native-button';
 import { withRouter } from 'react-router'
 //make a component
 //name same as filename
+
+//the header is taken from react elements
+//the navigation buttons are conditionally rendered based on which page they're on
 class HeaderComp extends React.Component {
   constructor(props){
     super(props);

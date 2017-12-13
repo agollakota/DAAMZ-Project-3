@@ -4,6 +4,11 @@ import RouterButton from 'react-router-native-button';
 import { StyleSheet, Text, ListView } from 'react-native';
 import Communications from 'react-native-communications';
 
+
+//favorites takes in what the user swipes yum on
+//this uses react elements to generate the list style and the map button
+//also uses communications to open the browsers to search for the location of the restaurant
+
 export default class FavoritesList extends Component {
 	constructor(props){ //constructor
 		super(props) //we do this cause we want to access this inside the constructor

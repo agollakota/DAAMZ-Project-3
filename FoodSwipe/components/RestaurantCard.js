@@ -9,6 +9,8 @@ import {
 	View,
 	Image
 } from 'react-native';
+//designs the inner box for the swipe CardSection
+//react elements was heavly used for this section to render the picture and the stars
 
 class RestaurantCard extends React.Component {
 

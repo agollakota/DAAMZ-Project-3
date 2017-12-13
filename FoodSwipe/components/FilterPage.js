@@ -11,6 +11,10 @@ import {
 import CheckBox from 'react-native-check-box'
 import Filters from '../constants/Filters.json'
 
+
+//this is the first user interaction package
+//this uses external libraries to handle the user input on the CheckBox
+//it also uses the search button to handle and send to the api request 
 export default class FilterPage extends Component {
     constructor() {
       super();
@@ -52,7 +56,7 @@ export default class FilterPage extends Component {
 			return boxes;
     }
 
-    onClickCheckBox(data) { 
+    onClickCheckBox(data) {
 			let selected = this.state.selectedDiet;
       data.checked = !data.checked;
       // let msg=data.checked? 'you checked ':'you unchecked '

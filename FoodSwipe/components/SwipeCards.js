@@ -8,6 +8,10 @@ import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
 import Spinner from './common/Spinner'
 
+
+//this handles the amount of cards in the deck
+//handles te swipes for the app, which is taken from an external API
+
 export default class extends React.Component {
   constructor(props) {
     super(props);
