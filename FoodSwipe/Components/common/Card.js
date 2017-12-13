@@ -25,5 +25,5 @@ const styles = { //Setting up the style for what the cards should look like
     marginTop: 10
   }
 };
-
+//Make the component available to other parts of the app
 export { Card };

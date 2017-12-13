@@ -8,24 +8,20 @@ import {
 import Card from './common/Card';
 import CardSection from './common/CardSection';
 
-const RestaurantDetail = () => {
-  var rating = 3
-  var price = 2
-  var address = '1234 Place'
-  var URL = 'https://blog.sqlauthority.com/i/a/errorstop.png'
 
+
+const RestaurantDetail = ({ rating, price,address, URL }) => {
+  const { headerContentStyle,headerTextStyle, thumbnailStyle, thumbnailContainerStyle, imageStyle} = styles;
   return (
-    <Card>
-      <CardSection>
-        <Image source={{uri: URL}}</Image>
-        <View style={headerContentStyle}>
-          <Text style={headerTextStyle}>{name}</Text>
-          <Text>{rating}</Text>
-          <Text>{price}</Text>
-          <Text>{address}</Text>
-        </View>
+   </View>
+        var rating = 3
+        var price = 2
+        var address = '1234 Place'
+        var URL = 'https://blog.sqlauthority.com/i/a/errorstop.png'
+      
       </CardSection>
-    </Card>
+     </Card>
+    </View>
   );
 };
 
