@@ -27,8 +27,8 @@ console.log(this.props);
     <Header
     statusBarProps={{ barStyle: 'light-content' }}
     leftComponent = {    <RouterButton
-    to="/favorites"
-    title="Back"
+    to="/"
+    title="Search"
     color="#581845"
     accessibilityLabel="Click to navigate to settings"
     />}
@@ -44,7 +44,54 @@ console.log(this.props);
     //this.props.navigation.path
     />
 
+/**
+ *
 
+ //for favorites no right
+ <Header
+ statusBarProps={{ barStyle: 'light-content' }}
+ leftComponent = {    <RouterButton
+ to="/cards"
+ title="Back"
+ color="#581845"
+ accessibilityLabel="Click to navigate to settings"
+ />}
+ centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
+ outerContainerStyles={{ backgroundColor: '#C70039' }}
+ innerContainerStyles={{ justifyContent: 'space-around',} }
+ //this.props.navigation.path
+ />
+
+
+
+//cards left favorites right
+<Header
+statusBarProps={{ barStyle: 'light-content' }}
+leftComponent = {    <RouterButton
+to="/cards"
+title="Cards"
+color="#581845"
+accessibilityLabel="Click to navigate to settings"
+/>}
+centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', fontFamily: 'Roboto-Bold ', color: '#fff', fontSize: 30 } }}
+outerContainerStyles={{ backgroundColor: '#C70039' }}
+innerContainerStyles={{ justifyContent: 'space-around',} }
+rightComponent = { <RouterButton
+to="/favorites"
+title="Favorites"
+color="#581845"
+accessibilityLabel="Click to navigate to settings"
+/>}
+//this.props.navigation.path
+/>
+
+
+
+
+
+
+
+ */
 
 </View>
 
