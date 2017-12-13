@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native'
 import SwipeCards from 'react-native-swipe-cards';
 import NoMoreCards from './NoMoreCards'
-import RestrauntCard from './RestrauntCard';
+import RestaurantCard from './RestaurantCard';
 import Spinner from './common/Spinner'
 
 export default class extends React.Component {
@@ -26,7 +26,7 @@ export default class extends React.Component {
   }
 
 	componentWillReceiveProps(nextProps){
-		var cards = nextProps.search.restraunts
+		var cards = nextProps.search.restaurant
 		this.setState({ cards: cards })
 	}
 

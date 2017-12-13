@@ -1,27 +1,27 @@
 import {
-	FETCH_RESTRAUNTS,
-  FETCH_RESTRAUNTS_SUCCESS,
-  FETCH_RESTRAUNTS_FAIL,
-	UPDATE_RESTRAUNTS
+	FETCH_RESTAURANTS,
+  FETCH_RESTAURANTS_SUCCESS,
+  FETCH_RESTAURANTS_FAIL,
+	UPDATE_RESTAURANTS
 } from '../constants/constants';
 
 const INITIAL_STATE = {
   query: {},
   error: '',
   loading: false,
-	restraunts: []
+	restaurants: []
 };
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-		case FETCH_RESTRAUNTS:
+		case FETCH_RESTAURANTS:
       return { ...state, query: action.payload, loading: true, error: '' };
-    case FETCH_RESTRAUNTS_SUCCESS:
-      return { ...state, loading: false, restraunts: action.payload };
-    case FETCH_RESTRAUNTS_FAIL:
+    case FETCH_RESTAURANTS_SUCCESS:
+      return { ...state, loading: false, restaurants: action.payload };
+    case FETCH_RESTAURANTS_FAIL:
       return { ...state, loading: false, query: {}, error: action.payload};
-		case UPDATE_RESTRAUNTS:
-			return { ...state, restraunts: action.payload}
+		case UPDATE_RESTAURANTS:
+			return { ...state, restaurants: action.payload}
     default:
       return state;
   }

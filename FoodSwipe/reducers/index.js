@@ -4,12 +4,12 @@ State: {
 		query: {},
 		error: '',
 		loading: false,
-		restraunts: [restraunt]
+		restaurants: [restaurant]
 	},
-	favorites: [restraunt]
+	favorites: [restaurant]
 }
 
-  restraunt: {
+  restaurant: {
     name:,
     location:,
     rating: 0-5,
@@ -21,10 +21,10 @@ State: {
 */
 
 import { combineReducers } from 'redux'
-import RestrauntReducer from './RestrauntReducer'
+import RestaurantReducer from './RestaurantReducer'
 import FavoritesReducer from './FavoritesReducer'
 
 export default combineReducers({
-  search: RestrauntReducer,
+  search: RestaurantReducer,
 	favorites: FavoritesReducer,
 });
