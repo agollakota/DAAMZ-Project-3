@@ -12,7 +12,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: props.restaurants
+      cards: []
     };
   }
 
@@ -23,10 +23,12 @@ export default class extends React.Component {
 
   handleYup (restaurant) {
 		this.props.addFavorite(restaurant)
-		// TODO: remove from array and send copy through dispatch
+		// remove from array and send copy through dispatch
+		this.props.removeCard(restaurant.name)
   }
-  handleNope (card) {
-		// TODO: remove from array and send copy through dispatch
+  handleNope (restaurant) {
+		// remove from array and send copy through dispatch
+		this.props.removeCard(restaurant.name)
   }
 
 	componentWillReceiveProps(nextProps){

@@ -2,7 +2,7 @@ import {
 	FETCH_RESTAURANTS,
   FETCH_RESTAURANTS_SUCCESS,
   FETCH_RESTAURANTS_FAIL,
-	UPDATE_RESTAURANTS
+	REMOVE_RESTAURANT
 } from '../constants/constants';
 
 const INITIAL_STATE = {
@@ -20,8 +20,11 @@ export default (state = INITIAL_STATE, action) => {
       return { ...state, loading: false, restaurants: action.payload };
     case FETCH_RESTAURANTS_FAIL:
       return { ...state, loading: false, query: {}, error: action.payload};
-		case UPDATE_RESTAURANTS:
-			return { ...state, restaurants: action.payload}
+		case REMOVE_RESTAURANT:
+			return { ...state,
+				restaurants: state.restaurants.filter( (restaurant) => {
+					return restaurant.name !== action.payload
+				})}
     default:
       return state;
   }

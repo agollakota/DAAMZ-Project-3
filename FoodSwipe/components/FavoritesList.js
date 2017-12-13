@@ -15,12 +15,11 @@ export default class FavoritesList extends Component {
 				type='font-awesome'
 				color='#f50'
 				onPress={() => Communications.phonecall('0123456789', true)} />}
-				//onPress={Communications.phonecall('0123456789', true)}
 			rightIcon={ <Icon raised
 				name='map'
 				type='font-awesome'
 				color='#f50'
-				onPress={() => Communications.web('https://www.google.com/maps/place/'+l.address,true)} />}
+				onPress={() => Communications.web('https://www.google.com/maps/place/'+restaurant.address,true)} />}
 			/>
 			))
 		)

@@ -2,13 +2,12 @@ import{
 	FETCH_RESTAURANTS,
 	FETCH_RESTAURANTS_SUCCESS,
 	FETCH_RESTAURANTS_FAIL,
-	UPDATE_RESTAURANTS,
+	REMOVE_RESTAURANT,
 	API_KEY,
 	PLACES_REQUEST,
 	PHOTO_REQUEST
 } from '../constants/constants';
 import RNFetchBlob from 'react-native-fetch-blob'
-
 
 export const fetchRestaurants = (query) => {
 	return (dispatch) => {
@@ -33,10 +32,7 @@ export const fetchRestaurants = (query) => {
 		}
 }
 
-// let results = response.results.filter(result => typeof(result.photos[0]) !== 'undefined')
-
 const setRestaurantData = (response) => {
-	console.log("Setting data");
 	let results = response.results.filter( (result) => {
 		try {
 			return typeof(result.photos[0]) !== 'undefined';
@@ -55,36 +51,35 @@ const setRestaurantData = (response) => {
 	})
 	return Promise.all(restaurants)
 }
+
 const getPhoto = (photo) => {
 
-		const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
-		const PhotoRef = '&photoreference=' + photo.photo_reference
-		const request = PHOTO_REQUEST + PhotoRef + API_KEY
+	const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
+	const PhotoRef = '&photoreference=' + photo.photo_reference
+	const request = PHOTO_REQUEST + PhotoRef + API_KEY
 
-		return RNFetchBlob
-			.fetch('GET', request)
-			.then((res) => {
-				return res.info().redirects[1]
-			})
-			.catch(error => {
-				console.log("Caught Photo Error:" + error);
-			});
-		}
+	return RNFetchBlob
+		.fetch('GET', request)
+		.then((res) => {
+			return res.info().redirects[1]
+		})
+		.catch(error => {
+			console.log("Caught Photo Error:" + error);
+		});
+}
 
 
 const fetchRestaurantsSuccess = async (dispatch, response) => {
-
-	let restaurants = response.filter(response => response != 'null')
-
 	dispatch({
     type: FETCH_RESTAURANTS_SUCCESS,
-    payload: restaurants
+    payload: response
   });
 };
 
-export const updateRestaurants = (restaurants) => {
+export const removeRestaurant = (name) => {
+	console.log(name);
 	return {
-		type: UPDATE_RESTAURANTS,
-		payload: restaurants
+		type: REMOVE_RESTAURANT,
+		payload: name
 	};
 }
