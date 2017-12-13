@@ -23,19 +23,17 @@ export default class FavoritesList extends Component {
 }
 
 const Row = ( props ) => {
+	var f =props.address.replace(/,\s?/g, "");;
+	var newAddress = f.split(' ').join('+');
 	return(
 		<ListItem title={props.name} subtitle={props.rating}
-		leftIcon={ <Icon raised
-			name='phone'
-			type='font-awesome'
-			color='#f50'
-			onPress={() => Communications.phonecall('0123456789', true)} />}
+
 			//onPress={Communications.phonecall('0123456789', true)}
-		rightIcon={ <Icon raised
+		leftIcon={ <Icon raised
 			name='map'
 			type='font-awesome'
 			color='#f50'
-			onPress={() => Communications.web('https://www.google.com/maps/place/'+props.address,true)} />}
+			onPress={() => Communications.web('https://www.google.com/maps/place/'+newAddress,true)} />}
 		/>)
 }
 
