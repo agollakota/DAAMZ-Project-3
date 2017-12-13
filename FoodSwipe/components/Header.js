@@ -1,8 +1,8 @@
-/*
+/**
 Will contain buttons to link to favorites list,
  filter page, &/or home depending on which container
  is being rendered
-*/
+**/
 //import libraries for making a component
 
 import React, {Component} from 'react';
