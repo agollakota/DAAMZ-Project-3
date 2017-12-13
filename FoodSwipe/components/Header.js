@@ -18,14 +18,17 @@ class HeaderComp extends React.Component {
   }
 
 	renderHeaders(){
-		const page = this.props.history.location.pathname //location props
+		const history = this.props.history
+		const page = history.location.pathname //location props
 		switch (page) {
-			case '/':
-				return SearchHeader;
 			case '/cards':
 				return CardsHeader
 			case '/favorites':
 				return FavoritesHeader
+			case '/':
+				if (history.index > 0) {
+					return SearchHeader;
+				}
 			default:
 				return(
 					<Header
