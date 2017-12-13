@@ -14,7 +14,7 @@ import { List, ListItem, Button, Icon } from 'react-native-elements'
 
 
         <View style={styles.container}>
-  
+
 
     <List containerStyle={{marginBottom: 20}}>
     {
@@ -23,8 +23,15 @@ import { List, ListItem, Button, Icon } from 'react-native-elements'
           subtitle={l.rating}
           key={i}
           title={l.name}
-          //onPress={Communications.phonecall('0123456789', true)}
           leftIcon={
+            <Icon
+        raised
+        name='phone'
+        type='font-awesome'
+        color='#f50'
+        onPress={() =>Communications.phonecall('0123456789', true)} />}
+          //onPress={Communications.phonecall('0123456789', true)}
+          rightIcon={
             <Icon
 raised
 name='map'
@@ -52,7 +59,7 @@ onPress={() =>Communications.web('https://www.google.com/maps/place/'+l.address,
     },
     item: {
       padding: 10,
-      fontSize: 18,
+      fontSize: 20,
       height: 44,
     },
   })
