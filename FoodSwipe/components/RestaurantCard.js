@@ -6,7 +6,6 @@ import {
 	Image
 } from 'react-native';
 import Spinner from './common/Spinner'
-import RNFetchBlob from 'react-native-fetch-blob'
 
 
 
@@ -22,6 +21,7 @@ class RestaurantCard extends React.Component {
 	constructor(props) {
 
 		super(props)
+<<<<<<< HEAD
 		this.state = {
 
 			photo: '',
@@ -78,12 +78,15 @@ class RestaurantCard extends React.Component {
 		// console.log(photo);
 			return(<Spinner />)
 		}
+=======
+>>>>>>> 85723ad336b93dd86bb3cb98f4da44e95b7a8898
 	}
 
 getCardName(){
 	return cardName;
 }
 	render(){
+<<<<<<< HEAD
 		cardName='';
 		const restraunt = this.props
 		cardInfo.cardName = this.props.name;
@@ -101,6 +104,14 @@ getCardName(){
 		 </View>
 
 	 )
+=======
+		const restaurant = this.props
+		return(
+		<View style={[styles.card, {backgroundColor: '#0000ff'}]}>
+			 <Text>{restaurant.name}</Text>
+			 <Text>{restaurant.rating}</Text>
+		 </View>)
+>>>>>>> 85723ad336b93dd86bb3cb98f4da44e95b7a8898
 	}
 }
 

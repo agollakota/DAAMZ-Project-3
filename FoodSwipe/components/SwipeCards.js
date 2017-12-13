@@ -20,9 +20,14 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: []
+      cards: props.restaurants
     };
   }
+
+	componentWillMount(){
+		var cards = this.props.search.restaurants
+		this.setState({ cards: cards })
+	}
 
   handleYup (card) {
 		// TODO: Add to favorites
@@ -38,7 +43,7 @@ export default class extends React.Component {
   }
 
 	componentWillReceiveProps(nextProps){
-		var cards = nextProps.search.restraunts
+		var cards = nextProps.search.restaurants
 		this.setState({ cards: cards })
 	}
 

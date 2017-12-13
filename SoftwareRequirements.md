@@ -1,4 +1,4 @@
-SwipeEats
+FoodSwipe
 ===================
 ###### Austin Edington, Zac Gallagher, Aparna Gollakota, Don Stolz, Mike Sukan
 
@@ -40,7 +40,7 @@ SwipeEats
 1.1 Purpose
 --------
 
-Our purpose for SwipeEats™ is to give our users a friendly way to search for food in their area. Whether they’re hungry for pizza or Chinese food, users can specify whether they want to see vegan/vegetarian options, gluten-free options, so on and so forth. By displaying “cards” of different restaurants to users, users can “thumbs-up” (or swipe right) or “thumbs-down” (or swipe left) the search results to find their perfect meal. This will be the release of our debut version, v1.0
+Our purpose for FoodSwipe™ is to give our users a friendly way to search for food in their area. Whether they’re hungry for pizza or Chinese food, users can specify whether they want to see vegan/vegetarian options, gluten-free options, so on and so forth. By displaying “cards” of different restaurants to users, users can “thumbs-up” (or swipe right) or “thumbs-down” (or swipe left) the search results to find their perfect meal. This will be the release of our debut version, v1.0
 
 1.2 Document Conventions
 --------------------
@@ -50,9 +50,9 @@ This proposal will use the Playfair Display font for all text. The bodies of our
 1.3 Intended Audience and Reading Suggestions
 -----------------------------------------
 
-Our intended audience for SwipeEats™ is an urban crowd, where food options tend to be abundant in variety, however depending on how far our users are willing to travel, SwipeEats™ could also be beneficial to a suburban audience. Our intended audience will be able to better service their own dietary restrictions, as SwipeEats™ would focus around helping our users find food that suits their own needs, no matter if they’re vegan, gluten-free, or eat Halal.
+Our intended audience for FoodSwipe™ is an urban crowd, where food options tend to be abundant in variety, however depending on how far our users are willing to travel, FoodSwipe™ could also be beneficial to a suburban audience. Our intended audience will be able to better service their own dietary restrictions, as FoodSwipe™ would focus around helping our users find food that suits their own needs, no matter if they’re vegan, gluten-free, or eat Halal.
 
-Users interested in SwipeEats™ would be best serviced throughout this document by focusing on 2. Overall Description, and then moving to 4. System Features.
+Users interested in FoodSwipe™ would be best serviced throughout this document by focusing on 2. Overall Description, and then moving to 4. System Features.
 
 1.4 Product Scope
 -------------
@@ -67,9 +67,9 @@ After users enter their determined restrictions including distance from the user
 2.1 Product Perspective
 -------------------
 
-SwipeEats™ is a mobile application designed to help users locate a restaurant that fits their dietary restrictions and otherwise. However, SwipeEats™ is a self-contained product. A long-term goal would be to attach SwipeEats™ to other sites for reviews, such as Yelp, Google Reviews, or TripAdvisor. SwipeEats™ was conceived as a tool for users to decide on local food option in their area, designed in response to the growing number of food options and how difficult it has become for our users to decide between them.
+FoodSwipe™ is a mobile application designed to help users locate a restaurant that fits their dietary restrictions and otherwise. However, FoodSwipe™ is a self-contained product. A long-term goal would be to attach FoodSwipe™ to other sites for reviews, such as Yelp, Google Reviews, or TripAdvisor. FoodSwipe™ was conceived as a tool for users to decide on local food option in their area, designed in response to the growing number of food options and how difficult it has become for our users to decide between them.
 
-The system of SwipeEats™ is to be initially designed as a mobile application. The app will need to communicate with the user’s GPS in order to view the restaurants in the user’s vicinity. This functionality will be embedded into SwipeEats™ so that other functions in the application may be accessed without any transition between applications.
+The system of FoodSwipe™ is to be initially designed as a mobile application. The app will need to communicate with the user’s GPS in order to view the restaurants in the user’s vicinity. This functionality will be embedded into FoodSwipe™ so that other functions in the application may be accessed without any transition between applications.
 
 The second part of the system will be a database used to store and reference information on restaurants around Loyola, as our first version. This database will be maintained separately from the application.
 
@@ -78,37 +78,32 @@ The second part of the system will be a database used to store and reference inf
 
 * Our users choose the types of restaurants they want food from
 
-We still need to create this component.
 
 * We take user’s current location into consideration
 
-We are about 20% complete with our location services and need to implement the Google WebPlaces API
 
 * The user then will be taken to a main menu, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” (or swipe right) and "thumbs down" (or swipe left) on restaurants.
 
-We have the code 90% complete for the swipe right/left component and we are about 30% with the buttons for the "thumbs up/thums down" components. 
 
 
 * The user then has the opportunity to view restaurant's profile for reviews, prices, menu items, allergy alerts, etc.
     
-Currently our profile component is about 30% complete. We still need to incorporate options for different food allergies, prices, and     reviews. We need to implement the Google WebPlaces API. We're working 
 
-We have our header file mostly complete and are working on navigation as well. Some of our components are pretty complete individually but we need to tie everything together. We know the next steps we need to take to modify the application.
 
 2.3 User Classes and Characteristics
 --------------------------------
 
-We are going for simple and minimalistic so people can quickly decide what to eat. Since this is a food app, there is no target age or gender. However, SwipeEats™ may be more useful for people in urban areas where there is a wide variety of restaurants to choose from in the area.
+We are going for simple and minimalistic so people can quickly decide what to eat. Since this is a food app, there is no target age or gender. However, FoodSwipe™ may be more useful for people in urban areas where there is a wide variety of restaurants to choose from in the area.
 
 2.4 Operating Environment
 ---------------------
 
-SwipeEats™ will be compatible with Apple and Android smartphones because we are using React-Native, which helps us be able to make the app cross-platform. 
+FoodSwipe™ will be compatible with Apple and Android smartphones because we are using React-Native, which helps us be able to make the app cross-platform. 
 
 2.5 Design and Implementation Constraints
 -------------------------------------
 
-Internet connection is required to properly use SwipeEats™, and the restaurants will be limited to the user’s area. New restaurants might be left out due to lack of information and appearance on Yelp or Google.
+Internet connection is required to properly use FoodSwipe™, and the restaurants will be limited to the user’s area. New restaurants might be left out due to lack of information and appearance on Yelp or Google.
 
 2.6 User Documentation
 ------------------
@@ -118,7 +113,7 @@ We will have several sources of documentation, including: user manuals, tutorial
 2.7 Assumptions and Dependencies
 ----------------------------
 
-Our assumptions are that SwipeEats™ will be used primarily within the application on the user’s mobile device. The application may not work as intended, crash, or provide inaccurate location data if the platform does not have the hardware resources available. We are also assuming that the GPS will work uniformly within browser platforms. We will be developing for Android 6.0 Marshmallow and up and iOS 10.1.1 and up.
+Our assumptions are that FoodSwipe™ will be used primarily within the application on the user’s mobile device. The application may not work as intended, crash, or provide inaccurate location data if the platform does not have the hardware resources available. We are also assuming that the GPS will work uniformly within browser platforms. We will be developing for Android 6.0 Marshmallow and up and iOS 10.1.1 and up.
 
 3 External Interface Requirements
 ===============================
@@ -149,7 +144,7 @@ Our user interface will be using a “card” interface, similar to applications
 
 #### 4.1.1 Description and Priority
 
-The swipe function is of high priority for SwipeEats™. After inputting their criteria, the swipe functions allows the users to determine their restaurants of choice.
+The swipe function is of high priority for FoodSwipe™. After inputting their criteria, the swipe functions allows the users to determine their restaurants of choice.
 
 #### 4.1.2 Stimulus/Response Sequences
 
@@ -160,7 +155,7 @@ The swipe function is dynamic to the user’s interactions. Users can swipe righ
 
 #### 4.2.1 Description and Priority
 
-Within the SwipeEats™ application, users input specific criteria for the restaurants they are searching for. Users can enter keywords that best identify with what they want.
+Within the FoodSwipe™ application, users input specific criteria for the restaurants they are searching for. Users can enter keywords that best identify with what they want.
 
 #### 4.2.2 Stimulus/Response Sequences
 
@@ -173,7 +168,7 @@ Users are given the opportunity to enter keywords that best identify with what t
 5.1 Performance Requirements
 ------------------------
 
-SwipeEats™ should be able to quickly receive and usefully relay information to the users, no delays if possible. Once the user has designated the category of food they are searching for, they will be able to swipe through the available options. The goal is for users to have no delay when searching for restaurants. The user will be able to view detailed and accurate information once a restraunt has been selected. The user experience should be smooth and up-to-date so that they can have the best experience possible.
+FoodSwipe™ should be able to quickly receive and usefully relay information to the users, no delays if possible. Once the user has designated the category of food they are searching for, they will be able to swipe through the available options. The goal is for users to have no delay when searching for restaurants. The user will be able to view detailed and accurate information once a restraunt has been selected. The user experience should be smooth and up-to-date so that they can have the best experience possible.
 
 5.2 Security Requirements
 ---------------------
@@ -183,7 +178,7 @@ User authentication may be added at a later point in the project. However, the i
 5.3 Software Quality Attributes
 ---------------------------
 
-We’re developing an app with cross-compatibility because of react-native. The information from the restaurants will be coming from the restaurants themselves, so the info will be as accurate as they make it online. Reliability depends on internet connection. Testing will be done in small focus groups before a release. It will be available on Google Play so we can provide the link to people with Android phones. Our intention is to show our focus groups how to navigate throughout the application, however the developers for SwipeEats™ have in their utmost priority to make the interface seem familiar, without the need of teaching users how to operate the application.
+We’re developing an app with cross-compatibility because of react-native. The information from the restaurants will be coming from the restaurants themselves, so the info will be as accurate as they make it online. Reliability depends on internet connection. Testing will be done in small focus groups before a release. It will be available on Google Play so we can provide the link to people with Android phones. Our intention is to show our focus groups how to navigate throughout the application, however the developers for FoodSwipe™ have in their utmost priority to make the interface seem familiar, without the need of teaching users how to operate the application.
 
 6 Market Research
 ================================

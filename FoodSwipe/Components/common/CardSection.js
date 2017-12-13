@@ -3,13 +3,13 @@ import { View } from 'react-native';
 
 const CardSection = (props) => {
   return (
-    <View style={styles.containerStyle}>
+    <View style={styles.containerStyle}> ////controls style/layout
       {props.children}
     </View>
   );
 };
 
-const styles = {
+const styles = { //Styling for the CardSection component
   containerStyle: {
     borderBottomWidth: 1,
     padding: 5,
@@ -20,5 +20,5 @@ const styles = {
     position: 'relative'
   }
 };
-
+//Make the component available to other parts of the app
 export { CardSection };

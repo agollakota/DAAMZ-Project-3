@@ -1,28 +1,27 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {
+	StyleSheet,
+	Text,
+	View,
+	Image
+} from 'react-native';
 import Card from './common/Card';
 import CardSection from './common/CardSection';
 
 
-const RestaurantDetail = ({ restaurant }) => {
-  const { name, rating } = restaurant;
-  const {
 
-    headerContentStyle,
-
-    headerTextStyle,
-  } = styles;
-
+const RestaurantDetail = ({ rating, price,address, image }) => {
+  const { headerContentStyle,headerTextStyle, thumbnailStyle, thumbnailContainerStyle, imageStyle} = styles;
   return (
-    <Card>
-      <CardSection>
-
-        <View style={headerContentStyle}>
-          <Text style={headerTextStyle}>{name}</Text>
-          <Text>{rating}</Text>
-        </View>
+   </View>
+        var rating = 3
+        var price = 2
+        var address = '1234 Place'
+        var image = 'https://blog.sqlauthority.com/i/a/errorstop.png'
+      
       </CardSection>
-    </Card>
+     </Card>
+    </View>
   );
 };
 
