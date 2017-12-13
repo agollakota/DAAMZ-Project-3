@@ -10,14 +10,14 @@ import CardSection from './common/CardSection';
 
 
 
-const RestaurantDetail = ({ rating, price,address, URL }) => {
+const RestaurantDetail = ({ rating, price,address, image }) => {
   const { headerContentStyle,headerTextStyle, thumbnailStyle, thumbnailContainerStyle, imageStyle} = styles;
   return (
    </View>
         var rating = 3
         var price = 2
         var address = '1234 Place'
-        var URL = 'https://blog.sqlauthority.com/i/a/errorstop.png'
+        var image = 'https://blog.sqlauthority.com/i/a/errorstop.png'
       
       </CardSection>
      </Card>
