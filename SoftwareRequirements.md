@@ -82,11 +82,11 @@ The second part of the system will be a database used to store and reference inf
 * We take user’s current location into consideration
 
 
-* The user then will be taken to a main menu, featuring “cards” of each restaurant is displayed, where the user can “thumbs up” (or swipe right) and "thumbs down" (or swipe left) on restaurants.
+* The user then will be taken to a main menu, featuring “cards” of each restaurant is displayed, where the user can swipe right (approve) or swipe left (disapprove) on restaurants.
 
 
 
-* The user then has the opportunity to view restaurant's profile for reviews, prices, menu items, allergy alerts, etc.
+* The user can access their approved restaurants in their "Favorites" tab. When a restaurant is clicked on, the user will be brought to Google Maps with the restaurant's location.
     
 
 
