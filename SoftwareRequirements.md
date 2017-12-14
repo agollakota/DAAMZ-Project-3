@@ -131,10 +131,8 @@ Our user interface will be using a “card” interface, similar to applications
 3.2 Software Interfaces
 -------------------
 
-* MongoDB
 * React-native
-* Bootstrap CSS
-* Meteor Boilerplate
+* Redux 
 
 4 System Features
 ===============
