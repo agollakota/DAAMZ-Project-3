@@ -41,7 +41,7 @@ Google Web Places API
 React Native
 
 ### Emulators Used
-Genymotion
+Genymotion and
 Xcode
 
 ## **Creators**
