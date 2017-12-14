@@ -24,12 +24,13 @@ export default class extends React.Component {
 	}
 
   handleYup (restaurant) {
+    // Send restraunt values to favorites state
 		this.props.addFavorite(restaurant)
-		// remove from array and send copy through dispatch
+		// Remove from state array
 		this.props.removeCard(restaurant.name)
   }
   handleNope (restaurant) {
-		// remove from array and send copy through dispatch
+		// Remove from state array
 		this.props.removeCard(restaurant.name)
   }
 
