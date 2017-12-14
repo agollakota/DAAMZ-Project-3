@@ -10,7 +10,7 @@ Otherwise:
 1) Open FoodSwipe
 2) Run "react-native run-android" on a command prompt
 
-
+# Technologies:
 # Testing:
 We hardcoded variables and tested the components we worked on individually.
 
