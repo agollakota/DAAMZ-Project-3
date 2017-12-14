@@ -46,8 +46,8 @@ Xcode
 
 ## **Creators**
 -------------------------------
-Austin Edington
-Zac Gallagher
-Aparna Gollakota
-Don Stolz
+Austin Edington,
+Zac Gallagher,
+Aparna Gollakota,
+Don Stolz,
 Michael Sukan
