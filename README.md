@@ -4,9 +4,13 @@ select their preferences and have restaurants returned that meet those specifica
 "swipe right" or "swipe left" and "thumbs up" and "thumbs down" on the restauraunts that are returned.
 
 # Installation:
+The preferred method would be to install it on the Google Play Store: https://play.google.com/store/apps/details?id=com.foodswipe&rdid=com.foodswipe
+
+Otherwise:
+
 1) Open FoodSwipe
 2) react-native run-android
-3) Will give link to Google Play when published
+
 
 # Testing:
 # Which tests we used and why:
