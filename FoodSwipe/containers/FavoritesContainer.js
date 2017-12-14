@@ -5,10 +5,12 @@ import { removeFavorite } from '../actions'
 
 import FavoritesList from '../components/FavoritesList';
 
+// Maps necessary pieces of state to FavoritesList component
 const mapStateToProps = (state) => ({
-	list: state.favorites
+	favorites: state.favorites
 })
 
+// Maps necessary dispatch functions to FavoritesList component
 const mapDispatchToProps = (dispatch) => ({
 	removeFavorite: bindActionCreators(removeFavorite, dispatch)
 })

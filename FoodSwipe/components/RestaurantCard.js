@@ -1,5 +1,5 @@
 
-import { Rating, Tile } from 'react-native-elements';
+import { Rating, Tile, Avatar } from 'react-native-elements';
 
 
 import React, { Component } from 'react'
@@ -9,6 +9,8 @@ import {
 	View,
 	Image
 } from 'react-native';
+//designs the inner box for the swipe CardSection
+//react elements was heavly used for this section to render the picture and the stars
 
 class RestaurantCard extends React.Component {
 
@@ -21,6 +23,11 @@ class RestaurantCard extends React.Component {
 		return(
 		<View style={[styles.card, {backgroundColor: '#FFC30F'}]}>
 
+<Tile
+   imageSrc={{uri:restaurant.photo}}
+	 height ={300}
+		width={300}
+/>
 
 			 <Text>{restaurant.name}</Text>
 			 <Rating

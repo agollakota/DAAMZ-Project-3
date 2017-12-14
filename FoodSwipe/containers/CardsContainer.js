@@ -8,10 +8,12 @@ import {
 
 import SwipeCards from '../components/SwipeCards'
 
+// Maps necessary pieces of state to SwipeCards component
 const mapStateToProps = (state) => ({
 	search: state.search
 })
 
+// Maps necessary dispatch functions to SwipeCards component
 const mapDispatchToProps = (dispatch) => ({
 	removeCard: bindActionCreators(removeRestaurant, dispatch),
 	addFavorite: bindActionCreators(addFavorite, dispatch)

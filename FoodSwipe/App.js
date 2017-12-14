@@ -20,7 +20,7 @@ import CardsContainer from './containers/CardsContainer'
 import FavoritesContainer from './containers/FavoritesContainer';
 
 const store = createStore(reducer, applyMiddleware(thunk));
-
+//uses route to help the naviagation and the header is also implmenented here
 export default class App extends Component{
   render() {
     return (
