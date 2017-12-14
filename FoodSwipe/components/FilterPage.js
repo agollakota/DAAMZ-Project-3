@@ -14,7 +14,7 @@ import Filters from '../constants/Filters.json'
 
 //this is the first user interaction package
 //this uses external libraries to handle the user input on the CheckBox
-//it also uses the search button to handle and send to the api request 
+//it also uses the search button to handle and send to the api request
 export default class FilterPage extends Component {
     constructor() {
       super();
@@ -59,8 +59,6 @@ export default class FilterPage extends Component {
     onClickCheckBox(data) {
 			let selected = this.state.selectedDiet;
       data.checked = !data.checked;
-      // let msg=data.checked? 'you checked ':'you unchecked '
-      // console.log(msg+data.name);
 			if (data.checked && !selected.includes(data.name)) {
 				selected.push(data.name);
 			}
@@ -111,7 +109,7 @@ export default class FilterPage extends Component {
     }
 
 		renderButton(){
-      // TODO: Break into search button component
+      // TODO: Turn into search button component
 			return(
 				<View style={styles.containerButton}>
 					<Link to="/cards"
@@ -160,47 +158,47 @@ export default class FilterPage extends Component {
 }
 
 const styles = StyleSheet.create({ //filterpage style
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        marginTop:15,
-    },
-		filters: {
-			flex: 3,
-			paddingLeft: 30,
-			paddingRight: 30,
-			marginBottom:15
-		},
-		headers: {
-			fontSize: 20,
-			fontWeight: 'bold'
-		},
-		containerButton: {
-	    borderBottomWidth: 1,
-	    padding: 5,
-	    backgroundColor: '#fff',
-	    justifyContent: 'flex-start',
-	    flexDirection: 'row',
-	    borderColor: '#ddd',
-	    position: 'relative'
-	  },
-		button: {
-			flex: 1,
-	    alignSelf: 'stretch',
-	    backgroundColor: '#581845',
-	    borderRadius: 5,
-	    borderWidth: 1,
-	    borderColor: '#C70039',
-	    marginLeft: 25,
-	    marginRight: 25,
-			marginBottom: 25,
-		},
-		buttonText:{
-			alignSelf: 'center',
-	    color: '#fff',
-	    fontSize: 16,
-	    fontWeight: '600',
-	    paddingTop: 10,
-	    paddingBottom: 10
-		}
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginTop:15,
+  },
+	filters: {
+		flex: 3,
+		paddingLeft: 30,
+		paddingRight: 30,
+		marginBottom:15
+	},
+	headers: {
+		fontSize: 20,
+		fontWeight: 'bold'
+	},
+	containerButton: {
+    borderBottomWidth: 1,
+    padding: 5,
+    backgroundColor: '#fff',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    borderColor: '#ddd',
+    position: 'relative'
+  },
+	button: {
+		flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: '#581845',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#C70039',
+    marginLeft: 25,
+    marginRight: 25,
+		marginBottom: 25,
+	},
+	buttonText:{
+		alignSelf: 'center',
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+    paddingTop: 10,
+    paddingBottom: 10
+	}
 })

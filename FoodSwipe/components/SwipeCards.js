@@ -8,10 +8,7 @@ import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
 import Spinner from './common/Spinner'
 
-
-//this handles the amount of cards in the deck
-//handles te swipes for the app, which is taken from an external API
-
+// Uses react-native-swipe-cards
 export default class extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +18,7 @@ export default class extends React.Component {
   }
 
 	componentWillMount(){
+    // Update cards array with current state when mounting comconent
 		var cards = this.props.search.restaurants
 		this.setState({ cards: cards })
 	}
@@ -36,6 +34,7 @@ export default class extends React.Component {
   }
 
 	componentWillReceiveProps(nextProps){
+    // Set the cards when search results are recieved
 		var cards = nextProps.search.restaurants
 		this.setState({ cards: cards })
 	}

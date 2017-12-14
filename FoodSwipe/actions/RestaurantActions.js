@@ -9,22 +9,23 @@ import{
 } from '../constants/constants';
 import RNFetchBlob from 'react-native-fetch-blob'
 
-export const fetchRestaurants = (query) => { //retrieves json data us-
+// Dispatch fetch_restaurants action with query & begin API calls
+export const fetchRestaurants = (query) => {
 	return (dispatch) => {
-	  dispatch({ type: FETCH_RESTAURANTS, payload: query }); //returns an action
+	  dispatch({ type: FETCH_RESTAURANTS, payload: query });
 
 		const request = PLACES_REQUEST + query + API_KEY;
 
+		// Begin 1st fetch request - For matching restaurants
 		fetch(request)
 			.then((response) => response.json())
 			.then(responseJson => setRestaurantData(responseJson))
 			.then( (restaurants) => {
-				fetchRestaurantsSuccess(dispatch, restaurants) //fetchRestaurauntsSuccess returns an action
+				fetchRestaurantsSuccess(dispatch, restaurants)
 			})
 			.catch(error => {
-				console.log("Request Error:");
 				console.log(error);
-				dispatch({ //returns an action with an error object
+				dispatch({
 					type: FETCH_RESTAURANTS_FAIL,
 					payload: error
 				});
@@ -32,7 +33,9 @@ export const fetchRestaurants = (query) => { //retrieves json data us-
 		}
 }
 
-const setRestaurantData = (response) => { //sets the data
+// Parses the data that was fetched and call getPhoto for each restaurant
+const setRestaurantData = (response) => {
+	// Filter out any matches without photos
 	let results = response.results.filter( (result) => {
 		try {
 			return typeof(result.photos[0]) !== 'undefined';
@@ -49,10 +52,12 @@ const setRestaurantData = (response) => { //sets the data
 			photo: await getPhoto(result.photos[0])
 		};
 	})
+	// Promise.all awaits the return of all the promises before continuing
 	return Promise.all(restaurants)
 }
 
-const getPhoto = (photo) => { //configuring getting the photo from the API
+// Returns call to goole's photo API
+const getPhoto = (photo) => {
 
 	const APIkey = '&key=AIzaSyAII5XMnyNX4W5HKvOoASo-qhxvJ5Z0jO0'
 	const PhotoRef = '&photoreference=' + photo.photo_reference
@@ -68,15 +73,16 @@ const getPhoto = (photo) => { //configuring getting the photo from the API
 		});
 }
 
-
-const fetchRestaurantsSuccess = async (dispatch, response) => { //If there is a sucess dispatch the restaurant
+// Dispatch success action with restaurants
+const fetchRestaurantsSuccess = async (dispatch, response) => {
 	dispatch({
     type: FETCH_RESTAURANTS_SUCCESS,
     payload: response
   });
 };
 
-export const removeRestaurant = (name) => { //removing the restaurant
+// Dispatch remove action with name of selected restaurant
+export const removeRestaurant = (name) => {
 	console.log(name);
 	return {
 		type: REMOVE_RESTAURANT,

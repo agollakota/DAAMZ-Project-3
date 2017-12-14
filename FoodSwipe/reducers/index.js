@@ -6,7 +6,9 @@ State: {
 		loading: false,
 		restaurants: [restaurant]
 	},
-	favorites: [restaurant]
+	favorites: {
+    list: [restaurant]
+  }
 }
 
   restaurant: {

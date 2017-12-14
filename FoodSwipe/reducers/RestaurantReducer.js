@@ -12,6 +12,7 @@ const INITIAL_STATE = {
 	restaurants: []
 };
 
+// Handles changes to the search section of the state
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
 		case FETCH_RESTAURANTS:
