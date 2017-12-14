@@ -6,9 +6,9 @@ select their preferences and have restaurants returned that meet those specifica
 
 ## **Installation**
 ------------------------------
-The preferred method would be to install it on the Google Play Store: https://play.google.com/store/apps/details?id=com.foodswipe&rdid=com.foodswipe
+You can install it on the Google Play Store: https://play.google.com/store/apps/details?id=com.foodswipe&rdid=com.foodswipe
 
-Otherwise:
+For the most update-to-date version:  
 1) Open FoodSwipe
 2) Run "react-native run-android" on a command prompt
 
@@ -36,6 +36,10 @@ Otherwise:
 ------------------------------
 ### Tools
 Google Web Places API
+React Communications
+React Elements 
+Redux Router 
+Router Button
 
 ### Framework
 React Native
