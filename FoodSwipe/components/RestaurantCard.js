@@ -25,6 +25,7 @@ class RestaurantCard extends React.Component {
 				style={{ paddingVertical: 10 }} fractions={1} readonly
 				type="star" startingValue={rating}
 				ref={(input) => { this.ratingInput = input; }}
+				style={{overflow: 'hidden', borderRadius: 7}}
 			/>
 		);
 	}
@@ -47,7 +48,7 @@ class RestaurantCard extends React.Component {
 	componentWillReceiveProps(nextProps){
 		// References setCurrentRating function to update component
 		this.ratingInput.setCurrentRating(nextProps.rating)
-		this.priceInput.setCurrentRating(nextProps.price + .5)
+		this.priceInput.setCurrentRating(nextProps.price + 1)
 	}
 
 	render(){
