@@ -183,20 +183,20 @@ const styles = StyleSheet.create({ //filterpage style
     position: 'relative'
   },
 	button: {
-		flex: 1,
+    flex: 1,
     alignSelf: 'stretch',
-    backgroundColor: '#581845',
+    backgroundColor: '#fff',
     borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#C70039',
+    borderWidth: 2,
+    borderColor: '#007aff',
     marginLeft: 25,
     marginRight: 25,
-		marginBottom: 25,
+  	marginBottom: 25,
 	},
 	buttonText:{
 		alignSelf: 'center',
-    color: '#fff',
-    fontSize: 16,
+    color: '#007aff',
+    fontSize: 18,
     fontWeight: '600',
     paddingTop: 10,
     paddingBottom: 10

@@ -24,7 +24,7 @@ class HeaderComp extends React.Component {
 					<Header
 				    statusBarProps={{ barStyle: 'light-content' }}
 				    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
-				    outerContainerStyles={{ backgroundColor: '#C70039' }}
+				    outerContainerStyles={{ backgroundColor: '#397031' }}
 				    innerContainerStyles={{ justifyContent: 'space-around',} }
 			    />
 				)
@@ -43,17 +43,17 @@ const CardsHeader = (
 	<Header
 	statusBarProps={{ barStyle: 'light-content' }}
 	leftComponent = { <RouterButton to="/" title="Search"
-	color="#581845" accessibilityLabel="Click to navigate to settings"
+	color="#fff" accessibilityLabel="Click to navigate to settings"
 	/>}
 	centerComponent={{ text: 'Food Swipe',
 	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
-	outerContainerStyles={{ backgroundColor: '#C70039' }}
+	outerContainerStyles={{ backgroundColor: '#397031' }}
 	innerContainerStyles={{ justifyContent: 'space-around' } }
 
 	rightComponent = { <RouterButton
 	to="/favorites"
 	title="Favorites"
-	color="#581845"
+	color="#fff"
 	accessibilityLabel="Click to navigate to settings"
 	/>}
 	/>
@@ -63,11 +63,11 @@ const FavoritesHeader = (
 	<Header
 	statusBarProps={{ barStyle: 'light-content' }}
 	leftComponent = { <RouterButton to="/cards" title="Cards"
-	color="#581845" accessibilityLabel="Click to navigate to settings"
+	color="#fff" accessibilityLabel="Click to navigate to settings"
 	/>}
 	centerComponent={{ text: 'Food Swipe',
 	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
-	outerContainerStyles={{ backgroundColor: '#C70039' }}
+	outerContainerStyles={{ backgroundColor: '#397031' }}
 	innerContainerStyles={{ justifyContent: 'space-around' } }
 	/>
 )
@@ -76,16 +76,16 @@ const SearchHeader = (
 	<Header
 	statusBarProps={{ barStyle: 'light-content' }}
 	leftComponent = { <RouterButton to="/cards" title="Cards"
-	color="#581845" accessibilityLabel="Click to navigate to settings"
+	color="#fff" accessibilityLabel="Click to navigate to settings"
 	/>}
 	centerComponent={{ text: 'Food Swipe',
 	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
-	outerContainerStyles={{ backgroundColor: '#C70039' }}
+	outerContainerStyles={ { backgroundColor: '#397031' } }
 	innerContainerStyles={{ justifyContent: 'space-around' } }
 	rightComponent = { <RouterButton
 	to="/favorites"
 	title="Favorites"
-	color="#581845"
+	color="#fff"
 	accessibilityLabel="Click to navigate to settings"
 	/>}
 	/>
@@ -106,7 +106,11 @@ const styles = {
   },
   textStyle: {
     fontSize: 30
-  }
+  },
+	headerBackground: {
+		backgroundColor: '#397031'
+	},
+	headerButtonColor: '#ffffff'
 };
 
 // Connect the component with the Router

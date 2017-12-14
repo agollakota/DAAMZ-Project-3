@@ -9,7 +9,7 @@ import {
 	View,
 	Image
 } from 'react-native';
-const DOLLAR_IMAGE = require('FoodSwipe/images/dollar_symbol.png');
+const DOLLAR_IMAGE = require('FoodSwipe/images/dollar_symbol_skyblue.png');
 //designs the inner box for the swipe CardSection
 //react elements was heavly used for this section to render the picture and the stars
 
@@ -46,8 +46,8 @@ class RestaurantCard extends React.Component {
 // Bug fix for iOS: Rating components were not updating
 	componentWillReceiveProps(nextProps){
 		// References setCurrentRating function to update component
-		this.ratingInput.setCurrentRating(nextProps.rating + 1)
-		this.priceInput.setCurrentRating(nextProps.price)
+		this.ratingInput.setCurrentRating(nextProps.rating)
+		this.priceInput.setCurrentRating(nextProps.price + .5)
 	}
 
 	render(){
@@ -55,7 +55,8 @@ class RestaurantCard extends React.Component {
 		return(
 		<View style={styles.card}>
 			<Tile height={300} width={300}
-				 imageSrc={{uri:restaurant.photo}} />
+				 imageSrc={{uri:restaurant.photo}}
+				 imageContainerStyle={{overflow: 'hidden', borderRadius: 8}}/>
 			<Text style={styles.headers}>{restaurant.name}</Text>
 			 { this.renderStarsRating(restaurant.rating)}
 			 { this.renderPriceRating(restaurant.price)}
@@ -73,6 +74,10 @@ const styles = StyleSheet.create({ //restaurantcard style
 		marginHorizontal: 25,
 		marginBottom: 50,
 		backgroundColor: '#7ec0ee',
+		borderRadius: 8,
+    borderWidth: 3,
+    borderColor: 'grey',
+    overflow: 'hidden',
   },
 	headers: {
 		fontSize: 30,
