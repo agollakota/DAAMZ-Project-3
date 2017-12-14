@@ -46,7 +46,7 @@ export default class extends React.Component {
 		}
 		else {
 			return (
-				<View style={styles.cards}>
+				<View style={styles.cardView}>
 		      <SwipeCards
 		        cards={this.state.cards}
 		        renderCard={(cardData) => <RestaurantCard {...cardData} />}
@@ -64,27 +64,7 @@ export default class extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  button: {
-    flex: 1,
-    alignSelf: 'stretch',
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#007aff',
-    marginLeft: 25,
-    marginRight: 25,
-
-  },
-  buttonText:{
-    alignSelf: 'center',
-    color: '#007aff',
-    fontSize: 16,
-    fontWeight: '600',
-    paddingTop: 10,
-    paddingBottom: 10
-  },
-
-	cards: {
+	cardView: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
