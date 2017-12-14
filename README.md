@@ -36,6 +36,10 @@ For the most update-to-date version:
 ------------------------------
 ### Tools
 Google Web Places API
+React Communications
+React Elements 
+Redux Router 
+Router Button
 
 ### Framework
 React Native
