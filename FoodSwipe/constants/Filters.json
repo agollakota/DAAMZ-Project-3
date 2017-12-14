@@ -1,10 +1,16 @@
 {
-  foodOptions : [	"Chinese",
-                  "Pizza",
-                  "Fast Food"],
-  dietOptions : [	{name : "Vegetarian", checked:false},
-                  {name : "Vegan", checked:false},
-                  {name : "Gluten Free", checked:false}],
+  foodOptions : [
+		"Italian",
+		"Bakery",
+		"Cafe",
+		"Mexican",
+		"Chinese",
+	  "Pizza",
+	  "Fast Food"],
+  dietOptions : [
+		{name : "Vegetarian", checked:false},
+    {name : "Vegan", checked:false},
+    {name : "Gluten Free", checked:false}],
   distance : 1600, // Meters; So default close to a mile
   price : 5
 }
