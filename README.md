@@ -4,9 +4,9 @@ select their preferences and have restaurants returned that meet those specifica
 "swipe right" or "swipe left" and "thumbs up" and "thumbs down" on the restauraunts that are returned.
 
 # Installation:
-1)
-2)
-3)
+1) Open FoodSwipe
+2) react-native run-android
+3) Will give link to Google Play when published
 
 # Testing:
 # Which tests we used and why:
@@ -14,4 +14,8 @@ select their preferences and have restaurants returned that meet those specifica
 # Built with:
 
 # Creators
-
+Aparna
+Austin
+Don
+Michael
+Zac
