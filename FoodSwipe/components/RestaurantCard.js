@@ -1,7 +1,5 @@
 
 import { Rating, Tile, Avatar } from 'react-native-elements';
-
-
 import React, { Component } from 'react'
 import {
 	StyleSheet,
@@ -58,7 +56,7 @@ class RestaurantCard extends React.Component {
 			<Tile height={300} width={300}
 				 imageSrc={{uri:restaurant.photo}}
 				 imageContainerStyle={{overflow: 'hidden', borderRadius: 8}}/>
-			<Text style={styles.title}>{restaurant.name}</Text>
+			<Text style={styles.cardTitle}>{restaurant.name}</Text>
 			 { this.renderStarsRating(restaurant.rating)}
 			 { this.renderPriceRating(restaurant.price)}
 		 </View>)
@@ -80,7 +78,7 @@ const styles = StyleSheet.create({ //restaurantcard style
     borderColor: 'grey',
     overflow: 'hidden',
   },
-	title: {
+	cardTitle: {
 		fontSize: 30,
 		textAlign: 'center',
 		fontWeight: 'bold'

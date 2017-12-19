@@ -16,7 +16,7 @@ export default class FavoritesList extends Component {
 
 	render() {
 		return (
-			<ListView style={styles.container}
+			<ListView style={styles.favoritesContainer}
 				dataSource={this.state.dataSource}
 				renderRow={(data) => <Row {...data} />}
 			/>
@@ -39,7 +39,7 @@ const Row = ( props ) => {
 }
 
 const styles = StyleSheet.create({ //favorites list style
-  container: {
+  favoritesContainer: {
    flex: 1,
    paddingTop: 12
   },

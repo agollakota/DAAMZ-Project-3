@@ -111,7 +111,7 @@ export default class FilterPage extends Component {
 		renderButton(){
       // TODO: Turn into search button component
 			return(
-				<View style={styles.containerButton}>
+				<View style={styles.buttonContainer}>
 					<Link to="/cards"
 						component={TouchableOpacity}
 						style={styles.button}
@@ -148,7 +148,7 @@ export default class FilterPage extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.filtersContainer}>
               {this.renderView()}
 							{this.renderButton()}
             </View>
@@ -158,7 +158,7 @@ export default class FilterPage extends Component {
 }
 
 const styles = StyleSheet.create({ //filterpage style
-  container: {
+  filtersContainer: {
     flex: 1,
     backgroundColor: '#fff',
     marginTop:15,
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({ //filterpage style
 		fontSize: 20,
 		fontWeight: 'bold'
 	},
-	containerButton: {
+	buttonContainer: {
     borderBottomWidth: 1,
     padding: 5,
     backgroundColor: '#fff',
