@@ -60,7 +60,7 @@ class RestaurantCard extends React.Component {
 				 imageContainerStyle={{overflow: 'hidden', borderRadius: 8}}/>
 			<Text style={styles.title}>{restaurant.name}</Text>
 			 { this.renderStarsRating(restaurant.rating)}
-			 { this.renderPriceRating(restaurant.price)}
+			 { this.renderPriceRating(restaurant.price + 1)}
 		 </View>)
 	}
 }
