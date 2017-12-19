@@ -1,3 +1,8 @@
+# TODO: Update ReadMe
+- [ ] Correct Installation and fix tools section
+- [ ] Add TOC
+- [ ] Add Travis CI
+
 # **FoodSwipe(TM)**
 ------------------------------
 Our app aims to provide users with a way to search for food in their area while also including ways they can
@@ -6,8 +11,6 @@ select their preferences and have restaurants returned that meet those specifica
 
 ## **Installation**
 ------------------------------
-You can install it on the Google Play Store: https://play.google.com/store/apps/details?id=com.foodswipe&rdid=com.foodswipe
-
 For the most update-to-date version:  
 1) Open FoodSwipe
 2) Run "react-native run-android" on a command prompt
@@ -38,20 +41,14 @@ For the most update-to-date version:
 Google Web Places API
 React Communications
 React Elements 
-Redux Router 
-Router Button
+React Router 
 
 ### Framework
 React Native
-
-### Emulators Used
-Genymotion and
-Xcode
+Redux
 
 ## **Creators**
 -------------------------------
-Austin Edington,
-Zac Gallagher,
-Aparna Gollakota,
-Don Stolz,
-Michael Sukan
+Don Stolz - System designer and primary software developer,
+Zac Gallagher - Assited with initial development (Favorites list and header),
+Aparna Gollakota - Original idea for finding restraunts catering to diet restrictions,
