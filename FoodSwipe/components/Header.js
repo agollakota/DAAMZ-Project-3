@@ -23,7 +23,7 @@ class HeaderComp extends React.Component {
 				return(
 					<Header
 				    statusBarProps={{ barStyle: 'light-content' }}
-				    centerComponent={{ text: 'Food Swipe', style: { fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
+				    centerComponent={{ text: 'Swipe Eat', style: { fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
 				    outerContainerStyles={{ backgroundColor: '#397031' }}
 				    innerContainerStyles={{ justifyContent: 'space-around',} }
 			    />
@@ -45,7 +45,7 @@ const CardsHeader = (
 	leftComponent = { <RouterButton to="/" title="Search"
 	color="#fff" accessibilityLabel="Click to navigate to settings"
 	/>}
-	centerComponent={{ text: 'Food Swipe',
+	centerComponent={{ text: 'Swipe Eat',
 	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
 	outerContainerStyles={{ backgroundColor: '#397031' }}
 	innerContainerStyles={{ justifyContent: 'space-around' } }
@@ -65,7 +65,7 @@ const FavoritesHeader = (
 	leftComponent = { <RouterButton to="/cards" title="Cards"
 	color="#fff" accessibilityLabel="Click to navigate to settings"
 	/>}
-	centerComponent={{ text: 'Food Swipe',
+	centerComponent={{ text: 'Swipe Eat',
 	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
 	outerContainerStyles={{ backgroundColor: '#397031' }}
 	innerContainerStyles={{ justifyContent: 'space-around' } }
@@ -78,7 +78,7 @@ const SearchHeader = (
 	leftComponent = { <RouterButton to="/cards" title="Cards"
 	color="#fff" accessibilityLabel="Click to navigate to settings"
 	/>}
-	centerComponent={{ text: 'Food Swipe',
+	centerComponent={{ text: 'Swipe Eat',
 	style:{ fontWeight: 'bold', color: '#fff', fontSize: 30 } }}
 	outerContainerStyles={ { backgroundColor: '#397031' } }
 	innerContainerStyles={{ justifyContent: 'space-around' } }
