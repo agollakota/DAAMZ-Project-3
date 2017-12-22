@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 import CheckBox from 'react-native-check-box'
 import Filters from '../constants/Filters.json'
-
+import styles from '../constants/styles'
 
 //this is the first user interaction package
 //this uses external libraries to handle the user input on the CheckBox
@@ -157,48 +157,48 @@ export default class FilterPage extends Component {
 
 }
 
-const styles = StyleSheet.create({ //filterpage style
-  filtersContainer: {
-    flex: 1,
-    backgroundColor: '#fff',
-    marginTop:15,
-  },
-	filters: {
-		flex: 3,
-		paddingLeft: 30,
-		paddingRight: 30,
-		marginBottom:15
-	},
-	headers: {
-		fontSize: 20,
-		fontWeight: 'bold'
-	},
-	buttonContainer: {
-    borderBottomWidth: 1,
-    padding: 5,
-    backgroundColor: '#fff',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    borderColor: '#ddd',
-    position: 'relative'
-  },
-	button: {
-    flex: 1,
-    alignSelf: 'stretch',
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#007aff',
-    marginLeft: 25,
-    marginRight: 25,
-  	marginBottom: 25,
-	},
-	buttonText:{
-		alignSelf: 'center',
-    color: '#007aff',
-    fontSize: 18,
-    fontWeight: '600',
-    paddingTop: 10,
-    paddingBottom: 10
-	}
-})
+// const styles = StyleSheet.create({ //filterpage style
+//   filtersContainer: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     marginTop:15,
+//   },
+// 	filters: {
+// 		flex: 3,
+// 		paddingLeft: 30,
+// 		paddingRight: 30,
+// 		marginBottom:15
+// 	},
+// 	headers: {
+// 		fontSize: 20,
+// 		fontWeight: 'bold'
+// 	},
+// 	buttonContainer: {
+//     borderBottomWidth: 1,
+//     padding: 5,
+//     backgroundColor: '#fff',
+//     justifyContent: 'flex-start',
+//     flexDirection: 'row',
+//     borderColor: '#ddd',
+//     position: 'relative'
+//   },
+// 	button: {
+//     flex: 1,
+//     alignSelf: 'stretch',
+//     backgroundColor: '#fff',
+//     borderRadius: 5,
+//     borderWidth: 2,
+//     borderColor: '#007aff',
+//     marginLeft: 25,
+//     marginRight: 25,
+//   	marginBottom: 25,
+// 	},
+// 	buttonText:{
+// 		alignSelf: 'center',
+//     color: '#007aff',
+//     fontSize: 18,
+//     fontWeight: '600',
+//     paddingTop: 10,
+//     paddingBottom: 10
+// 	}
+// })

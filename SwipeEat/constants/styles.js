@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-export default const styles = StyleSheet.create({
+export default styles = StyleSheet.create({
 
 // HeaderStyles
   headerOuterStyle: {

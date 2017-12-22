@@ -3,6 +3,7 @@ import { List, ListItem, Button, Icon } from 'react-native-elements'
 import RouterButton from 'react-router-native-button';
 import { StyleSheet, Text, ListView } from 'react-native';
 import Communications from 'react-native-communications';
+import styles from '../constants/styles'
 
 export default class FavoritesList extends Component {
 	//favorites takes in what the user swipes 'yum' on
@@ -38,14 +39,14 @@ const Row = ( props ) => {
 		/>)
 }
 
-const styles = StyleSheet.create({ //favorites list style
-  favoritesContainer: {
-   flex: 1,
-   paddingTop: 12
-  },
-  item: {
-    padding: 10,
-    fontSize: 20,
-    height: 44,
-  },
-})
+// const styles = StyleSheet.create({ //favorites list style
+//   favoritesContainer: {
+//    flex: 1,
+//    paddingTop: 12
+//   },
+//   item: {
+//     padding: 10,
+//     fontSize: 20,
+//     height: 44,
+//   },
+// })

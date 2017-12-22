@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { Header } from 'react-native-elements'
 import RouterButton from 'react-router-native-button';
 import { withRouter } from 'react-router'
+import styles from '../constants/styles'
 
 class HeaderComp extends React.Component {
 

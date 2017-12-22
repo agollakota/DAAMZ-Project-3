@@ -1,19 +1,16 @@
 
 import React, { Component } from 'react';
-import { View, } from 'react-native';
+import { View } from 'react-native';
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import { NativeRouter,
+import {
+	NativeRouter,
 	Route,
-	Scene,
 	nativeHistory
 } from 'react-router-native'
-import createMemoryHistory from 'history/createMemoryHistory'
-import thunk from 'redux-thunk'
-
+// import createMemoryHistory from 'history/createMemoryHistory'
 import reducer from './reducers'
-
-// import NavHeader from './components/NavHeader'
+import thunk from 'redux-thunk'
 import HeaderComp from './components/Header'
 import FilterContainer from './containers/FilterContainer'
 import CardsContainer from './containers/CardsContainer'

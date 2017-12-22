@@ -7,7 +7,8 @@ import {
 	View,
 	Image
 } from 'react-native';
-const DOLLAR_IMAGE = require('FoodSwipe/images/dollar_symbol_skyblue.png');
+import styles from '../constants/styles'
+import { DOLLAR_IMAGE_BLUE } from '../constants/constants'
 //designs the inner box for the swipe CardSection
 //react elements was heavly used for this section to render the picture and the stars
 
@@ -35,7 +36,7 @@ class RestaurantCard extends React.Component {
 			<Rating ratingBackgroundColor='red' imageSize={40}
 				style={{ paddingVertical: 10 }} fractions={1} readonly
 				type="custom" startingValue={price}
-				ratingImage={DOLLAR_IMAGE} ratingColor="#397031"
+				ratingImage={DOLLAR_IMAGE_BLUE} ratingColor="#397031"
 				ratingBackgroundColor="white"
 				ref={(input) => { this.priceInput = input; }}
 			/>
@@ -63,26 +64,26 @@ class RestaurantCard extends React.Component {
 	}
 }
 
-const styles = StyleSheet.create({ //restaurantcard style
-  card: {
-    justifyContent: 'center',
-    alignItems: 'center',
-		flex: 1,
-		minWidth: 350,
-		marginTop: 25,
-		marginHorizontal: 25,
-		marginBottom: 50,
-		backgroundColor: '#7ec0ee',
-		borderRadius: 8,
-    borderWidth: 3,
-    borderColor: 'grey',
-    overflow: 'hidden',
-  },
-	cardTitle: {
-		fontSize: 30,
-		textAlign: 'center',
-		fontWeight: 'bold'
-	}
-})
+// const styles = StyleSheet.create({ //restaurantcard style
+//   card: {
+//     justifyContent: 'center',
+//     alignItems: 'center',
+// 		flex: 1,
+// 		minWidth: 350,
+// 		marginTop: 25,
+// 		marginHorizontal: 25,
+// 		marginBottom: 50,
+// 		backgroundColor: '#7ec0ee',
+// 		borderRadius: 8,
+//     borderWidth: 3,
+//     borderColor: 'grey',
+//     overflow: 'hidden',
+//   },
+// 	cardTitle: {
+// 		fontSize: 30,
+// 		textAlign: 'center',
+// 		fontWeight: 'bold'
+// 	}
+// })
 
 export default RestaurantCard;

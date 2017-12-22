@@ -1,6 +1,8 @@
-package com.foodswipe;
+package com.swipeeat;
 
 import com.facebook.react.ReactActivity;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class MainActivity extends ReactActivity {
 
@@ -10,6 +12,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "FoodSwipe";
+        return "SwipeEat";
     }
 }
