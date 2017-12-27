@@ -46,6 +46,7 @@ const setRestaurantData = (response) => {
 	let restaurants = results.map( async (result, index) => {
 		return {
 			name: result.name,
+			id: result.place_id,
 			address: result.formatted_address,
 			rating: result.rating,
 			price: result.price_level,
@@ -74,7 +75,7 @@ const getPhoto = (photo) => {
 }
 
 // Dispatch success action with restaurants
-const fetchRestaurantsSuccess = async (dispatch, response) => {
+const fetchRestaurantsSuccess = (dispatch, response) => {
 	dispatch({
     type: FETCH_RESTAURANTS_SUCCESS,
     payload: response

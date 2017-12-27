@@ -7,11 +7,18 @@ State: {
 		restaurants: [restaurant]
 	},
 	favorites: {
-    list: [restaurant]
+    list: [restaurantDetail]
   }
 }
 
-  restaurant: {
+	restaurant: {
+		name:,
+		location:,
+		rating: 0-5,
+		price: 0-4
+	}
+
+  restaurantDetail: {
     name:,
     location:,
     rating: 0-5,

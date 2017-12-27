@@ -1,6 +1,8 @@
 import React from 'react'
 import {Text, View} from 'react-native';
 
+// TODO: Add button to go to "Search"
+// TODO: Add button to go to "Favorites"
 
 const NoMoreCards = () =>(
   <View>

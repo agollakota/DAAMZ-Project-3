@@ -26,6 +26,8 @@ export default class FavoritesList extends Component {
 
 //Uses react-native-elements to generate the ListItem style and the map button
 // Also uses communications to open the browsers to search for the location of the restaurant
+// TODO: Add phoneNumber button
+// TODO: Add onPress for Row
 const Row = ( props ) => {
 	var f =props.address.replace(/,\s?/g, "");;
 	var newAddress = f.split(' ').join('+');
@@ -38,15 +40,3 @@ const Row = ( props ) => {
 				onPress={() => Communications.web('https://www.google.com/maps/place/'+newAddress,true)} />}
 		/>)
 }
-
-// const styles = StyleSheet.create({ //favorites list style
-//   favoritesContainer: {
-//    flex: 1,
-//    paddingTop: 12
-//   },
-//   item: {
-//     padding: 10,
-//     fontSize: 20,
-//     height: 44,
-//   },
-// })
