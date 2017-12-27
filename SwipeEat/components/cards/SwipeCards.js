@@ -6,8 +6,8 @@ import { View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import NoMoreCards from './NoMoreCards'
 import RestaurantCard from './RestaurantCard';
-import Spinner from './common/Spinner'
-import styles from '../constants/styles'
+import Spinner from '../common/Spinner'
+import styles from '../../constants/styles'
 
 // Uses react-native-swipe-cards
 export default class extends React.Component {
@@ -60,15 +60,5 @@ export default class extends React.Component {
 				</View>
 	    )
 		}
-
   }
 }
-
-// const styles = StyleSheet.create({
-// 	cardView: {
-// 		flex: 1,
-// 		justifyContent: 'center',
-// 		alignItems: 'center',
-// 		backgroundColor: '#FFF',
-// 	}
-// });

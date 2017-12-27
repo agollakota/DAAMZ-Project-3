@@ -1,14 +1,13 @@
 
-import { Rating, Tile, Avatar } from 'react-native-elements';
+import { Rating, Tile } from 'react-native-elements';
 import React, { Component } from 'react'
 import {
-	StyleSheet,
 	Text,
 	View,
 	Image
 } from 'react-native';
-import styles from '../constants/styles'
-import { DOLLAR_IMAGE_BLUE } from '../constants/constants'
+import styles from '../../constants/styles'
+import { DOLLAR_IMAGE_BLUE } from '../../constants/constants'
 //designs the inner box for the swipe CardSection
 //react elements was heavly used for this section to render the picture and the stars
 
@@ -63,27 +62,5 @@ class RestaurantCard extends React.Component {
 		 </View>)
 	}
 }
-
-// const styles = StyleSheet.create({ //restaurantcard style
-//   card: {
-//     justifyContent: 'center',
-//     alignItems: 'center',
-// 		flex: 1,
-// 		minWidth: 350,
-// 		marginTop: 25,
-// 		marginHorizontal: 25,
-// 		marginBottom: 50,
-// 		backgroundColor: '#7ec0ee',
-// 		borderRadius: 8,
-//     borderWidth: 3,
-//     borderColor: 'grey',
-//     overflow: 'hidden',
-//   },
-// 	cardTitle: {
-// 		fontSize: 30,
-// 		textAlign: 'center',
-// 		fontWeight: 'bold'
-// 	}
-// })
 
 export default RestaurantCard;

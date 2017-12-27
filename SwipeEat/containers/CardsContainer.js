@@ -6,7 +6,7 @@ import {
 	addFavorite
 } from '../actions'
 
-import SwipeCards from '../components/SwipeCards'
+import SwipeCards from '../components/cards/SwipeCards'
 
 // Maps necessary pieces of state to SwipeCards component
 const mapStateToProps = (state) => ({
