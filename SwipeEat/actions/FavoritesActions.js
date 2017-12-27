@@ -32,15 +32,15 @@ export const addFavorite = (restaurant) => { //adding to favorites
 const fetchDetailsSuccess = (response, restaurant) => {
 	favorite = {
 		name: restaurant.name,
-		id: restaurant.id
+		id: restaurant.id,
 		address: restaurant.formatted_address,
 		rating: restaurant.rating,
 		price: restaurant.price_level,
 		photo: restaurant.photo,
-		// TODO: Fetch more photosif available
+		// TODO: Fetch more photos if available
 		phoneNumber: response.international_phone_number,
     websiteLink: response.website,
-    reviews:,
+    reviews: null,
 	}
 
 	return {

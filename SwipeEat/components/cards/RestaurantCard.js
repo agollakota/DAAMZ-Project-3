@@ -6,8 +6,8 @@ import {
 	View,
 	Image
 } from 'react-native';
-import styles from 'constants/styles'
-import { DOLLAR_IMAGE_BLUE } from 'constants/constants'
+import styles from '../../constants/styles'
+import { DOLLAR_IMAGE_BLUE } from '../../constants/constants'
 //designs the inner box for the swipe CardSection
 //react elements was heavly used for this section to render the picture and the stars
 
